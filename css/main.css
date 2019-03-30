@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+nav .logo {
+  width: 2rem;
+}
+
+nav h2 {
+  font-family: 'Lobster', cursive;
+}
+
+nav .cart-info .fa-shopping-cart {
+  font-size: 1.2em;
+  margin-right: .5em;
+  cursor: pointer;
+}
+
+nav #myNav {
+  position: absolute;
+  top: 100%;
+}
+
+nav #myNav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 96vw;
+}
+
+nav #myNav ul li a {
+  color: #343a40;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  top: 40%;
+}
+
+.carousel-control-prev {
+  left: 4em;
+}
+
+.carousel-control-next {
+  right: 4em;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  width: 4em;
+  height: 4em;
+}
+/*# sourceMappingURL=main.css.map */
