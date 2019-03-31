@@ -187,14 +187,13 @@ body {
     text-align: center;
     line-height: 50px;
     color: whitesmoke;
-    border-radius: 15px;
 }
 .gotopbtn:hover {
     color: white;
 }
 .copyright .logo {
     border: 1px solid var(--mainBlack);
-    border-radius: 3px;
+    border-radius: 50%;
     padding: 5px 7px;
     transform: translateY(50%);
 }
