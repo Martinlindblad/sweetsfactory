@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+
+:root {
+    --mainPink: #ef7998;
+    --mainYellow: rgb(249, 228, 148);
+    --yellowTrans: rgba(248, 223, 133, 0.5);
+    --mainGrey: rgb(238, 238, 238);
+    --mainBlack: #343a40;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Kaushan Script", cursive;
+}
+
+.logo {
+    width: 2rem;
+    height: auto;
+}
+
+.nav-link {
+    color: var(--mainPink);
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+}
+.nav-link:hover {
+    color: var(--mainBlack);
+}
+/* info icons */
+.cart-info-icon {
+    color: var(--mainBlack);
+    cursor: pointer;
+}
+.cart-info {
+    border: 0.1rem solid var(--mainBlack);
+    color: var(--mainBlack);
+    border-radius: 0.25rem;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+}
+.cart-info:hover {
+    background: var(--mainPink);
+    border-color: var(--mainPink);
+    color: whitesmoke;
+}
+.cart-info:hover .cart-info-icon {
+    color: whitesmoke;
+}
+/* end of info icons */
+
+/* banner */
+.max-height {
+    min-height: calc(100vh - 1rem);
+    background: linear-gradient(var(--yellowTrans), var(--yellowTrans)),
+      url("../img/carousel03.jpg") center/cover fixed no-repeat;
+    position: relative;
+}
+.banner {
+    color: whitesmoke;
+    margin-top: -4rem;
+}
+.banner-title {
+    color: var(--mainPink);
+    font-size: 4rem;
+    font-family: "Lobster";
+}
+.banner-link {
+    font-size: 1.5rem;
+    color: var(--mainBlack);
+    border: 0.2rem solid var(--mainBlack);
+}
+.banner-link:hover {
+    background: var(--mainBlack);
+    color: var(--mainPink);
+}
+/* endo of banner */
+
+/* cart */
+.cart {
+    position: absolute;
+    min-height: 10rem;
+    background: whitesmoke;
+    top: 0;
+    right: 0;
+    transition: all 0.1s ease-in-out;
+    background: rgba(255, 255, 255, 0.8);
+    width: 0;
+    overflow: hidden;
+}
+.show-cart {
+    width: 18rem;
+    padding: 2rem 1.5rem;
+    transform: rotateY(-360deg);
+}
+.cart-item {
+    transition: all .3s ease-in-out;
+}
+#item-img {
+    width: 2.5rem;
+    height: 2rem;
+}
+/* end of cart */
+
+/* cart item */
+.cart-item-remove {
+    color: var(--mainPink);
+    transition: all 1s ease-in-out;
+}
+.cart-item-remove:hover {
+    transform: scale(1.1);
+    color: var(--mainBlack);
+}
+#cart-item-price {
+    font-size: 0.8rem;
+}
+/* cart item */
+
+/* cart buttons */
+.btn-pink {
+    color: var(--mainPink) !important;
+    border-color: var(--mainPink) !important;
+}
+.btn-black {
+    color: var(--mainBlack) !important;
+    border-color: var(--mainBlack) !important;
+}
+.btn-black:hover {
+    color: var(--mainPink) !important;
+    background: var(--mainBlack) !important;
+}
+.btn-pink:hover {
+    background: var(--mainPink) !important;
+    color: var(--mainBlack) !important;
+}
+/* end of cart buttons */
+
+/* bestsellers */
+.card {
+    width: 18rem;
+}
+.btn-secondary {
+    background: var(--mainPink);
+    border: 1px solid var(--mainPink);
+}
+.btn-secondary:hover {
+    background: none;
+    border: none;
+    color: var(--mainPink);
+}
+/* end of bestsellers */
+
+/* store items */
+.store {
+    background: var(--mainGrey);
+}
+.search-box {
+    background: var(--mainPink);
+    color: var(--mainBlack);
+}
+.img-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.rounded-circle {
+    transition: all .65s ease-in-out;
+}
+.rounded-circle:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+/* end of store items */
+
+/* footer container */
+.gotopbtn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: var(--mainPink);
+    bottom: 1rem;
+    right: 1rem;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: whitesmoke;
+    border-radius: 15px;
+}
+.gotopbtn:hover {
+    color: white;
+}
+.copyright .logo {
+    border: 1px solid var(--mainBlack);
+    border-radius: 3px;
+    padding: 5px 7px;
+    transform: translateY(50%);
+}
