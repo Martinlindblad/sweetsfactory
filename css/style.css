@@ -53,15 +53,21 @@ body {
 /* end of info icons */
 
 /* banner */
-.max-height {
-    min-height: calc(100vh - 1rem);
-    background: linear-gradient(var(--yellowTrans), var(--yellowTrans)),
-    url("../img/carousel03.jpg") center/cover fixed no-repeat;
-    position: relative;
+.carousel {
+    width: 100%;
+    height: 45rem;
+    overflow: hidden;
+}
+.carousel-inner img {
+    width: 100vw;
+    height: auto;
+    /* filter: grayscale(50%); */
+    filter: sepia(60%);
+    filter: brightness(.75);
 }
 .banner {
     color: whitesmoke;
-    margin-top: -4rem;
+    margin-top: -50%;
 }
 .banner-title {
     color: var(--mainPink);
@@ -88,11 +94,12 @@ body {
     right: 0;
     transition: all 0.1s ease-in-out;
     background: rgba(255, 255, 255, 0.8);
-    width: 0;
+    width: 25rem;
     overflow: hidden;
+    display: none;
 }
 .show-cart {
-    width: 25rem;
+    display: block;
     padding: 2rem 1.5rem;
     transform: rotateY(-360deg);
 }
@@ -184,10 +191,6 @@ body {
 }
 .img-container {
     position: relative;
-<<<<<<< HEAD
-=======
-    /* overflow: hidden; */
->>>>>>> 9e2ffba321e65c3d853ac8d2ebcad589e25f8a99
     cursor: pointer;
 }
 .rounded-circle {
@@ -222,3 +225,16 @@ body {
     padding: 5px 7px;
     transform: translateY(50%);
 }
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
