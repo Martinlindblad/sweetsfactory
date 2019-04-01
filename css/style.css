@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Lobster");
 @import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Yeseva+One');
+@import url('https://fonts.googleapis.com/css?family=Pinyon+Script');
 
 :root {
     --mainPink: #ef7998;
     --mainYellow: rgb(249, 228, 148);
-    --yellowTrans: rgba(248, 223, 133, 0.5);
+    --yellowTrans: rgba(206, 205, 203, 0.281);
     --mainGrey: rgb(238, 238, 238);
     --mainBlack: #343a40;
 }
@@ -15,6 +18,7 @@ html {
 
 body {
     font-family: "Kaushan Script", cursive;
+    font-family: 'Playfair Display', serif;
 }
 
 .logo {
@@ -56,17 +60,18 @@ body {
 .max-height {
     min-height: calc(100vh - 1rem);
     background: linear-gradient(var(--yellowTrans), var(--yellowTrans)),
-    url("../img/carousel03.jpg") center/cover fixed no-repeat;
+    url("../img/slideshow1.jpg") center/cover fixed no-repeat;
     position: relative;
 }
 .banner {
-    color: whitesmoke;
+    color: rgb(255, 255, 255);
     margin-top: -4rem;
 }
 .banner-title {
     color: var(--mainPink);
     font-size: 4rem;
     font-family: "Lobster";
+    font-family: 'Yeseva One', cursive;
 }
 .banner-link {
     font-size: 1.5rem;
@@ -74,7 +79,7 @@ body {
     border: 0.2rem solid var(--mainBlack);
 }
 .banner-link:hover {
-    background: var(--mainBlack);
+    /* background: var(--mainBlack); */
     color: var(--mainPink);
 }
 /* endo of banner */
@@ -172,6 +177,10 @@ body {
     border: none;
     color: var(--mainPink);
 }
+.card-title{
+    font-family: 'Pinyon Script', cursive;
+    font-size: 2.5em;
+}
 /* end of bestsellers */
 
 /* store items */
@@ -181,6 +190,7 @@ body {
 .search-box {
     background: var(--mainPink);
     color: var(--mainBlack);
+    color: white;
 }
 .img-container {
     position: relative;
