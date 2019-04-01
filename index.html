@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+<<<<<<< HEAD
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sweet Factory</title>
@@ -10,7 +12,19 @@
   crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="img/sweetLogo.png" type="image/png" sizes="32x32">
+=======
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Factory</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="img/sweetLogo.png" type="image/png" sizes="32x32">
+>>>>>>> 9e2ffba321e65c3d853ac8d2ebcad589e25f8a99
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg px-4">
@@ -20,20 +34,19 @@
             </button>
             <div class="collapse navbar-collapse" id="myNav">
                 <ul class="navbar-nav mx-auto text-capitalize">
-                    <li class="nav-item active">
+                    <li class="nav-item mx-5 active">
                         <a class="nav-link" href="#">home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-5">
                         <a class="nav-link" href="#">products</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-5">
                         <a class="nav-link " href="#">about</a>
                     </li>
                 </ul>
                 <div class="nav-info-items d-none d-lg-flex ">
                     <!-- single info -->
-                    <div id="cart-info"
-                        class="nav-info align-items-center cart-info d-flex justify-content-between ">
+                    <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between ">
                         <span class="cart-info-icon mr-lg-3"><i class="fas fa-shopping-cart"></i></span>
                         <p class="mb-0 text-capitalize"><span id="item-count">2 </span> items - $<span
                                 class="item-total">10.49</span></p>
@@ -95,6 +108,29 @@
         </div>
     </header>
 
+    <!-- about us -->
+    <section class="about py-5" id="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-10 mx-auto col-md-6 my-5">
+                    <h1 class="text-capitalize">about <strong class="banner-title ">us</strong></h1>
+                    <p class="my-4 text-muted w-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+                        aliquam voluptas
+                        beatae vitae expedita consectetur nesciunt quia deserunt asperiores facere fuga dicta fugiat
+                        corrupti et omnis
+                        porro at dolorum! Ad!</p>
+                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase ">details</a>
+                </div>
+                <div class="col-10 mx-auto col-md-6 align-self-center my-5">
+                    <div class="about-img-container">
+                        <img src="img/img2.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- bestseller -->
     <section id="bestseller" class="py-5">
         <div class="container">
@@ -140,7 +176,8 @@
             <!--filter buttons -->
             <div class="row">
                 <div class=" col-lg-8 mx-auto d-flex justify-content-around my-2 sortBtn flex-wrap">
-                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="all">
+                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
+                        data-filter="all">
                         all</a>
                     <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
                         data-filter="cakes">cakes</a>
@@ -157,7 +194,8 @@
                 <div class="col-10 mx-auto col-md-6">
                     <form>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder='what is your flavor....' id="search-item">
+                            <input type="text" class="form-control" placeholder='what is your flavor....'
+                                id="search-item">
                             <div class="input-group-prepend ">
                                 <span class="input-group-text search-box" id="search-icon"><i
                                         class="fas fa-search"></i></span>
@@ -166,36 +204,33 @@
                     </form>
                 </div>
             </div>
-        </div><!--end of .conterner -->
+        </div>
+        <!--end of .conterner -->
 
         <div class="row w-100 d-flex justify-content-center">
             <div class="col-lg-2 d-flex flex-column align-items-center img-container">
                 <img class="rounded-circle" src="img/img3.jpg" alt="Generic placeholder image" width="140" height="140">
                 <p>cake</p>
-                <p><a class="btn btn-secondary" href="#" role="button">Details</a></p>
             </div><!-- /.col-lg-2 -->
             <div class="col-lg-2 d-flex flex-column align-items-center">
                 <img class="rounded-circle" src="img/img2.jpg" alt="Generic placeholder image" width="140" height="140">
                 <p>dounut</p>
-                <p><a class="btn btn-secondary" href="#" role="button">Details</a></p>
             </div><!-- /.col-lg-2 -->
             <div class="col-lg-2 d-flex flex-column align-items-center">
                 <img class="rounded-circle" src="img/img3.jpg" alt="Generic placeholder image" width="140" height="140">
                 <p>sweets</p>
-                <p><a class="btn btn-secondary" href="#" role="button">Details</a></p>
             </div><!-- /.col-lg-2 -->
             <div class="col-lg-2 d-flex flex-column align-items-center">
                 <img class="rounded-circle" src="img/img2.jpg" alt="Generic placeholder image" width="140" height="140">
                 <p>snack</p>
-                <p><a class="btn btn-secondary" href="#" role="button">Details</a></p>
             </div><!-- /.col-lg-2 -->
             <div class="col-lg-2 d-flex flex-column align-items-center">
                 <img class="rounded-circle" src="img/img3.jpg" alt="Generic placeholder image" width="140" height="140">
                 <p>cupcake</p>
-                <p><a class="btn btn-secondary" href="#" role="button">Details</a></p>
             </div><!-- /.col-lg-2 -->
         </div><!-- /.row -->
-    </section><!--end of store items -->
+    </section>
+    <!--end of store items -->
 
     <footer class="container">
         <div class="toTop float-right"><a class='gotopbtn' href="#"><i class="fas fa-arrow-up"></i></a></div>
@@ -206,9 +241,11 @@
     </footer>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
