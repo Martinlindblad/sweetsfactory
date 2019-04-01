@@ -56,7 +56,7 @@ body {
 .max-height {
     min-height: calc(100vh - 1rem);
     background: linear-gradient(var(--yellowTrans), var(--yellowTrans)),
-      url("../img/carousel03.jpg") center/cover fixed no-repeat;
+    url("../img/carousel03.jpg") center/cover fixed no-repeat;
     position: relative;
 }
 .banner {
@@ -92,7 +92,7 @@ body {
     overflow: hidden;
 }
 .show-cart {
-    width: 18rem;
+    width: 25rem;
     padding: 2rem 1.5rem;
     transform: rotateY(-360deg);
 }
@@ -138,6 +138,27 @@ body {
 }
 /* end of cart buttons */
 
+/* about */
+.about-img-container {
+    position: relative;
+}
+.about-img-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: .3rem solid var(--mainYellow);
+    top: -2rem;
+    right: -2rem;
+    z-index: -10;
+    transition: all .3s ease-in-out;
+}
+.about-img-container:hover:before {
+    top: 0;
+    right: 0;
+}
+/* end of about */
+
 /* bestsellers */
 .card {
     width: 18rem;
@@ -163,7 +184,7 @@ body {
 }
 .img-container {
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     cursor: pointer;
 }
 .rounded-circle {
@@ -193,6 +214,7 @@ body {
 }
 .copyright .logo {
     border: 1px solid var(--mainBlack);
+    border-radius: 3px;
     border-radius: 50%;
     padding: 5px 7px;
     transform: translateY(50%);
