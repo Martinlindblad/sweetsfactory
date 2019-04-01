@@ -163,7 +163,6 @@ body {
 }
 .img-container {
     position: relative;
-    overflow: hidden;
     cursor: pointer;
 }
 .rounded-circle {
