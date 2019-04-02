@@ -149,10 +149,36 @@ body {
     font-size: 1.5em;
     font-family: 'Yeseva One', cursive;
 }
+.btn-outline-secondary{
+    background-color: var(--mainPink);
+    color: white;
+    border: none;
+}
+
+/* end of products */
+
+/* modal */
+.btn-secondary{
+    background: var(--mainPink);
+    border: 1px solid var(--mainPink);
+}
+.btn-secondary:hover {
+    background: none;
+    border: none;
+    color: var(--mainPink);
+}
+.icon .far{
+    font-size: 2em;
+    color: cornflowerblue;
+}
+#show-num{
+    font-size: 2.5em;
+}
 
 
 
 
+/* end of modal */
 
 /* footer container */
 .gotopbtn {
