@@ -224,9 +224,22 @@ body {
     text-align: center;
     line-height: 50px;
     color: whitesmoke;
+    opacity: .75;
+    transition: all .2s ease-in;
 }
 .gotopbtn:hover {
     color: white;
+    opacity: 1;
+}
+.gotopbtn .fa-arrow-up {
+    transition: all .6s ease;
+}
+.gotopbtn:hover .fa-arrow-up {
+    font-size: 1.4rem;
+}
+.hidden {
+    display: none;
+    transition: all .5s ease-in-out;
 }
 .copyright .logo {
     border: 1px solid var(--mainBlack);
