@@ -20,12 +20,12 @@ body, html {
   }
   
   /* Images used */
-  .img1 { background-image: url("./img/abundance.jpg"); }
-  .img2 { background-image: url("./img/cakes.jpg"); }
-  .img3 { background-image: url("./img/cinnamon.jpg"); }
-  .img4 { background-image: url("./img/cupcakes.jpg"); }
-  .img5 { background-image: url("./img/donuts.jpg"); }
-  .img6 { background-image: url("./img/eclair.jpg"); }
+  .img1 { background-image: url("abundance.jpg"); }
+  .img2 { background-image: url("cakes.jpg"); }
+  .img3 { background-image: url("cinnamon.jpg"); }
+  .img4 { background-image: url("cupcakes.jpg"); }
+  .img5 { background-image: url("donuts.jpg"); }
+  .img6 { background-image: url("eclair.jpg"); }
   
   /* Position text in the middle of the page/image */
   .bg-text {
