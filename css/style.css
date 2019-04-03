@@ -16,6 +16,12 @@ html {
     scroll-behavior: smooth;
 }
 
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Kaushan Script", cursive;
     font-family: 'Playfair Display', serif;
@@ -95,7 +101,7 @@ body {
     position: absolute;
     min-height: 10rem;
     background: whitesmoke;
-    top: 0;
+    top: 73px;
     right: 0;
     transition: all 0.1s ease-in-out;
     background: rgba(255, 255, 255, 0.8);
@@ -107,6 +113,9 @@ body {
     display: block;
     padding: 2rem 1.5rem;
     transform: rotateY(-360deg);
+}
+.hide-cart {
+    display: none;
 }
 .cart-item {
     transition: all .3s ease-in-out;
@@ -171,6 +180,25 @@ body {
 }
 /* end of about */
 
+#bestseller, #store {
+    display: flex;
+}
+#bestseller::before, #bestseller::after, #store::before, #store::after {
+    content: '';
+    position: absolute;
+    width: 15%;
+    height: 4px;
+    margin-top: 2rem;
+}
+#bestseller::before, #store::before {
+    left: 0;
+    background: linear-gradient(90deg, var(--mainPink), var(--mainYellow, .2), var(--mainGrey, .1));
+}
+#bestseller::after, #store::after {
+    right: 0;
+    background: linear-gradient(90deg, var(--mainGrey, .1), var(--mainYellow, .2), var(--mainPink));
+}
+
 /* bestsellers */
 .card {
     width: 18rem;
@@ -190,6 +218,10 @@ body {
 }
 /* end of bestsellers */
 
+#store {
+    flex-direction: column;
+}
+
 /* store items */
 .store {
     background: var(--mainGrey);
@@ -204,6 +236,8 @@ body {
     cursor: pointer;
 }
 .rounded-circle {
+    height: 150px;
+    width: 150px;
     transition: all .65s ease-in-out;
 }
 .rounded-circle:hover {
@@ -250,14 +284,21 @@ body {
 }
 
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {  }
+@media (max-width: 576px) {
+    .carousel {
+        height: 20rem;
+    }
+    .banner-title {
+        font-size: 2rem;
+    }
+}
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {  }
+@media (max-width: 768px) {
+    .carousel {
+        height: 25rem;
+    }
+}
 
-/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {  }
 
-/* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {  }
