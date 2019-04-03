@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Factory</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="img/sweetLogo.png" type="image/png" sizes="32x32">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg px-4">
+            <a class="navbar-brand" href="#"><img src="img/sweetLogo.svg" alt="" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
+                <span class="toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNav">
+                <ul class="navbar-nav mx-auto text-capitalize">
+                    <li class="nav-item mx-5 active">
+                        <a class="nav-link" href="#">home</a>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link" href="#bestseller">products</a>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link " href="#about">about</a>
+                    </li>
+                </ul>
+                <div class="nav-info-items d-none d-lg-flex ">
+                    <!-- single info -->
+                    <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between ">
+                        <span class="cart-info-icon mr-lg-1"><i class="fas fa-shopping-cart"></i></span>
+                        <span class="badge badge-pill badge-light">2</span>
+                        <!-- <p class="mb-0 text-capitalize"><span id="item-count">2 </span> items - $<span
+                                class="item-total">10.49</span></p> -->
+                    </div>
+                    <!-- end of single info -->
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row max-height justify-content-center align-items-center">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                        <li data-target="#demo" data-slide-to="3"></li>
+                    </ul>
+
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/slideshow1.jpg" alt="slideshow1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slideshow2.jpg" alt="slideshow2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slideshow3.jpg" alt="slideshow3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slideshow4.jpg" alt="slideshow4">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+
+                </div>
+
+                <div class="col-8 mx-auto banner text-center">
+                    <h1 class="text-capitalize">welcome to <strong class="banner-title ">Sweet Factory</strong></h1>
+                    <a href="#store" class="btn banner-link text-uppercase my-2">explore</a>
+                </div>
+
+                <div id="cart" class="cart">
+                    <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                        <img src="img/carousel01.jpg" class="img-fluid card-img" id="item-img" alt="">
+                        <div class="item-text">
+                            <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+                            <span>$</span>
+                            <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
+                        </div>
+                        <a href="#" id='cart-item-remove' class="cart-item-remove">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                    <!--end of  cart item -->
+                    <!-- cart item -->
+                    <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                        <img src="img/carousel02.jpg" class="img-fluid card-img" id="item-img" alt="">
+                        <div class="cart-item-text">
+                            <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+                            <span>$</span>
+                            <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
+                        </div>
+                        <a href="#" id='cart-item-remove' class="cart-item-remove">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                    <!--end of  cart item -->
+                    <!-- cart total -->
+                    <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
+                        <h5>total</h5>
+                        <h5> $ <strong id="cart-total" class="font-weight-bold">10.00</strong> </h5>
+                    </div>
+                    <!--end cart total -->
+                    <!-- cart buttons -->
+                    <div class="cart-buttons-container mt-3 d-flex justify-content-between">
+                        <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear
+                            cart</a>
+                        <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
+                    </div>
+                    <!--end of  cart buttons -->
+                    <!--  -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- about us -->
+    <section class="about py-5" id="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-10 mx-auto col-md-6 my-5">
+                    <h1 class="text-capitalize">about <strong class="banner-title ">us</strong></h1>
+                    <p class="my-4 text-muted w-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+                        aliquam voluptas
+                        beatae vitae expedita consectetur nesciunt quia deserunt asperiores facere fuga dicta fugiat
+                        corrupti et omnis
+                        porro at dolorum! Ad!</p>
+                    <a href="#" class="btn btn-outline-secondary  text-uppercase ">details</a>
+                </div>
+                <div class="col-10 mx-auto col-md-6 align-self-center my-5">
+                    <div class="about-img-container">
+                        <img src="img/about.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- bestseller -->
+    <section id="bestseller" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h1 class="text-capitalize">our <strong class="banner-title ">bestsellers</strong></h1>
+                </div>
+            </div>
+
+            <div class="row mx-auto d-flex justify-content-center">
+                <div class="col-lg-3 card mx-2">
+                    <h4 class="card-title text-center">#01</h4>
+                    <img src="./img/chocodoughnuts.png" alt="" class="card-img mt-5 mb-2">
+                    <p class="card-text text-center text-uppercase">chocolate doughnuts</p>
+                    <p><a class="btn btn-secondary" href="#" role="button">Order</a></p>
+                </div><!-- /.col-lg-3 -->
+                <div class="col-lg-3 card mx-2">
+                    <h4 class="card-title text-center">#02</h4>
+                    <img src="./img/orangecupcakes.png" alt="" class="card-img">
+                    <p class="card-text text-center text-uppercase">orange cupcakes</p>
+                    <p><a class="btn btn-secondary" href="#" role="button">Order</a></p>
+                </div><!-- /.col-lg-3 -->
+                <div class="col-lg-3 card mx-2">
+                    <h4 class="card-title text-center">#03</h4>
+                    <img src="./img/chocochipcookies.png" alt="" class="card-img mb-2">
+                    <p class="card-text text-center text-uppercase">chocolate cookies</p>
+                    <p><a class="btn btn-secondary" href="#" role="button">Order</a></p>
+                </div><!-- /.col-lg-3 -->
+            </div><!-- /.row -->
+        </div>
+    </section>
+
+    <!-- store -->
+    <section id="store" class="store py-5">
+        <div class="container">
+            <!-- section title -->
+            <div class="row">
+                <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h1 class="text-capitalize">our <strong class="banner-title ">products</strong></h1>
+                </div>
+            </div>
+            <!-- end of section title -->
+            <!--filter buttons -->
+            <div class="row">
+                <div class=" col-lg-8 mx-auto d-flex justify-content-around my-2 sortBtn flex-wrap">
+                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
+                        data-filter="all">
+                        all</a>
+                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
+                        data-filter="chocolate">chocolates</a>
+                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
+                        data-filter="cupcakes">cupcakes</a>
+                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
+                        data-filter="cookies">cookies</a>
+                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
+                        data-filter="doughnuts">doughnuts</a>
+                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
+                        data-filter="candy">candy</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10 mx-auto col-md-6">
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder='what is your flavor....'
+                                id="search-item">
+                            <div class="input-group-prepend ">
+                                <span class="input-group-text search-box" id="search-icon"><i
+                                        class="fas fa-search"></i></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--end of .conterner -->
+
+        <div class="row w-100 d-flex justify-content-center">
+            <div class="col-lg-2 d-flex flex-column align-items-center img-container">
+                <img class="rounded-circle" src="./img/chocolate.jpg" alt="Generic placeholder image"  width="160" >
+                <p>chocolates</p>
+            </div><!-- /.col-lg-2 -->
+            <div class="col-lg-2 d-flex flex-column align-items-center">
+                <img class="rounded-circle" src="./img/cupcakes.jpg" alt="Generic placeholder image"  width="160">
+                <p>cupcake</p>
+            </div><!-- /.col-lg-2 -->
+            <div class="col-lg-2 d-flex flex-column align-items-center">
+                <img class="rounded-circle" src="./img/doughnuts.jpg" alt="Generic placeholder image"  width="160" >
+                <p>doughnuts</p>
+            </div><!-- /.col-lg-2 -->
+            <div class="col-lg-2 d-flex flex-column align-items-center">
+                <img class="rounded-circle" src="./img/cookies.jpg" alt="Generic placeholder image"  width="160">
+                <p>cookies</p>
+            </div><!-- /.col-lg-2 -->
+            <div class="col-lg-2 d-flex flex-column align-items-center">
+                <img class="rounded-circle" src="./img/candy.jpg" alt="Generic placeholder image"  width="160">
+                <p>candy</p>
+            </div><!-- /.col-lg-2 -->
+        </div><!-- /.row -->
+    </section>
+    <!--end of store items -->
+
+    <footer class="container">
+        <div class="toTop float-right"><a class='gotopbtn hidden' href="#"><i class="fas fa-arrow-up"></i></a></div>
+        <div class="copyright">
+            <img src="img/sweetLogo.svg" alt="" class="logo">
+            <p class="text-center">&copy; 2019 Sweet Factory, Inc. </p>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
