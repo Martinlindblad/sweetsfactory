@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 @import url('https://fonts.googleapis.com/css?family=Yeseva+One');
 @import url('https://fonts.googleapis.com/css?family=Pinyon+Script');
-
 :root {
     --mainPink: #ef7998;
     --mainYellow: rgb(249, 228, 148);
@@ -11,21 +10,17 @@
     --mainGrey: rgb(238, 238, 238);
     --mainBlack: #343a40;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
 body {
     font-family: "Kaushan Script", cursive;
     font-family: 'Playfair Display', serif;
 }
-
 .logo {
     width: 2rem;
     height: auto;
 }
-
 .nav-link {
     color: var(--mainBlack);
     font-size: 1.5rem;
@@ -94,10 +89,11 @@ body {
 #cart-item-price {
     font-size: 0.8rem;
 }
-/* cart item */
+/* end of cart item */
 
 /* cart buttons */
-.btn{
+
+.btn {
     letter-spacing: 0.15em;
     border-radius: 0;
 }
@@ -120,45 +116,90 @@ body {
 /* end of cart buttons */
 
 /* banner scroll */
-.max-height {
+
+/* .max-height {
     min-height: calc(70vh - 1rem);
-    background: linear-gradient(var(--yellowTrans), var(--yellowTrans)),
-      url("./img/bg-img.jpg") center/cover fixed no-repeat;
+    background: linear-gradient(var(--yellowTrans), var(--yellowTrans)), url("./img/bg-img.jpg") center/cover fixed no-repeat;
     position: relative;
-}
-.banner-title{
+} */
+
+.banner-title, .product-title {
     color: var(--mainPink);
     font-size: 4rem;
     font-family: 'Yeseva One', cursive;
 }
-.banner-link {
-    font-size: 1.5rem;
-    color: white;
-    border: 0.2rem solid white;
+.product-title{
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    text-align: center;
+    margin: 0 auto;
 }
-.banner-link:hover {
-    color: var(--mainBlack);
+.bg-image {
+    /* Full height */
+    height: 70vh;
+    width: 100vw;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-position: fixed;
 }
+/* Images used */
+.img1 {
+    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("./img/bg-img.jpg");
+}
+.img2 {
+    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("./img/bg-img2.jpg");
+}
+.img3 {
+    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("./img/bg-img3.jpg");
+}
+.img4 {
+    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("./img/bg-img4.jpg");
+}
+.img5 {
+    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("./img/bg-img5.jpg");
+}
+.img6 {
+    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("./img/bg-img6.jpg");
+}
+.banner-roll {
+    width: 100vw;
+    overflow-y: scroll;
+    height: 70vh;
+    scrollbar-width: none;
+}
+.big-nothing {
+    height: 500px;
+    width: 100%;
+}
+.banner {
+    height: 100%;
+    position: relative;
+    margin: 0%;
+    width: 100vw;
+}
+
 /* end of banner scroll */
 
 /* Products */
-.card{
+.card {
     border: none;
 }
-.price{
+.price {
     font-size: 1.5em;
     font-family: 'Yeseva One', cursive;
 }
-.btn-outline-secondary{
+.btn-outline-secondary {
     background-color: var(--mainPink);
     color: white;
     border: none;
 }
-
 /* end of products */
 
 /* modal */
-.btn-secondary{
+.btn-secondary {
     background: var(--mainPink);
     border: 1px solid var(--mainPink);
 }
@@ -167,17 +208,13 @@ body {
     border: none;
     color: var(--mainPink);
 }
-.icon .far{
+.icon .far {
     font-size: 2em;
     color: cornflowerblue;
 }
-#show-num{
+#show-num {
     font-size: 2.5em;
 }
-
-
-
-
 /* end of modal */
 
 /* footer container */
@@ -216,38 +253,16 @@ body {
     padding: 5px 7px;
     transform: translateY(50%);
 }
-
-
-
-
-
 /* ____________________________Category_________________________ */
 
-.bg-image {
-    /* Full height */
-    height: 70vh; 
-    width: 100vw;
-    
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100vw;
-    background-position: fixed;
-  }
-  
-  /* Images used */
-  .img1 { background-image: url("abundance.jpg"); }
-  .img2 { background-image: url("cakes.jpg"); }
-  .img3 { background-image: url("cinnamon.jpg"); }
-  .img4 { background-image: url("cupcakes.jpg"); }
-  .img5 { background-image: url("donuts.jpg"); }
-  .img6 { background-image: url("eclair.jpg"); }
-  
-  /* Position text in the middle of the page/image */
-  .bg-text {
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-    color: white;
+/* Position text in the middle of the page/image */
+
+/* .bg-text { */
+    /* background-color: rgb(0, 0, 0); */
+    /* Fallback color */
+    /* background-color: rgba(0, 0, 0, 0.4); */
+    /* Black w/opacity/see-through */
+    /* color: white;
     text-shadow: var(--mainPink) 1px 2px 3px;
     font-weight: bold;
     font-size: 4rem;
@@ -261,27 +276,4 @@ body {
     width: 50vw;
     padding: 10px;
     font-family: var(--font-family-monospace);
- 
-
-}
-.banner-roll{
-    width: 100vw;
-    overflow-y: scroll;
-    height: 70vh;
-    scrollbar-width: none;
-    
-}
-
-
-  .big-nothing{
-      height: 500px;
-      width: 100%;
-  }
-
-  .banner {
-    height:100%;
-    position:relative;
-    margin: 0% ;
-    width: 100vw;
-
-}
+} */
