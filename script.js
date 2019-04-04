@@ -1,23 +1,14 @@
-const cartBtn = document.querySelector('.cart-info');
-const cart = document.querySelector('.cart');
-
 const scrollTop = document.querySelector('.gotopbtn');
 const aboutSec = document.querySelector('#about');
 const topOfAbout = aboutSec.offsetTop;
 
-// display shopping cart
-cartBtn.addEventListener('click', () => {
-    cart.classList.add('show-cart');
-});
+// toggle shopping cart
+(function() {
+    const cartInfo = document.querySelector('.cart-info');
+    const cart = document.querySelector('.cart');
 
-// click outside the shopping cart to hide it
-document.addEventListener('click', (e) => {
-    if(!e.target.closest('.cart'))
-    // console.log('click');
-    return;
-
-    cart.classList.toggle('show-cart')
-});
+    cartInfo.addEventListener('click', () => cart.classList.toggle('show-cart'));
+})();
 
 // toggle scroll top arrow when it hits #about
 function toTop() {
