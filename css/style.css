@@ -33,12 +33,12 @@ body {
 }
 
 .nav-link {
-    color: var(--mainPink);
+    color: var(--mainBlack);
     font-size: 1.5rem;
     transition: all 0.5s ease-in-out;
 }
 .nav-link:hover {
-    color: var(--mainBlack);
+    color: var(--mainPink);
 }
 /* info icons */
 .cart-info-icon {
@@ -82,18 +82,17 @@ body {
 .banner-title {
     color: var(--mainPink);
     font-size: 4rem;
-    font-family: "Lobster";
     font-family: 'Yeseva One', cursive;
 }
 .banner-link {
     font-size: 1.5rem;
-    color: var(--mainBlack);
+    color: whitesmoke;
     border: 0.2rem solid var(--mainBlack);
     background: var(--mainGrey);
     --mainGrey: rgba(218, 218, 218, 0.37);
 }
 .banner-link:hover {
-    color: var(--mainPink);
+    color: var(--mainBlack);
 }
 /* endo of banner */
 
@@ -104,16 +103,14 @@ body {
     background: whitesmoke;
     top: 73px;
     right: 0;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.3s ease-in-out;
     background: rgba(255, 255, 255, 0.8);
-    width: 25rem;
+    width: 0;
     overflow: hidden;
-    display: none;
 }
 .show-cart {
-    display: block;
+    width: 30rem;
     padding: 2rem 1.5rem;
-    transform: rotateY(-360deg);
 }
 .cart-item {
     transition: all .3s ease-in-out;
@@ -178,21 +175,21 @@ body {
 }
 /* end of about */
 
-#bestseller, #store {
+#bestseller, #contact {
     display: flex;
 }
-#bestseller::before, #bestseller::after, #store::before, #store::after {
+#bestseller::before, #bestseller::after, #contact::before, #contact::after {
     content: '';
     position: absolute;
     width: 15%;
     height: 4px;
     margin-top: 2rem;
 }
-#bestseller::before, #store::before {
+#bestseller::before, #contact::before {
     left: 0;
     background: linear-gradient(90deg, var(--mainPink), var(--mainYellow, .2), var(--mainGrey, .1));
 }
-#bestseller::after, #store::after {
+#bestseller::after, #contact::after {
     right: 0;
     background: linear-gradient(90deg, var(--mainGrey, .1), var(--mainYellow, .2), var(--mainPink));
 }

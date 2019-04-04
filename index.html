@@ -31,14 +31,15 @@
                     <li class="nav-item mx-5">
                         <a class="nav-link " href="#about">about</a>
                     </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link " href="#contact">contact</a>
+                    </li>
                 </ul>
                 <div class="nav-info-items d-none d-lg-flex ">
                     <!-- single info -->
                     <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between ">
                         <span class="cart-info-icon mr-lg-1"><i class="fas fa-shopping-cart"></i></span>
-                        <span class="badge badge-pill badge-light">2</span>
-                        <!-- <p class="mb-0 text-capitalize"><span id="item-count">2 </span> items - $<span
-                                class="item-total">10.49</span></p> -->
+                        <span class="badge badge-pill badge-light">1</span>
                     </div>
                     <!-- end of single info -->
                 </div>
@@ -89,31 +90,27 @@
                 </div>
 
                 <div id="cart" class="cart">
-                    <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                    <div class="cart-item d-flex text-capitalize my-3">
                         <img src="img/carousel01.jpg" class="img-fluid card-img" id="item-img" alt="">
-                        <div class="item-text">
+                        <div class="item-text mx-5">
                             <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
                             <span>$</span>
                             <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
                         </div>
-                        <a href="#" id='cart-item-remove' class="cart-item-remove">
-                            <i class="fas fa-trash"></i>
-                        </a>
-                    </div>
-                    <!--end of  cart item -->
-                    <!-- cart item -->
-                    <div class="cart-item d-flex justify-content-between text-capitalize my-3">
-                        <img src="img/carousel02.jpg" class="img-fluid card-img" id="item-img" alt="">
-                        <div class="cart-item-text">
-                            <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
-                            <span>$</span>
-                            <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
+                        <div class="row mx-auto d-flex justify-content-center py-0 icon">
+                            <span class="text-center mx-1 my-auto" id="minus" role="button"><i
+                                    class="far fa-minus-square"></i></span>
+                            <span class="text-center mx-4 my-auto"
+                                id="show-num">1</span>
+                            <span class="text-center mx-1 my-auto" id="plus"
+                                role="button"><i class="far fa-plus-square"></i></a>
                         </div>
-                        <a href="#" id='cart-item-remove' class="cart-item-remove">
+                        <a href="#" id='cart-item-remove' class="cart-item-remove my-auto">
                             <i class="fas fa-trash"></i>
                         </a>
                     </div>
                     <!--end of  cart item -->
+
                     <!-- cart total -->
                     <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
                         <h5>total</h5>
@@ -170,19 +167,19 @@
                     <h4 class="card-title text-center">#01</h4>
                     <img src="./img/chocodoughnuts.png" alt="" class="card-img mt-5 mb-2">
                     <p class="card-text text-center text-uppercase">chocolate doughnuts</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">Order</a></p>
+                    <p><button class="btn btn-secondary store-item-icon">Order</button></p>
                 </div><!-- /.col-lg-3 -->
                 <div class="col-lg-3 card mx-2">
                     <h4 class="card-title text-center">#02</h4>
                     <img src="./img/orangecupcakes.png" alt="" class="card-img">
                     <p class="card-text text-center text-uppercase">orange cupcakes</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">Order</a></p>
+                    <p><button class="btn btn-secondary store-item-icon">Order</button></p>
                 </div><!-- /.col-lg-3 -->
                 <div class="col-lg-3 card mx-2">
                     <h4 class="card-title text-center">#03</h4>
                     <img src="./img/chocochipcookies.png" alt="" class="card-img mb-2">
                     <p class="card-text text-center text-uppercase">chocolate cookies</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">Order</a></p>
+                    <p><button class="btn btn-secondary store-item-icon">Order</button></p>
                 </div><!-- /.col-lg-3 -->
             </div><!-- /.row -->
         </div>
@@ -258,6 +255,19 @@
         </div><!-- /.row -->
     </section>
     <!--end of store items -->
+
+    <!-- contact -->
+    <section id="contact" class="contact py-5">
+        <div class="container">
+            <!-- section title -->
+            <div class="row">
+                <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h1 class="text-capitalize"><strong class="banner-title ">contact</strong> us</h1>
+                </div>
+            </div>
+            <!-- end of section title -->
+        </div>
+    </section>
 
     <footer class="container">
         <div class="toTop float-right"><a class='gotopbtn hidden' href="#"><i class="fas fa-arrow-up"></i></a></div>
