@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="./products.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="icon" href="./img/sweetLogo.png" type="image/png" sizes="32x32">
-    <script src="category.js"></script>
 </head>
 
 <body>
@@ -442,20 +441,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-    <!-- <script src="./category.js"></script> -->
+    <script src="./category.js"></script>
     <!-- <script src="script.js"></script> -->
     <script>
-        // toggle scroll top arrow when it hits #about
-        const scrollTop = document.querySelector('.gotopbtn');
-        const productsSec = document.querySelector('#products');
-        const topOfAbout = productsSec.offsetTop;
-
-        function toTop() {
-            (window.scrollY >= topOfAbout) ? scrollTop.classList.remove('hidden') : scrollTop.classList.add('hidden');
-        }
-
-        window.addEventListener('scroll', toTop);
-
         /*-----------modal window-----------------*/
         $('#myModal').on('shown.bs.modal', function () {
             $('#myInput').trigger('focus')
@@ -528,22 +516,9 @@
                 showAmout.html(total.toFixed(2));
 
             }
-
-            /*---------------- När man trycker cancel ------------------*/
-            cancel.on('click', function() {
-                  
-            });
-
-           
         }); // ready
 
-
-
-
-
     </script>
-    
-   
 </body>
 
 </html>
