@@ -1,8 +1,8 @@
 
 
 {
-  "sweets":[
-    {"cupcake": "cupcakeTitle1", "sort" : "Cupcake", "price": 1.5, "quantity" : 0, "taste" : "Chocolate"},
+  "Doughnut":[
+    {"name": "chocolate punch", "description" : "Fresh yeast doughnut topped with chocolate fudge glazed with nuts", "price": 3.50, "picture": ""},
     {"cupcake": "cupcakeTitle2", "sort" : "Cupcake", "price": 2, "quantity" : 0, "taste" : "Apple"},
     {"cupcake": "cupcakeTitle3", "sort" : "Cupcake", "price": 1, "quantity" : 0, "taste" : "Cinnamon"},
     {"Chocolate" : "ChokolateTitle1", "sort" : "Chocolate", "price": 1.50, "quantity" : 0, "taste" : "Mint"},
