@@ -1,0 +1,46 @@
+.form-control{
+    border: 1px solid  #ef7998;
+    box-shadow: 0 4px 8px 0 #ef79984a;
+    position: relative;
+}
+.rounded{
+    box-shadow: 0 4px 8px 0 #ef79984a;
+    height: 30vh;
+}
+#exampleFormControlTextarea1{
+    max-height: 10vh;
+}
+.container{
+    border: 1px solid #ef7998;
+    border-radius: 5px 5px 00;
+    box-shadow: 0 4px 8px 0 #ef79984a;
+    background: #f0f2f342;  /* fallback for old browsers */
+    
+}
+.btn-default{
+    background-color: #ef7998;
+    color: white;
+    font-size: 1.8rem;
+}
+
+/* glyphicon-remove : kross 
+    glyphicon-ok : check
+    glyphicon-warning-sign
+
+*/
+
+
+.green{
+    
+    border: green solid 2px;
+}
+.red{
+    
+    border: red solid 2px;
+}
+.form-control-green :focus{
+    border: 1px solid green;
+}
+.form-control-red :focus{
+    border: 1px solid red;
+}

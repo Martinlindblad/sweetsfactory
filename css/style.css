@@ -33,12 +33,12 @@ body {
 }
 
 .nav-link {
-    color: var(--mainPink);
+    color: var(--mainBlack);
     font-size: 1.5rem;
     transition: all 0.5s ease-in-out;
 }
 .nav-link:hover {
-    color: var(--mainBlack);
+    color: var(--mainPink);
 }
 /* info icons */
 .cart-info-icon {
@@ -77,22 +77,22 @@ body {
 }
 .banner {
     color: whitesmoke;
-    margin-top: -50%;
+    margin-top: -35%;
 }
 .banner-title {
     color: var(--mainPink);
     font-size: 4rem;
-    font-family: "Lobster";
     font-family: 'Yeseva One', cursive;
 }
 .banner-link {
     font-size: 1.5rem;
-    color: var(--mainBlack);
+    color: whitesmoke;
     border: 0.2rem solid var(--mainBlack);
+    background: var(--mainGrey);
+    --mainGrey: rgba(218, 218, 218, 0.37);
 }
 .banner-link:hover {
-    /* background: var(--mainBlack); */
-    color: var(--mainPink);
+    color: var(--mainBlack);
 }
 /* endo of banner */
 
@@ -103,19 +103,14 @@ body {
     background: whitesmoke;
     top: 73px;
     right: 0;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.3s ease-in-out;
     background: rgba(255, 255, 255, 0.8);
-    width: 25rem;
+    width: 0;
     overflow: hidden;
-    display: none;
 }
 .show-cart {
-    display: block;
+    width: 30rem;
     padding: 2rem 1.5rem;
-    transform: rotateY(-360deg);
-}
-.hide-cart {
-    display: none;
 }
 .cart-item {
     transition: all .3s ease-in-out;
@@ -137,6 +132,9 @@ body {
 }
 #cart-item-price {
     font-size: 0.8rem;
+}
+.cart-quantity-input {
+    width: 20%
 }
 /* cart item */
 
@@ -180,21 +178,21 @@ body {
 }
 /* end of about */
 
-#bestseller, #store {
+#bestseller, #contact {
     display: flex;
 }
-#bestseller::before, #bestseller::after, #store::before, #store::after {
+#bestseller::before, #bestseller::after, #contact::before, #contact::after {
     content: '';
     position: absolute;
     width: 15%;
     height: 4px;
     margin-top: 2rem;
 }
-#bestseller::before, #store::before {
+#bestseller::before, #contact::before {
     left: 0;
     background: linear-gradient(90deg, var(--mainPink), var(--mainYellow, .2), var(--mainGrey, .1));
 }
-#bestseller::after, #store::after {
+#bestseller::after, #contact::after {
     right: 0;
     background: linear-gradient(90deg, var(--mainGrey, .1), var(--mainYellow, .2), var(--mainPink));
 }
@@ -238,6 +236,7 @@ body {
 .rounded-circle {
     height: 150px;
     width: 150px;
+    object-fit: cover;
     transition: all .65s ease-in-out;
 }
 .rounded-circle:hover {
@@ -284,21 +283,128 @@ body {
 }
 
 
+
+/* _________________________FORM_________________________ */
+
+.form-control{
+    border: 1px solid  #ef7998;
+    box-shadow: 0 4px 8px 0 #ef79984a;
+    position: relative;
+    width: 30vw;
+}
+.form-group{
+    margin: 0% auto;
+}
+.rounded{
+    /* box-shadow: 0 4px 8px 0 #ef79984a; */
+    /* height: 40vh; */
+    float: right;
+}
+
+#kaka{
+    width: 300px;
+    height: 300px;
+}
+
+.non-click{
+    
+        pointer-events: none;
+        cursor: default;
+    
+}
+.container-form{
+    position: relative;
+    text-align: center;
+
+    border-radius: 1%;
+    
+    box-shadow: 0px 0px 0px 1px #ef79981a;
+    
+    background: var(--mainGrey);
+    
+    
+    width: 100vw;
+    
+    padding: 5%;    
+    
+}
+
+.btn-default{
+    background-color: #ef7998;
+    color: white;
+    font-size: 1.8rem;
+}
+
+/* glyphicon-remove : kross 
+    glyphicon-ok : check
+    glyphicon-warning-sign
+
+*/
+
+
+.green{
+    
+    border: green solid 2px;
+}
+.red{
+    
+    border: red solid 2px;
+}
+.form-control-green :focus{
+    border: 1px solid green;
+}
+.form-control-red :focus{
+    border: 1px solid red;
+}
+
+
+/* ___________________MEDIA QUERYS__________________ */
+
+
+
 @media (max-width: 576px) {
     .carousel {
-        height: 20rem;
+        height: 18rem;
+    }
+    .banner h1 {
+        font-size: 1.2rem;
     }
     .banner-title {
-        font-size: 2rem;
+        font-size: 1.3rem;
+    }
+    .banner-link {
+        font-size: 1.1rem;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 577px) {
     .carousel {
         height: 25rem;
     }
+    .banner h1 {
+        font-size: 1.4rem;
+    }
+    .banner-title {
+        font-size: 1.5rem;
+    }
+    .banner-link {
+        font-size: 1.3rem;
+    }
 }
 
-@media (min-width: 992px) {  }
+@media (max-width: 992px) and (min-width: 769px) {
+    .carousel {
+        height: 28rem;
+    }
+    .banner h1 {
+        font-size: 1.8rem;
+    }
+    .banner-title {
+        font-size: 1.8rem;
+    }
+    .banner-link {
+        font-size: 1.5rem;
+    }
+}
 
-@media (min-width: 1200px) {  }
+@media (max-width: 1200px) and (mn-width: 993px) {  }

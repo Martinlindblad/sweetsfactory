@@ -1,0 +1,21 @@
+
+
+{
+  "Doughnut":[
+    {"name": "chocolate punch", "description" : "Fresh yeast doughnut topped with chocolate fudge glazed with nuts", "price": 3.50, "picture": ""},
+    {"cupcake": "cupcakeTitle2", "sort" : "Cupcake", "price": 2, "quantity" : 0, "taste" : "Apple"},
+    {"cupcake": "cupcakeTitle3", "sort" : "Cupcake", "price": 1, "quantity" : 0, "taste" : "Cinnamon"},
+    {"Chocolate" : "ChokolateTitle1", "sort" : "Chocolate", "price": 1.50, "quantity" : 0, "taste" : "Mint"},
+    {"Chocolate" : "ChokolateTitle2", "sort" : "Chocolate", "price": 2, "quantity" : 0, "taste" : "White"},
+    {"Chocolate" : "ChokolateTitle3", "sort" : "Chocolate", "price": 2, "quantity" : 0, "taste" : "Orange"},
+    {"Doughnut" : "DoughnutTitle1", "sort" : "Doughnut", "price": 1, "quantity" : 0, "taste" : "Vanila"},
+    {"Doughnut" : "DoughnutTitle2", "sort" : "Doughnut", "price": 2, "quantity" : 0, "taste" : "Chocolate"},
+    {"Doughnut" : "DoughnutTitle3", "sort" : "Doughnut", "price": 3, "quantity" : 0, "taste" : "Strawberry"},
+    {"Candy" : "CandyTitle1", "sort" : "Candy", "price": 1, "quantity" : 0, "taste" : "Vanila"},
+    {"Candy" : "CandyTitle2", "sort" : "Candy", "price": 2, "quantity" : 0, "taste" : "Chocolate"},
+    {"Candy" : "CandyTitle3", "sort" : "Candy", "price": 3, "quantity" : 0, "taste" : "Strawberry"},
+    {"Cookie" : "CookieTitle1", "sort" : "Cookie", "price": 1, "quantity" : 0, "taste" : "Vanila"},
+    {"Cookie" : "CookieTitle2", "sort" : "Cookie", "price": 2, "quantity" : 0, "taste" : "Chocolate"},
+    {"Cookie" : "CookieTitle3", "sort" : "Cookie", "price": 3, "quantity" : 0, "taste" : "Strawberry"}
+  ]
+}

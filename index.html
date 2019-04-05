@@ -2,15 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sweet Factory</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Factory</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-  crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" href="img/sweetLogo.png" type="image/png" sizes="32x32">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="img/sweetLogo.png" type="image/png" sizes="32x32">
+    
 </head>
 
 <body>
@@ -31,14 +32,15 @@
                     <li class="nav-item mx-5">
                         <a class="nav-link " href="#about">about</a>
                     </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link " href="#contact">contact</a>
+                    </li>
                 </ul>
                 <div class="nav-info-items d-none d-lg-flex ">
                     <!-- single info -->
                     <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between ">
                         <span class="cart-info-icon mr-lg-1"><i class="fas fa-shopping-cart"></i></span>
-                        <span class="badge badge-pill badge-light">2</span>
-                        <!-- <p class="mb-0 text-capitalize"><span id="item-count">2 </span> items - $<span
-                                class="item-total">10.49</span></p> -->
+                        <span class="badge badge-pill badge-light">0</span>
                     </div>
                     <!-- end of single info -->
                 </div>
@@ -74,12 +76,12 @@
                     </div>
 
                     <!-- Left and right controls -->
-                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <!-- <a class="carousel-control-prev" href="#demo" data-slide="prev">
                         <span class="carousel-control-prev-icon"></span>
                     </a>
                     <a class="carousel-control-next" href="#demo" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
-                    </a>
+                    </a> -->
 
                 </div>
 
@@ -89,42 +91,31 @@
                 </div>
 
                 <div id="cart" class="cart">
-                    <div class="cart-item d-flex justify-content-between text-capitalize my-3">
-                        <img src="img/carousel01.jpg" class="img-fluid card-img" id="item-img" alt="">
-                        <div class="item-text">
-                            <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+                    <!-- cart-items -->
+                    <div class="cart-items text-capitalize my-3">
+                        <!-- <div class="cart-item d-flex align-items-center justify-content-between">
+                            <img src="img/carousel01.jpg" class="img-fluid card-img" id="item-img" alt="">
+                            <span class="item-text mx-5">cart item</span>
                             <span>$</span>
                             <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
-                        </div>
-                        <a href="#" id='cart-item-remove' class="cart-item-remove">
-                            <i class="fas fa-trash"></i>
-                        </a>
+                            <input type="number" value="2" class="cart-quantity-input">
+                            <button id='cart-item-remove' class="btn cart-item-remove my-auto">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>end .cart-item -->
                     </div>
-                    <!--end of  cart item -->
-                    <!-- cart item -->
-                    <div class="cart-item d-flex justify-content-between text-capitalize my-3">
-                        <img src="img/carousel02.jpg" class="img-fluid card-img" id="item-img" alt="">
-                        <div class="cart-item-text">
-                            <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
-                            <span>$</span>
-                            <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
-                        </div>
-                        <a href="#" id='cart-item-remove' class="cart-item-remove">
-                            <i class="fas fa-trash"></i>
-                        </a>
-                    </div>
-                    <!--end of  cart item -->
+
                     <!-- cart total -->
                     <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
                         <h5>total</h5>
-                        <h5> $ <strong id="cart-total" class="font-weight-bold">10.00</strong> </h5>
+                        <h5> $ <strong id="cart-total" class="font-weight-bold cart-total-price">0</strong> </h5>
                     </div>
                     <!--end cart total -->
                     <!-- cart buttons -->
                     <div class="cart-buttons-container mt-3 d-flex justify-content-between">
                         <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear
                             cart</a>
-                        <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
+                        <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink btn-checkout">checkout</a>
                     </div>
                     <!--end of  cart buttons -->
                     <!--  -->
@@ -170,19 +161,22 @@
                     <h4 class="card-title text-center">#01</h4>
                     <img src="./img/chocodoughnuts.png" alt="" class="card-img mt-5 mb-2">
                     <p class="card-text text-center text-uppercase">chocolate doughnuts</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">Order</a></p>
+                    <button class="btn btn-secondary store-item-icon">Add To Cart</button>
+                    <span class="cart-item-price" class="mb-0">10.99</span>
                 </div><!-- /.col-lg-3 -->
                 <div class="col-lg-3 card mx-2">
                     <h4 class="card-title text-center">#02</h4>
                     <img src="./img/orangecupcakes.png" alt="" class="card-img">
                     <p class="card-text text-center text-uppercase">orange cupcakes</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">Order</a></p>
+                    <button class="btn btn-secondary store-item-icon">Add To Cart</button>
+                    <span class="cart-item-price" class="mb-0">10.99</span>
                 </div><!-- /.col-lg-3 -->
                 <div class="col-lg-3 card mx-2">
                     <h4 class="card-title text-center">#03</h4>
                     <img src="./img/chocochipcookies.png" alt="" class="card-img mb-2">
                     <p class="card-text text-center text-uppercase">chocolate cookies</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">Order</a></p>
+                    <button class="btn btn-secondary store-item-icon">Add To Cart</button>
+                    <span class="cart-item-price" class="mb-0">10.99</span>
                 </div><!-- /.col-lg-3 -->
             </div><!-- /.row -->
         </div>
@@ -259,21 +253,110 @@
     </section>
     <!--end of store items -->
 
-    <footer class="container">
-        <div class="toTop float-right"><a class='gotopbtn hidden' href="#"><i class="fas fa-arrow-up"></i></a></div>
-        <div class="copyright">
-            <img src="img/sweetLogo.svg" alt="" class="logo">
-            <p class="text-center">&copy; 2019 Sweet Factory, Inc. </p>
+    <!-- contact -->
+    <section id="contact" class="contact py-5">
+        <div class="container">
+            <!-- section title -->
+            <div class="row">
+                <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h1 class="text-capitalize"><strong class="banner-title ">contact</strong> us</h1>
+                </div>
+            </div>
+            <!-- end of section title -->
+
         </div>
-    </footer>
+
+    </section>
+         
+    <div class=" container-form">
+        <section class="row">
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            <div class="col-5">
+                <div>
+                    <a href=""
+                    type="button"
+                    id="submit"
+                    value="Submit"
+                    name="submit"
+                    data-toggle="modal"
+                    data-target="#exampleModal">
+                        <img class="rounded rounded-circle" id="kaka" src="./img/kaka-1.jpg" alt="">
+                    </a> 
+
+                </div>
+               
+            
+            </div>
+            
+            <form id="form" action="" class="form-group col-5 " method="post" class="a">
+                
+                <input id="Name" type="text" class="form-control" placeholder="Name:">
+                <br>
+                <input
+                type="email"
+                class="form-control "
+                id="email"
+                placeholder="name@example.com"
+                >
+                <br>
+                <input
+                id="phone"
+                type="text"
+                class="form-control bfh-phone"
+                placeholder="Phone: (+46) "
+                >
+                <br>
+                <textarea
+                class="form-control help-block"
+                id="exampleFormControlTextarea1"
+                placeholder="Message.."
+                rows="3"
+                ></textarea> <br>
+                
+            </form>
+        </div>
+    </section>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static"> 
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SweetsFactory</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="add-modal">
+                                <h2 id="add-modal-h2"></h2>
+                                <p id="add-modal-p"></p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <footer class="container">
+            <div class="toTop float-right"><a class='gotopbtn hidden' href="#"><i class="fas fa-arrow-up"></i></a></div>
+            <div class="copyright">
+                <img src="img/sweetLogo.svg" alt="" class="logo">
+                <p class="text-center">&copy; 2019 Sweet Factory, Inc. </p>
+            </div>
+        </footer>
+        
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-</body>
-
-</html>
+        <script src="script.js"></script>
+        <script src="form.js"></script>
+    </body>
+    
+    </html>
