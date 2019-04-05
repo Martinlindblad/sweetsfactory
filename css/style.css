@@ -283,6 +283,85 @@ body {
 }
 
 
+
+/* _________________________FORM_________________________ */
+
+.form-control{
+    border: 1px solid  #ef7998;
+    box-shadow: 0 4px 8px 0 #ef79984a;
+    position: relative;
+    width: 30vw;
+}
+.form-group{
+    margin: 0% auto;
+}
+.rounded{
+    /* box-shadow: 0 4px 8px 0 #ef79984a; */
+    /* height: 40vh; */
+    float: right;
+}
+
+#kaka{
+    width: 300px;
+    height: 300px;
+}
+
+.non-click{
+    
+        pointer-events: none;
+        cursor: default;
+    
+}
+.container-form{
+    position: relative;
+    text-align: center;
+
+    border-radius: 1%;
+    
+    box-shadow: 0px 0px 0px 1px #ef79981a;
+    
+    background: var(--mainGrey);
+    
+    
+    width: 100vw;
+    
+    padding: 5%;    
+    
+}
+
+.btn-default{
+    background-color: #ef7998;
+    color: white;
+    font-size: 1.8rem;
+}
+
+/* glyphicon-remove : kross 
+    glyphicon-ok : check
+    glyphicon-warning-sign
+
+*/
+
+
+.green{
+    
+    border: green solid 2px;
+}
+.red{
+    
+    border: red solid 2px;
+}
+.form-control-green :focus{
+    border: 1px solid green;
+}
+.form-control-red :focus{
+    border: 1px solid red;
+}
+
+
+/* ___________________MEDIA QUERYS__________________ */
+
+
+
 @media (max-width: 576px) {
     .carousel {
         height: 18rem;

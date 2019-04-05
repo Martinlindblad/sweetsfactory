@@ -11,6 +11,7 @@
     crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="img/sweetLogo.png" type="image/png" sizes="32x32">
+    
 </head>
 
 <body>
@@ -267,24 +268,100 @@
                 </div>
             </div>
             <!-- end of section title -->
+
+        </div>
+
+    </section>
+         
+    <div class=" container-form">
+        <section class="row">
+
+
+            <div class="col-5">
+                <div>
+                    <a href=""
+                    type="button"
+                    id="submit"
+                    value="Submit"
+                    name="submit"
+                    data-toggle="modal"
+                    data-target="#exampleModal">
+                        <img class="rounded rounded-circle" id="kaka" src="./img/kaka-1.jpg" alt="">
+                    </a> 
+
+                </div>
+               
+            
+            </div>
+            
+            <form id="form" action="" class="form-group col-5 " method="post" class="a">
+                
+                <input id="Name" type="text" class="form-control" placeholder="Name:">
+                <br>
+                <input
+                type="email"
+                class="form-control "
+                id="email"
+                placeholder="name@example.com"
+                >
+                <br>
+                <input
+                id="phone"
+                type="text"
+                class="form-control bfh-phone"
+                placeholder="Phone: (+46) "
+                >
+                <br>
+                <textarea
+                class="form-control help-block"
+                id="exampleFormControlTextarea1"
+                placeholder="Message.."
+                rows="3"
+                ></textarea> <br>
+                
+            </form>
         </div>
     </section>
-
-    <footer class="container">
-        <div class="toTop float-right"><a class='gotopbtn hidden' href="#"><i class="fas fa-arrow-up"></i></a></div>
-        <div class="copyright">
-            <img src="img/sweetLogo.svg" alt="" class="logo">
-            <p class="text-center">&copy; 2019 Sweet Factory, Inc. </p>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static"> 
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SweetsFactory</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="add-modal">
+                                <h2 id="add-modal-h2"></h2>
+                                <p id="add-modal-p"></p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        
+        
+        
+        <footer class="container">
+            <div class="toTop float-right"><a class='gotopbtn hidden' href="#"><i class="fas fa-arrow-up"></i></a></div>
+            <div class="copyright">
+                <img src="img/sweetLogo.svg" alt="" class="logo">
+                <p class="text-center">&copy; 2019 Sweet Factory, Inc. </p>
+            </div>
+        </footer>
+        
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-</body>
-
-</html>
+        <script src="script.js"></script>
+        <script src="form.js"></script>
+    </body>
+    
+    </html>
