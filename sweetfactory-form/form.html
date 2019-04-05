@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Formulär</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+     
+    <div class="container">
+      <form action="" class="form-group " method="post" class="a">
+        
+        <input id="Name" type="text" class="form-control" placeholder="Name:">
+        <br>
+        <input
+        type="email"
+        class="form-control "
+        id="email"
+        placeholder="name@example.com"
+        >
+        <br>
+        <input
+        id="phone"
+        type="text"
+        class="form-control bfh-phone"
+        placeholder="Phone: (+46) "
+        >
+        <br>
+        <textarea
+        class="form-control help-block"
+        id="exampleFormControlTextarea1"
+        placeholder="Message.."
+        rows="3"
+        ></textarea>
+        
+        <input
+        type="button"
+        id="submit"
+        value="Submit"
+        class="btn-lg btn-default"
+        name="submit"
+        data-toggle="modal"
+         data-target="#exampleModal"
+        >
+      </form>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">SweetsFactory</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h2>Thank You!</h2>
+            <p>For submiting your information, we will contact you soon!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="form.js"></script>
+  </body>
+  </html>
+  
