@@ -64,47 +64,33 @@
         <!-- end of banner roll-->
 
         <div id="cart" class="cart">
-            <div class="cart-item d-flex justify-content-between text-capitalize my-3">
-                <img src="" class="img-fluid card-img" id="item-img" alt="">
-                <div class="item-text">
-                    <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
-                    <span>$</span>
-                    <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
-                </div>
-                <a href="#" id='cart-item-remove' class="cart-item-remove">
-                    <i class="fas fa-trash"></i>
-                </a>
+            <!-- cart-items -->
+            <div class="cart-items text-capitalize my-3">
+                <!-- <div class="cart-item d-flex align-items-center justify-content-between">
+                        <img src="img/carousel01.jpg" class="img-fluid card-img" id="item-img" alt="">
+                        <span class="item-text mx-5">cart item</span>
+                        <span>$</span>
+                        <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
+                        <input type="number" value="2" class="cart-quantity-input">
+                        <button id='cart-item-remove' class="btn cart-item-remove my-auto">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>end .cart-item -->
             </div>
-            <!--end of  cart item -->
-            <!-- cart item -->
-            <div class="cart-item d-flex justify-content-between text-capitalize my-3">
-                <img src="" class="img-fluid card-img" id="item-img" alt="">
-                <div class="cart-item-text">
-                    <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
-                    <span>$</span>
-                    <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
-                </div>
-                <a href="#" id='cart-item-remove' class="cart-item-remove">
-                    <i class="fas fa-trash"></i>
-                </a>
-            </div>
-            <!--end of  cart item -->
             <!-- cart total -->
             <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
                 <h5>total</h5>
-                <h5> $ <strong id="cart-total" class="font-weight-bold">10.00</strong> </h5>
+                <h5> $ <strong id="cart-total" class="font-weight-bold cart-total-price">0</strong> </h5>
             </div>
             <!--end cart total -->
             <!-- cart buttons -->
             <div class="cart-buttons-container mt-3 d-flex justify-content-between">
                 <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear
                     cart</a>
-                <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
+                <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink btn-checkout">checkout</a>
             </div>
             <!--end of  cart buttons -->
             <!--  -->
-        </div>
-        </div>
         </div>
     </header>
 
@@ -286,8 +272,8 @@
                     <p class="card-text"><strong class="text-capitalize">ingredients:
                         </strong>flour,sugar,egg,butter,chocolate</p>
                     <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
-                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$ <span
-                                class="amount">6.00 </span></strong>/ 10 pieces</p>
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">6.00 </span></strong>/ 10 pieces</p>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4 card mx-4 my-2">
                     <img src="./img/cookie4.jpg" alt="oatmeal cookies" class="card-img">
