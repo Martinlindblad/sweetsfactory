@@ -132,42 +132,48 @@
             </div><!-- row mx-auto show-product -->
             <div class="container mx-auto my-3 py-3 checkout">
                 <div class="text-center mx-auto my-4"><i class="fas fa-money-check-alt"></i></div>
-                <form method="POST" action="" name="form" id="personal-info">
+                <form method="POST" action="" name="form" id="personal-info" novalidate>
                     <div class="row d-flex text-center mx-auto">
                         <div class="col-md-6">
                             <div id="firstname-msg" class="msg text-capitalize">write your firstname</div><input
-                                class="row mx-auto" type="text" id="firstname" name="firstname"
-                                placeholder="FIRST NAME">
+                                class="row mx-auto" data-valid="false" type="text" id="firstname" name="firstname"
+                                placeholder="FIRST NAME" required>
                         </div>
                         <!--col-md-6-->
                         <div class="col-md-6">
-                            <div id="lastname-msg" class="msg">write your lastname</div><input class="row mx-auto"
-                                type="text" id="lastname" name="lastname" placeholder="LAST NAME">
+                            <div id="lastname-msg" class="msg text-capitalize">write your lastname</div><input
+                                class="row mx-auto" data-valid="false" type="text" id="lastname" name="lastname"
+                                placeholder="LAST NAME" required>
                         </div>
                         <!--col-md-6-->
                         <div class="col-md-6">
-                            <div id="email-msg" class="msg">write your email address</div><input class="row mx-auto"
-                                type="email" id="mail" name="mail" placeholder="E-mail">
+                            <div id="email-msg" class="msg text-capitalize">write your email address</div><input
+                                class="row mx-auto" data-valid="false" type="email" id="mail" name="mail"
+                                placeholder="E-mail" required>
                         </div>
                         <!--col-md-6-->
                         <div class="col-md-6">
-                            <div id="tel-msg" class="msg">write your phone number</div><input class="row mx-auto"
-                                type="text" id="tel" name="tel" placeholder="TEL">
+                            <div id="tel-msg" class="msg text-capitalize">write your phone number</div><input
+                                class="row mx-auto" data-valid="false" type="text" id="tel" name="tel" placeholder="TEL"
+                                required>
                         </div>
                         <!--col-md-6-->
                         <div class="col-md-12">
-                            <div id="address-msg" class="msg">write your address</div><input class="row mx-auto"
-                                type="text" id="address" name="address" placeholder="ADDRESS">
+                            <div id="address-msg" class="msg text-capitalize">write your address</div><input
+                                class="row mx-auto" data-valid="false" type="text" id="address" name="address"
+                                placeholder="ADDRESS" required>
                         </div>
                         <!--col-md-12-->
                         <div class="col-md-6">
-                            <div id="city-msg" class="msg">write your city name</div><input class="row mx-auto"
-                                type="text" id="city" name="city" placeholder="CITY">
+                            <div id="city-msg" class="msg text-capitalize">write your city name</div><input
+                                class="row mx-auto" data-valid="false" type="text" id="city" name="city"
+                                placeholder="CITY" required>
                         </div>
                         <!--col-md-6-->
                         <div class="col-md-6">
-                            <div id="postcode-msg" class="msg">write your postcode</div><input class="row mx-auto"
-                                type="text" id="postcode" name="postcode" placeholder="POSTCODE">
+                            <div id="postcode-msg" class="msg text-capitalize">write your postcode</div><input
+                                class="row mx-auto" data-valid="false" type="text" id="postcode" name="postcode"
+                                placeholder="POSTCODE" required>
                         </div>
                         <!--col-md-6-->
                         <div class="text-center mx-auto"><button type="submit" value="" name="confirm"
@@ -179,6 +185,55 @@
         <!--container-->
     </section>
     <!-- end of checkout form-->
+
+    <!-- Modal -->
+    <div class="modal fade bd-modal-lg" id="exampleModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="mx-auto text-center">
+                                <h1 class="modal-title text-capitalize" id="exampleModalLabel"></h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img class="cart-item-image" src="" width="400">
+                            </div>
+                            <div class="col-md-5 ml-auto my-5 d-flex flex-column">
+                                <div class="row mx-auto py-4">
+                                    <strong class="cart-price cart-column price mx-auto">$ <span
+                                            class="product-price"></span></strong>
+                                </div>
+                                <div class="row mx-auto d-flex py-4 icon">
+                                    <a class="text-center mx-3 my-auto" id="minus" role="button"><i
+                                            class="far fa-minus-square"></i></a><span class="mx-4"
+                                        id="show-num"></span><a class="text-center mx-3 my-auto" id="plus"
+                                        role="button"><i class="far fa-plus-square"></i></a>
+                                </div>
+                                <div class="row mt-5 d-flex pt-5">
+                                    <button type="button" class="btn btn-outline-dark mr-5"
+                                        data-dismiss="modal">Close</button>
+                                    <button class="btn btn-secondary btn-add-to-cart" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <!--/.col-md-5-->
+                        </div>
+                        <!--/.row-->
+                    </div>
+                    <!--/.container-fluid-->
+                </div>
+                <!--/.modal-body-->
+            </div>
+            <!--/.modal content-->
+
+        </div>
+        <!--/.modal-dialog modal-lg-->
+
+    </div><!-- end of modal-->
+
 
 
 
