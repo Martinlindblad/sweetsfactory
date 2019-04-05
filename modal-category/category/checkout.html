@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Factory</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="./checkout.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="icon" href="./img/sweetLogo.png" type="image/png" sizes="32x32">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg px-4">
+            <a class="navbar-brand" href="#"><img src="img/sweetLogo.svg" alt="" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
+                <span class="toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNav">
+                <ul class="navbar-nav mx-auto text-capitalize">
+                    <li class="nav-item mx-5">
+                        <a class="nav-link" href="#">home</a>
+                    </li>
+                    <li class="nav-item mx-5 active">
+                        <a class="nav-link" href="#bestseller">products</a>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link " href="#about">about</a>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link " href="#contact">contact</a>
+                    </li>
+                </ul>
+                <div class="nav-info-items d-none d-lg-flex ">
+                    <!-- single info -->
+                    <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between ">
+                        <span class="cart-info-icon mr-lg-1"><i class="fas fa-shopping-cart"></i></span>
+                        <span class="badge badge-pill badge-light">2</span>
+                        <!-- <p class="mb-0 text-capitalize"><span id="item-count">2 </span> items - $<span
+                                        class="item-total">10.49</span></p> -->
+                    </div>
+                    <!-- end of single info -->
+                </div>
+            </div>
+        </nav>
+        <div class="col-8 mx-auto banner text-center mt-4">
+            <h1 class="text-capitalize"><strong class="banner-title ">C</strong>heckout</h1>
+        </div>
+
+        <div id="cart" class="cart">
+            <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                <img src="" class="img-fluid card-img" id="item-img" alt="">
+                <div class="item-text">
+                    <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+                    <span>$</span>
+                    <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
+                </div>
+                <a href="#" id='cart-item-remove' class="cart-item-remove">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </div>
+            <!--end of  cart item -->
+            <!-- cart item -->
+            <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                <img src="" class="img-fluid card-img" id="item-img" alt="">
+                <div class="cart-item-text">
+                    <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+                    <span>$</span>
+                    <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
+                </div>
+                <a href="#" id='cart-item-remove' class="cart-item-remove">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </div>
+            <!--end of  cart item -->
+            <!-- cart total -->
+            <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
+                <h5>total</h5>
+                <h5> $ <strong id="cart-total" class="font-weight-bold">10.00</strong> </h5>
+            </div>
+            <!--end cart total -->
+            <!-- cart buttons -->
+            <div class="cart-buttons-container mt-3 d-flex justify-content-between">
+                <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear
+                    cart</a>
+                <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
+            </div>
+            <!--end of  cart buttons -->
+            <!--  -->
+        </div>
+        </div>
+        </div>
+    </header>
+
+    <!-- checkout form -->
+    <section>
+        <div class="container my-4 py-5" id="checkout">
+
+            <div class="container row mx-auto show-product my-3 py-3">
+                <div class="text-center mx-auto my-4"><i class="fas fa-shopping-cart text-center"></i></div>
+                <table class="text-capitalize table">
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">item</th>
+                        <th scope="col">price</th>
+                        <th scope="col">qty</th>
+                    </tr>
+                    <tr>
+                        <td><img src="./img/chocolate.jpg" alt="" width="110"></td>
+                        <td>almond and rasberry</td>
+                        <td>$ 2.00</td>
+                        <td>1 </td>
+                    </tr>
+                    <tr>
+                        <td><img src="./img/cookie2.jpg" alt="" width="110"></td>
+                        <td>chocochip</td>
+                        <td>$ 3.00</td>
+                        <td>1 </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="text-right">total</td>
+                        <td>$</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div><!-- row mx-auto show-product -->
+            <div class="container mx-auto my-3 py-3 checkout">
+                <div class="text-center mx-auto my-4"><i class="fas fa-money-check-alt"></i></div>
+                <form method="POST" action="" name="form" id="personal-info" novalidate>
+                    <div class="row d-flex text-center mx-auto">
+                        <div class="col-md-6">
+                            <div id="firstname-msg" class="msg text-capitalize">write your firstname</div><input
+                                class="row mx-auto" data-valid="false" type="text" id="firstname" name="firstname"
+                                placeholder="FIRST NAME" required>
+                        </div>
+                        <!--col-md-6-->
+                        <div class="col-md-6">
+                            <div id="lastname-msg" class="msg text-capitalize">write your lastname</div><input
+                                class="row mx-auto" data-valid="false" type="text" id="lastname" name="lastname"
+                                placeholder="LAST NAME" required>
+                        </div>
+                        <!--col-md-6-->
+                        <div class="col-md-6">
+                            <div id="email-msg" class="msg text-capitalize">write your email address</div><input
+                                class="row mx-auto" data-valid="false" type="email" id="mail" name="mail"
+                                placeholder="E-mail" required>
+                        </div>
+                        <!--col-md-6-->
+                        <div class="col-md-6">
+                            <div id="tel-msg" class="msg text-capitalize">write your phone number</div><input
+                                class="row mx-auto" data-valid="false" type="text" id="tel" name="tel" placeholder="TEL"
+                                required>
+                        </div>
+                        <!--col-md-6-->
+                        <div class="col-md-12">
+                            <div id="address-msg" class="msg text-capitalize">write your address</div><input
+                                class="row mx-auto" data-valid="false" type="text" id="address" name="address"
+                                placeholder="ADDRESS" required>
+                        </div>
+                        <!--col-md-12-->
+                        <div class="col-md-6">
+                            <div id="city-msg" class="msg text-capitalize">write your city name</div><input
+                                class="row mx-auto" data-valid="false" type="text" id="city" name="city"
+                                placeholder="CITY" required>
+                        </div>
+                        <!--col-md-6-->
+                        <div class="col-md-6">
+                            <div id="postcode-msg" class="msg text-capitalize">write your postcode</div><input
+                                class="row mx-auto" data-valid="false" type="text" id="postcode" name="postcode"
+                                placeholder="POSTCODE" required>
+                        </div>
+                        <!--col-md-6-->
+                        <div class="text-center mx-auto"><button type="submit" value="" name="confirm"
+                                class="btn btn-outline-secondary text-uppercase">check</button></div>
+                    </div> <!-- /.d-flex flex-column-->
+                </form>
+            </div><!-- /.container mx-auto my-3 py-3 checkout-->
+        </div>
+        <!--container-->
+    </section>
+    <!-- end of checkout form-->
+
+    <!-- Modal -->
+    <div class="modal fade bd-modal-lg" id="exampleModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="mx-auto text-center">
+                                <h1 class="modal-title text-capitalize" id="exampleModalLabel"></h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img class="cart-item-image" src="" width="400">
+                            </div>
+                            <div class="col-md-5 ml-auto my-5 d-flex flex-column">
+                                <div class="row mx-auto py-4">
+                                    <strong class="cart-price cart-column price mx-auto">$ <span
+                                            class="product-price"></span></strong>
+                                </div>
+                                <div class="row mx-auto d-flex py-4 icon">
+                                    <a class="text-center mx-3 my-auto" id="minus" role="button"><i
+                                            class="far fa-minus-square"></i></a><span class="mx-4"
+                                        id="show-num"></span><a class="text-center mx-3 my-auto" id="plus"
+                                        role="button"><i class="far fa-plus-square"></i></a>
+                                </div>
+                                <div class="row mt-5 d-flex pt-5">
+                                    <button type="button" class="btn btn-outline-dark mr-5"
+                                        data-dismiss="modal">Close</button>
+                                    <button class="btn btn-secondary btn-add-to-cart" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <!--/.col-md-5-->
+                        </div>
+                        <!--/.row-->
+                    </div>
+                    <!--/.container-fluid-->
+                </div>
+                <!--/.modal-body-->
+            </div>
+            <!--/.modal content-->
+
+        </div>
+        <!--/.modal-dialog modal-lg-->
+
+    </div><!-- end of modal-->
+
+
+
+
+    <footer class="container">
+        <!-- <div class="toTop float-right"><a class='gotopbtn hidden' href="#"><i class="fas fa-arrow-up"></i></a></div> -->
+        <div class="copyright">
+            <img src="img/sweetLogo.svg" alt="" class="logo">
+            <p class="text-center">&copy; 2019 Sweet Factory, Inc. </p>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="./checkout.js"></script>
+</body>
+
+</html>

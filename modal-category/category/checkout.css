@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Yeseva+One');
+@import url('https://fonts.googleapis.com/css?family=Pinyon+Script');
+:root {
+    --mainPink: #ef7998;
+    --mainYellow: rgb(249, 228, 148);
+    --yellowTrans: rgba(206, 205, 203, 0.281);
+    --mainGrey: rgb(238, 238, 238);
+    --mainBlack: #343a40;
+    --mainBrown: #b9a58e;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Playfair Display', serif;
+    /* background-color: var(--mainBrown); */
+    box-sizing: border-box;
+}
+.logo {
+    width: 2rem;
+    height: auto;
+}
+.nav-link {
+    color: var(--mainBlack);
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+}
+.nav-link:hover {
+    color: var(--mainPink);
+}
+/* info icons */
+.cart-info-icon {
+    color: var(--mainBlack);
+    cursor: pointer;
+}
+.cart-info {
+    border: 0.1rem solid var(--mainBlack);
+    color: var(--mainBlack);
+    border-radius: 0.25rem;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+}
+.cart-info:hover {
+    background: var(--mainPink);
+    border-color: var(--mainPink);
+    color: whitesmoke;
+}
+.cart-info:hover .cart-info-icon {
+    color: whitesmoke;
+}
+/* end of info icons */
+/* cart */
+.cart {
+    position: absolute;
+    min-height: 10rem;
+    background: whitesmoke;
+    top: 73px;
+    right: 0;
+    transition: all 0.1s ease-in-out;
+    background: rgba(255, 255, 255, 0.8);
+    width: 25rem;
+    overflow: hidden;
+    display: none;
+}
+.show-cart {
+    display: block;
+    padding: 2rem 1.5rem;
+    transform: rotateY(-360deg);
+}
+.cart-item {
+    transition: all .3s ease-in-out;
+}
+#item-img {
+    width: 2.5rem;
+    height: 2rem;
+}
+/* end of cart */
+
+/* cart item */
+.cart-item-remove {
+    color: var(--mainPink);
+    transition: all 1s ease-in-out;
+}
+.cart-item-remove:hover {
+    transform: scale(1.1);
+    color: var(--mainBlack);
+}
+#cart-item-price {
+    font-size: 0.8rem;
+}
+/* cart item */
+
+/* cart buttons */
+.btn {
+    letter-spacing: 0.15em;
+    border-radius: 0;
+}
+.btn-pink {
+    color: var(--mainPink) !important;
+    border-color: var(--mainPink) !important;
+}
+.btn-black {
+    color: var(--mainBlack) !important;
+    border-color: var(--mainBlack) !important;
+}
+.btn-black:hover {
+    color: var(--mainPink) !important;
+    background: var(--mainBlack) !important;
+}
+.btn-pink:hover {
+    background: var(--mainPink) !important;
+    color: var(--mainBlack) !important;
+}
+/* end of cart buttons */
+
+/* banner */
+.banner-title{
+    color: var(--mainPink);
+    font-size: 4rem;
+    font-family: 'Yeseva One', cursive;
+}
+
+/* Products */
+.card {
+    border: none;
+}
+.price {
+    font-size: 1.5em;
+    font-family: 'Yeseva One', cursive;
+}
+.btn-outline-secondary {
+    background-color: var(--mainPink);
+    color: white;
+    border: none;
+}
+/* end of products */
+
+/* checkout */
+.show-product{
+    width: 80%;
+    background-color: rgb(184, 178, 171);
+}
+#checkout{
+    background-color: var(--mainBrown);
+}
+section .fas{
+    font-size: 3em;
+    color: white;
+}
+input{
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--mainBlack);
+    margin: 1em 0;
+}
+input{
+    width: 90%;
+}
+.checkout{
+    width: 80%;
+    background-color: rgb(241, 224, 201);
+}
+.msg{
+    color: red;
+    font-size: 0.8em;
+    display: none;
+}
+.bg{
+    background-color: #f1e0c9;
+}
+#address{
+    width: 96%;
+}
+
+/* end of checkout */
+
+/* footer container */
+.gotopbtn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: var(--mainPink);
+    bottom: 1rem;
+    right: 1rem;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: whitesmoke;
+    opacity: .75;
+    transition: all .2s ease-in;
+}
+.gotopbtn:hover {
+    color: white;
+    opacity: 1;
+}
+.gotopbtn .fa-arrow-up {
+    transition: all .6s ease;
+}
+.gotopbtn:hover .fa-arrow-up {
+    font-size: 1.4rem;
+}
+.hidden {
+    display: none;
+    transition: all .5s ease-in-out;
+}
+.copyright .logo {
+    border: 1px solid var(--mainBlack);
+    border-radius: 3px;
+    border-radius: 50%;
+    padding: 5px 7px;
+    transform: translateY(50%);
+}
+

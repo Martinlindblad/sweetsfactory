@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Factory</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="./products.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="icon" href="./img/sweetLogo.png" type="image/png" sizes="32x32">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg px-4">
+            <a class="navbar-brand" href="#"><img src="img/sweetLogo.svg" alt="" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
+                <span class="toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNav">
+                <ul class="navbar-nav mx-auto text-capitalize">
+                    <li class="nav-item mx-5">
+                        <a class="nav-link" href="#">home</a>
+                    </li>
+                    <li class="nav-item mx-5 active">
+                        <a class="nav-link" href="#bestseller">products</a>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link " href="#about">about</a>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link " href="#contact">contact</a>
+                    </li>
+                </ul>
+                <div class="nav-info-items d-none d-lg-flex ">
+                    <!-- single info -->
+                    <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between ">
+                        <span class="cart-info-icon mr-lg-1"><i class="fas fa-shopping-cart"></i></span>
+                        <span class="badge badge-pill badge-light">2</span>
+                        <!-- <p class="mb-0 text-capitalize"><span id="item-count">2 </span> items - $<span
+                                        class="item-total">10.49</span></p> -->
+                    </div>
+                    <!-- end of single info -->
+                </div>
+            </div>
+        </nav>
+
+        <!-- banner -->
+        <div class="banner">
+            <div id="banner-roll" class="banner-roll ">
+                <div class="bg-image img1"></div>
+                <div class="bg-image img2"></div>
+                <div class="bg-image img3"></div>
+                <div class="bg-image img4"></div>
+                <div class="bg-image img5"></div>
+                <div class="bg-image img6"></div>
+            </div>
+            <h1 class="product-title">Category</h1>
+        </div>
+        <!-- end of banner roll-->
+
+        <div id="cart" class="cart">
+            <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                <img src="" class="img-fluid card-img" id="item-img" alt="">
+                <div class="item-text">
+                    <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+                    <span>$</span>
+                    <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
+                </div>
+                <a href="#" id='cart-item-remove' class="cart-item-remove">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </div>
+            <!--end of  cart item -->
+            <!-- cart item -->
+            <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                <img src="" class="img-fluid card-img" id="item-img" alt="">
+                <div class="cart-item-text">
+                    <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+                    <span>$</span>
+                    <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
+                </div>
+                <a href="#" id='cart-item-remove' class="cart-item-remove">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </div>
+            <!--end of  cart item -->
+            <!-- cart total -->
+            <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
+                <h5>total</h5>
+                <h5> $ <strong id="cart-total" class="font-weight-bold">10.00</strong> </h5>
+            </div>
+            <!--end cart total -->
+            <!-- cart buttons -->
+            <div class="cart-buttons-container mt-3 d-flex justify-content-between">
+                <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear
+                    cart</a>
+                <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
+            </div>
+            <!--end of  cart buttons -->
+            <!--  -->
+        </div>
+        </div>
+        </div>
+    </header>
+
+
+
+    <!-- products -->
+    <section class="py-5" id="products">
+        <!-- Dougnuts -->
+
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h2 class="text-capitalize"><strong class="banner-title ">D</strong>oughnuts</h2>
+                </div>
+            </div>
+            <div class="row mx-auto d-flex justify-content-center products-container">
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/doughnuts.jpg" alt="chocolate doughnut" class="card-img">
+                    <h4 class="card-text text-center text-capitalize">Chocolate punch</h4>
+                    <p class="card-text">Fresh yeast doughnut topped with chocolate fudge glaze with nuts</p>
+                    <p class="card-text"><strong class="text-capitalize">ingredients:
+                        </strong>flour,milk,sugar,egg,butter,chocolates, nuts</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">3.50 </span></strong>/ 1 piece</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/doughnut2.jpg" alt="vanilla bean glaze" class="card-img">
+                    <h4 class="card-text text-center text-capitalize">Old fashion</h4>
+                    <p class="card-text">Classic vanilla bean glaze</p>
+                    <p class="card-text mt-4"><strong class="text-capitalize">ingredients:
+                        </strong>flour,milk,sugar,egg,butter,nutmeg</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">2.50 </span></strong>/ 1 piece</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/doughnut3.jpg" alt="strawberry dougnut" class="card-img">
+                    <h4 class="card-text text-center text-capitalize">Pinky ring</h4>
+                    <p class="card-text">Yeast doughnut topped with pink strawberry cake batter glaze with sprinkles</p>
+                    <p class="card-text"><strong class="text-capitalize">ingredients:
+                        </strong>flour,milk,sugar,egg,butter,strawberry</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">2.50 </span></strong>/ 1 piece</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/doughnut4.jpg" alt="cherry doughnut" class="card-img">
+                    <h4 class="card-text text-center text-capitalize">cherry to you</h4>
+                    <p class="card-text">Yeast doughnut topped with white cake batter glaze with dried cherry</p>
+                    <p class="card-text "><strong class="text-capitalize">ingredients:
+                        </strong>flour,milk,sugar,egg,butter,dried cherry</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">3.00 </span></strong>/ 1 piece</p>
+                </div><!-- /.col-lg-4 -->
+            </div>
+            <!--/.row -->
+        </div>
+        <!-- end of dougnuts -->
+        <!-- cupcakes -->
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h2 class="text-capitalize"><strong class="banner-title ">c</strong>upcakes</h2>
+                </div>
+            </div>
+            <div class="row mx-auto d-flex justify-content-center products-container">
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/cupcake2.jpg" alt="rasberry and chocolate cupcake" class="card-img">
+                    <h4 class="card-text text-center text-capitalize">double stuff</h4>
+                    <p class="card-text">Dark chocolate cupcake baked with rasberry, topped with rasberry cream and
+                        chocolates</p>
+                    <p class="card-text"><strong class="text-capitalize">ingredients:
+                        </strong>flour,milk,sugar,egg,butter,rasberry,chocolate</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">3.00 </span></strong>/ 1 piece</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/cupcake3.jpg" alt="mint cupcake" class="card-img">
+                    <h4 class="card-text text-center text-capitalize">mint party</h4>
+                    <p class="card-text">Chocolate mint cupcake topped with mint cream and frosting</p>
+                    <p class="card-text"><strong class="text-capitalize">ingredients:
+                        </strong>flour,milk,sugar,egg,butter,mint,chocolate</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">2.00 </span></strong>/ 1 piece</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/cupcake.jpg" alt="orange cupcake" class="card-img">
+                    <h4 class="card-text text-center text-capitalize">orange range</h4>
+                    <p class="card-text">Orange peel cupcake baked with vanilla, topped with orange buttercream.</p>
+                    <p class="card-text"><strong class="text-capitalize">ingredients:
+                        </strong>flour,milk,sugar,egg,butter,orange</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">2.50 </span></strong>/ 1 piece</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/cupcake4.jpg" alt="lemon cupcake" class="card-img">
+                    <h4 class="card-text text-center text-capitalize">limoncello</h4>
+                    <p class="card-text">Vanilla cupcake with lemon flavor, topped with chocolates and sugar</p>
+                    <p class="card-text "><strong class="text-capitalize">ingredients:
+                        </strong>flour,milk,sugar,egg,butter,orange</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">2.50 </span></strong>/ 1 piece</p>
+                </div><!-- /.col-lg-4 -->
+            </div>
+            <!--/.row -->
+        </div>
+        <!-- end of cupcakes -->
+        <!-- chocolates -->
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h2 class="text-capitalize"><strong class="banner-title ">c</strong>hocolates</h2>
+                </div>
+            </div>
+            <div class="row mx-auto d-flex justify-content-center products-container">
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/chocolate.jpg" alt="almond and rasberry chocolate" class="card-img">
+                    <h4 class="card-text text-center text-capitalize">almond and rasberry</h4>
+                    <p class="card-text">Dark chocolate with almond and rasberry</p>
+                    <p class="card-text"><strong class="text-capitalize">ingredients:
+                        </strong>70% cacao,almond,rasberry</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">2.00 </span></strong>/ 100g </p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/chocolate2.jpg" alt="coffee chocolate" class="card-img">
+                    <h4 class="card-text text-center text-capitalize">choco mocha</h4>
+                    <p class="card-text">Dark chocolate with coffee mocha flavor</p>
+                    <p class="card-text"><strong class="text-capitalize">ingredients:
+                        </strong>80% cacao, coffee</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">1.50 </span></strong>/ 100g </p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/chocolate3.jpg" alt="pistachio chocolate" class="card-img">
+                    <h4 class="card-text text-center text-capitalize">pistachio truffles</h4>
+                    <p class="card-text">chocolate balls filled with pistachio</p>
+                    <p class="card-text"><strong class="text-capitalize">ingredients:
+                        </strong>40% cacao,pistachio,dates,butter</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">3.00 </span></strong>/ 100g </p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/chocolate4.jpg" alt="ginger chocolate" class="card-img">
+                    <h4 class="card-text text-center text-capitalize">Ginger</h4>
+                    <p class="card-text">Dark chocolate with ginger spice</p>
+                    <p class="card-text "><strong class="text-capitalize">ingredients:
+                        </strong>70% cacao, ginger</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">2.00 </span></strong>/ 100g </p>
+                </div><!-- /.col-lg-4 -->
+            </div>
+            <!--/.row -->
+        </div>
+
+        <!-- end of chocolates -->
+        <!-- cookies -->
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h2 class="text-capitalize"><strong class="banner-title ">c</strong>ookies</h2>
+                </div>
+            </div>
+            <div class="row mx-auto d-flex justify-content-center products-container">
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/cookie.jpg" alt="chocolate cookies" class="card-img">
+                    <h4 class="card-text text-center text-capitalize">chocolate holic</h4>
+                    <p class="card-text">Chocolate cookies topped with milk chocolate</p>
+                    <p class="card-text"><strong class="text-capitalize">ingredients:
+                        </strong>flour,sugar,egg,butter,chocolate</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$ <span
+                                class="amount">6.00 </span></strong>/ 10 pieces</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/cookie4.jpg" alt="oatmeal cookies" class="card-img">
+                    <h4 class="card-text text-center text-capitalize">crunchy oatmeal</h4>
+                    <p class="card-text">Crispy oatmeal cookies</p>
+                    <p class="card-text "><strong class="text-capitalize">ingredients:
+                        </strong>oatmeal,milk,sugar,butter</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">5.00 </span></strong>/ 10 pieces</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/cookie2.jpg" alt="chocolate chip cookies" class="card-img" id="a">
+                    <h4 class="card-text text-center text-capitalize">choco chip</h4>
+                    <p class="card-text">Butter cookies with chocolate chip</p>
+                    <p class="card-text"><strong class="text-capitalize">ingredients:
+                        </strong>flour,milk,sugar,egg,butter,chocolate</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">5.50 </span></strong>/ 10 pieces</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/cookie3.jpg" alt="almond cookies" class="card-img">
+                    <h4 class="card-text text-center text-capitalize">honey almond</h4>
+                    <p class="card-text">Honey cookies topped with a full av almond</p>
+                    <p class="card-text"><strong class="text-capitalize">ingredients:
+                        </strong>flour,milk,sugar,egg,butter,honey,almond</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">6.00 </span></strong>/ 10 pieces</p>
+                </div><!-- /.col-lg-4 -->
+            </div>
+            <!--/.row -->
+        </div>
+        <!-- end of cookies -->
+        <!-- Candy -->
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h2 class="text-capitalize"><strong class="banner-title ">c</strong>andy</h2>
+                </div>
+            </div>
+            <div class="row mx-auto d-flex justify-content-center products-container">
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/candy.jpg" alt="Jelly beans" class="card-img">
+                    <h4 class="card-text text-center text-capitalize">jelly beans</h4>
+                    <p class="card-text">Classic jelly beans</p>
+                    <p class="card-text"><strong class="text-capitalize">ingredients:
+                        </strong>sugar,glucose syrup, maize starch, water, fruit juice from concentrate</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">2.00 </span></strong>/ 100g</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/candy2.jpg" alt="jelly" class="card-img">
+                    <h4 class="card-text text-center text-capitalize">fruits jelly</h4>
+                    <p class="card-text">Strawbery, orange and pear taste</p>
+                    <p class="card-text"><strong class="text-capitalize">ingredients:
+                        </strong>sugar,glucose syrup, maize starch, water, fruit juice from concentrate</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">2.00 </span></strong>/ 100g</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/candy3.jpg" alt="egg boll" class="card-img">
+                    <h4 class="card-text text-center text-capitalize">easter egg</h4>
+                    <p class="card-text">Easter milk chocolate egg candy</p>
+                    <p class="card-text"><strong class="text-capitalize">ingredients:
+                        </strong>sugar,chocolate,vanilla</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">4.50 </span></strong>/ 300g</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card mx-4 my-2">
+                    <img src="./img/candy4.jpg" alt="" class="card-img">
+                    <h4 class="card-text text-center text-capitalize">candy crush</h4>
+                    <p class="card-text">candy with different flavors</p>
+                    <p class="card-text "><strong class="text-capitalize">ingredients:
+                        </strong>sugar,glucose syrup</p>
+                    <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                            data-target="#exampleModal" role="button">add to cart</button><strong class="ml-4 price">$
+                            <span class="amount">3.50 </span></strong>/
+                        200g</p>
+                </div><!-- /.col-lg-4 -->
+            </div>
+            <!--/.row -->
+        </div>
+        <!-- end of candy -->
+    </section>
+    <!-- Modal -->
+    <div class="modal fade bd-modal-lg" id="exampleModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="mx-auto text-center">
+                                <h1 class="modal-title text-capitalize" id="exampleModalLabel"></h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img class="cart-item-image" src="" width="400">
+                            </div>
+                            <div class="col-md-5 ml-auto my-5 d-flex flex-column">
+                                <div class="row mx-auto py-4">
+                                    <strong class="cart-price cart-column price mx-auto">$ <span
+                                            class="product-price"></span></strong>
+                                </div>
+                                <div class="row mx-auto d-flex py-4 icon">
+                                    <a class="text-center mx-3 my-auto" id="minus" role="button"><i
+                                            class="far fa-minus-square"></i></a><span class="mx-4"
+                                        id="show-num"></span><a class="text-center mx-3 my-auto" id="plus"
+                                        role="button"><i class="far fa-plus-square"></i></a>
+                                </div>
+                                <div class="row mt-5 d-flex pt-5">
+                                    <button type="button" class="btn btn-outline-dark mr-5"
+                                        data-dismiss="modal">Close</button>
+                                    <button class="btn btn-secondary btn-add-to-cart" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <!--/.col-md-5-->
+                        </div>
+                        <!--/.row-->
+                    </div>
+                    <!--/.container-fluid-->
+                </div>
+                <!--/.modal-body-->
+            </div>
+            <!--/.modal content-->
+
+        </div>
+        <!--/.modal-dialog modal-lg-->
+
+    </div><!-- end of modal-->
+
+
+    <footer class="container">
+        <div class="toTop float-right"><a class='gotopbtn hidden' href="#"><i class="fas fa-arrow-up"></i></a></div>
+        <div class="copyright">
+            <img src="img/sweetLogo.svg" alt="" class="logo">
+            <p class="text-center">&copy; 2019 Sweet Factory, Inc. </p>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="./category.js"></script>
+    <script>
+
+        /*-------------------- toggle scroll top arrow  ---------------------*/
+        const scrollTop = document.querySelector('.gotopbtn');
+        const productsSec = document.querySelector('#products');
+        const topOfAbout = productsSec.offsetTop;
+
+        function toTop() {
+            (window.scrollY >= topOfAbout) ? scrollTop.classList.remove('hidden') : scrollTop.classList.add('hidden');
+        }
+
+        window.addEventListener('scroll', toTop);
+    </script>
+</body>
+
+</html>
