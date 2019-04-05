@@ -9,13 +9,15 @@
     --yellowTrans: rgba(206, 205, 203, 0.281);
     --mainGrey: rgb(238, 238, 238);
     --mainBlack: #343a40;
+    --mainBrown: #b9a58e;
 }
 html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: "Kaushan Script", cursive;
     font-family: 'Playfair Display', serif;
+    /* background-color: var(--mainBrown); */
+    box-sizing: border-box;
 }
 .logo {
     width: 2rem;
@@ -114,66 +116,12 @@ body {
 }
 /* end of cart buttons */
 
-/* banner scroll */
-
-.banner-title, .product-title {
+/* banner */
+.banner-title{
     color: var(--mainPink);
     font-size: 4rem;
     font-family: 'Yeseva One', cursive;
 }
-.product-title{
-    position: absolute;
-    top: 25vh;
-    left: 25vw;
-    text-align: center;
-    margin: 0 auto;
-}
-.bg-image {
-    /* Full height */
-    min-height: 70vh;
-    width: 100vw;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100vw;
-    background-position: fixed;
-}
-.img1 {
-    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("./img/bg-img.jpg");
-}
-.img2 {
-    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("./img/bg-img2.jpg");
-}
-.img3 {
-    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("./img/bg-img3.jpg");
-}
-.img4 {
-    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("./img/bg-img4.jpg");
-}
-.img5 {
-    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("./img/bg-img5.jpg");
-}
-.img6 {
-    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("./img/bg-img6.jpg");
-}
-.banner-roll {
-    width: 100vw;
-    overflow-y: scroll;
-    height: 70vh;
-    scrollbar-width: none;
-}
-.big-nothing {
-    height: 500px;
-    width: 100%;
-}
-.banner {
-    height: 100%;
-    position: relative;
-    margin: 0%;
-    width: 100vw;
-}
-
-/* end of banner scroll */
 
 /* Products */
 .card {
@@ -190,24 +138,44 @@ body {
 }
 /* end of products */
 
-/* modal */
-.btn-secondary {
-    background: var(--mainPink);
-    border: 1px solid var(--mainPink);
+/* checkout */
+.show-product{
+    width: 80%;
+    background-color: rgb(184, 178, 171);
 }
-.btn-secondary:hover {
-    background: none;
+#checkout{
+    background-color: var(--mainBrown);
+}
+section .fas{
+    font-size: 3em;
+    color: white;
+}
+input{
     border: none;
-    color: var(--mainPink);
+    background-color: transparent;
+    border-bottom: 1px solid var(--mainBlack);
+    margin: 1em 0;
 }
-.icon .far {
-    font-size: 2em;
-    color: cornflowerblue;
+input{
+    width: 90%;
 }
-#show-num {
-    font-size: 2.5em;
+.checkout{
+    width: 80%;
+    background-color: rgb(241, 224, 201);
 }
-/* end of modal */
+.msg{
+    color: red;
+    font-size: 0.8em;
+    display: none;
+}
+.bg{
+    background-color: #f1e0c9;
+}
+#address{
+    width: 96%;
+}
+
+/* end of checkout */
 
 /* footer container */
 .gotopbtn {

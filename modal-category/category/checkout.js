@@ -1,27 +1,7 @@
-/*--------------------Banner-----------------------*/
-// Load Document/Start bannerRoll()
-$(document).ready(function(){
-    bannerRoll();
-});
-// Load bannerRoll() after first document load. Repeats the action.
-setInterval(() => {
-    bannerRoll();
-    
-}, 100000);
-
-function bannerRoll(){       
-    let high = $('.img1').height();      // get the hight for one img
-    high = high * 5;    // all images have the same size. 6 images. there fore img height*5
-    
-    $(".banner-roll").stop(true,true).animate({scrollTop: high}, 35000,  // Start the action, will move the page to "high"
-        function(){ $(this).stop(true,true).animate({scrollTop: 0}, 35000); // Go back up again
-});
-}
-
 
 /*------------------ toggle shopping cart -------------------*/
 
-(function() {
+(function () {
     const cartInfo = document.querySelector('.cart-info');
     const cart = document.querySelector('.cart');
 
@@ -30,8 +10,8 @@ function bannerRoll(){
 
 
 
- /*-----------modal window-----------------*/
- $('#myModal').on('shown.bs.modal', function () {
+/*-----------modal window-----------------*/
+$('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus')
 })
 
@@ -42,9 +22,9 @@ $(function () {
     let image = $('.cart-item-image');
     let productName = $(".modal-title");
     let totalAmount = 0; // total summan  
-    let defaultq= [];
+    let defaultq = [];
 
-   
+
 
     // När man klickar BUY btn
     btn.on('click', function () {
@@ -99,9 +79,58 @@ $(function () {
     /*-------------visa pris -----------------*/
     function showPrice(total) {
         showAmout.html(total.toFixed(2));
-
     }
+
 }); // ready
 
+/*---------------- checkout validation ---------------*/
+$(function () {
+    let mailerror = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    // Check all form
+    $('#personal-info input').on('blur', function () {
+        // $(this).addClass('bg');
+        let chose = $(this).val();
+        if (chose === '') {
+            $(this).prev().fadeIn();
+        }
+        else if (chose !== '') {
+            $(this).prev().fadeOut();
+        }
+    });
+
+    // Check Email
+    $('#mail').on('blur', function () {
+        let mail = $('#mail').val();
+        if (mail === '') {
+            $('#mail').fadeIn();
+        }
+        else if (!mail.match(mailerror)) {
+            $(this).prev().fadeIn().html("Check your email address");
+        }
+    });
+
+    // Check  postcode
+    $('#tel,#postcode').on('blur', function () {
+        let tel = $('#tel').val();
+        if (tel.match(/[^0-9]+/)) {
+            $(this).prev().fadeIn().html("Check your phone number");
+        }
+        else if (tel.length < 10) {
+            $(this).prev().fadeIn().html("10 characters minimum");
+        }
+    });
+
+    // Check postcode          
+    $('#postcode').on('blur', function () {
+        let postcode = $('#postcode').val();
+        if (postcode.match(/[^0-9]+/)) {
+            $(this).prev().fadeIn().html("Check your postcode");
+        }
+
+    });
+
+
+})
 
 
