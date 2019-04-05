@@ -3,15 +3,39 @@
     {"name": "Chocolate punch", "description" : "Fresh yeast doughnut topped with chocolate fudge glazed with nuts", "ingridents": "flour,milk,sugar,egg,butter,chocolates, nuts", "price": 3.50, "picture": ""},
     {"name": "Old fashion", "description" : "Classic vanilla bean glaze", "ingridents": "flour,milk,sugar,egg,butter,nutmeg", "price": 2.50, "picture": ""},
     {"name": "Pinky ring", "description" : "Yeast doughnut topped with pink strawberry cake batter glaze with sprinkles", "ingridents": "flour,milk,sugar,egg,butter,strawberry", "price": 2.50, "picture": ""},
-    {"name": "Pinky ring", "description" : "Yeast doughnut topped with white cake batter glaze with dried cherry", "ingridents": "flour,milk,sugar,egg,butter,dried cherry", "price": 3.00, "picture": ""},
+    {"name": "cherry to you", "description" : "Yeast doughnut topped with white cake batter glaze with dried cherry", "ingridents": "flour,milk,sugar,egg,butter,dried cherry", "price": 3.00, "picture": ""}
     
   ],
  
   "Cupcake":[
     {"name": "double stuff", "description" : "Dark chocolate cupcake baked with rasberry, topped with rasberry cream and chocolates", "ingridents": "flour,milk,sugar,egg,butter,chocolates, nuts", "price": 3.50, "picture": ""},
-    {"name": "Old fashion", "description" : "Classic vanilla bean glaze", "ingridents": "flour,milk,sugar,egg,butter,nutmeg", "price": 2.50, "picture": ""},
-    {"name": "mint party", "description" : "Yeast doughnut topped with pink strawberry cake batter glaze with sprinkles", "ingridents": ">flour,milk,sugar,egg,butter,rasberry,chocolate", "price": 2.50, "picture": ""},
-    {"name": "Pinky ring", "description" : "Yeast doughnut topped with white cake batter glaze with dried cherry", "ingridents": "flour,milk,sugar,egg,butter,dried cherry", "price": 3.00, "picture": ""},
+    {"name": "mint party", "description" : "Yeast doughnut topped with pink strawberry cake batter glaze with sprinkles", "ingridents": "flour,milk,sugar,egg,butter,rasberry,chocolate", "price": 2.00, "picture": ""},
+    {"name": "orange range", "description" : "Orange peel cupcake baked with vanilla, topped with orange buttercream.", "ingridents": "flour,milk,sugar,egg,butter,orange", "price": 2.50, "picture": ""},
+    {"name": "limoncello", "description" : "Vanilla cupcake with lemon flavor, topped with chocolates and sugar", "ingridents": "flour,milk,sugar,egg,butter,orange", "price": 2.50, "picture": ""}
+    
+  ],
+
+  "Chocolates":[
+    {"name": "almond and rasberry", "description" : "Dark chocolate with almond and rasberry", "ingridents": "70% cacao,almond,rasberry", "price": 2.00, "picture": ""},
+    {"name": "choco mocha", "description" : "Dark chocolate with coffee mocha flavor", "ingridents": "80% cacao, coffee", "price": 1.50, "picture": ""},
+    {"name": "pistachio truffles", "description" : "chocolate balls filled with pistachio", "ingridents": "40% cacao,pistachio,dates,butter", "price": 3.00, "picture": ""},
+    {"name": "Ginger", "description" : "Dark chocolate with ginger spice", "ingridents": "70% cacao, ginger", "price": 2.00, "picture": ""}
+    
+  ],
+
+  "Cookies":[
+    {"name": "chocolate holic", "description" : "Chocolate cookies topped with milk chocolate", "ingridents": "flour,sugar,egg,butter,chocolate", "price": 6.00, "picture": ""},
+    {"name": "crunchy oatmeal", "description" : "Crispy oatmeal cookies", "ingridents": "oatmeal,milk,sugar,butter", "price": 5.00, "picture": ""},
+    {"name": "choco chip", "description" : "Butter cookies with chocolate chip", "ingridents": "flour,milk,sugar,egg,butter,chocolate", "price": 5.50, "picture": ""},
+    {"name": "honey almond", "description" : "Honey cookies topped with a full av almond", "ingridents": "flour,milk,sugar,egg,butter,honey,almond", "price": 6.00, "picture": ""}
+    
+  ],
+
+  "Candy":[
+    {"name": "jelly beans", "description" : "Classic jelly beans", "ingridents": "sugar,glucose syrup, maize starch, water, fruit juice from concentrate", "price": 2.00, "picture": ""},
+    {"name": "fruits jelly", "description" : "Strawbery, orange and pear taste", "ingridents": "sugar,glucose syrup, maize starch, water, fruit juice from concentrate", "price": 2.00, "picture": ""},
+    {"name": "easter egg", "description" : "Easter milk chocolate egg candy", "ingridents": "sugar,chocolate,vanilla", "price": 4.50, "picture": ""},
+    {"name": "candy crush", "description" : "candy with different flavors", "ingridents": "sugar,glucose syrup", "price": 3.50, "picture": ""}
     
   ]
 }
