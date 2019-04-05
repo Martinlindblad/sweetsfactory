@@ -1,0 +1,17 @@
+{
+  "Doughnut":[
+    {"name": "Chocolate punch", "description" : "Fresh yeast doughnut topped with chocolate fudge glazed with nuts", "ingridents": "flour,milk,sugar,egg,butter,chocolates, nuts", "price": 3.50, "picture": ""},
+    {"name": "Old fashion", "description" : "Classic vanilla bean glaze", "ingridents": "flour,milk,sugar,egg,butter,nutmeg", "price": 2.50, "picture": ""},
+    {"name": "Pinky ring", "description" : "Yeast doughnut topped with pink strawberry cake batter glaze with sprinkles", "ingridents": "flour,milk,sugar,egg,butter,strawberry", "price": 2.50, "picture": ""},
+    {"name": "Pinky ring", "description" : "Yeast doughnut topped with white cake batter glaze with dried cherry", "ingridents": "flour,milk,sugar,egg,butter,dried cherry", "price": 3.00, "picture": ""},
+    
+  ],
+ 
+  "Cupcake":[
+    {"name": "double stuff", "description" : "Dark chocolate cupcake baked with rasberry, topped with rasberry cream and chocolates", "ingridents": "flour,milk,sugar,egg,butter,chocolates, nuts", "price": 3.50, "picture": ""},
+    {"name": "Old fashion", "description" : "Classic vanilla bean glaze", "ingridents": "flour,milk,sugar,egg,butter,nutmeg", "price": 2.50, "picture": ""},
+    {"name": "mint party", "description" : "Yeast doughnut topped with pink strawberry cake batter glaze with sprinkles", "ingridents": ">flour,milk,sugar,egg,butter,rasberry,chocolate", "price": 2.50, "picture": ""},
+    {"name": "Pinky ring", "description" : "Yeast doughnut topped with white cake batter glaze with dried cherry", "ingridents": "flour,milk,sugar,egg,butter,dried cherry", "price": 3.00, "picture": ""},
+    
+  ]
+}
