@@ -133,6 +133,9 @@ body {
 #cart-item-price {
     font-size: 0.8rem;
 }
+.cart-quantity-input {
+    width: 20%
+}
 /* cart item */
 
 /* cart buttons */

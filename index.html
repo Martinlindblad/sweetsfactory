@@ -39,7 +39,7 @@
                     <!-- single info -->
                     <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between ">
                         <span class="cart-info-icon mr-lg-1"><i class="fas fa-shopping-cart"></i></span>
-                        <span class="badge badge-pill badge-light">1</span>
+                        <span class="badge badge-pill badge-light">0</span>
                     </div>
                     <!-- end of single info -->
                 </div>
@@ -75,12 +75,12 @@
                     </div>
 
                     <!-- Left and right controls -->
-                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <!-- <a class="carousel-control-prev" href="#demo" data-slide="prev">
                         <span class="carousel-control-prev-icon"></span>
                     </a>
                     <a class="carousel-control-next" href="#demo" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
-                    </a>
+                    </a> -->
 
                 </div>
 
@@ -90,31 +90,32 @@
                 </div>
 
                 <div id="cart" class="cart">
-                    <div class="cart-item d-flex text-capitalize my-3">
+                    <!-- cart-item -->
+                    <div class="cart-item d-flex align-items-center justify-content-between text-capitalize my-3">
                         <img src="img/carousel01.jpg" class="img-fluid card-img" id="item-img" alt="">
-                        <div class="item-text mx-5">
-                            <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
-                            <span>$</span>
-                            <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
-                        </div>
-                        <div class="row mx-auto d-flex justify-content-center py-0 icon">
-                            <span class="text-center mx-1 my-auto" id="minus" role="button"><i
-                                    class="far fa-minus-square"></i></span>
-                            <span class="text-center mx-4 my-auto"
-                                id="show-num">1</span>
-                            <span class="text-center mx-1 my-auto" id="plus"
-                                role="button"><i class="far fa-plus-square"></i></a>
-                        </div>
-                        <a href="#" id='cart-item-remove' class="cart-item-remove my-auto">
-                            <i class="fas fa-trash"></i>
-                        </a>
+                        <span class="item-text mx-5">cart item</span>
+                        <span>$</span>
+                        <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
+                        <input type="number" value="2" class="cart-quantity-input">
+                        <button id='cart-item-remove' class="btn cart-item-remove my-auto">
+                                <i class="fas fa-trash"></i>
+                        </button>
                     </div>
-                    <!--end of  cart item -->
+                    <div class="cart-item d-flex align-items-center justify-content-between text-capitalize my-3">
+                        <img src="img/carousel02.jpg" class="img-fluid card-img" id="item-img" alt="">
+                        <span class="item-text mx-5">cart item</span>
+                        <span>$</span>
+                        <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
+                        <input type="number" value="2" class="cart-quantity-input">
+                        <button id='cart-item-remove' class="btn cart-item-remove my-auto">
+                                <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
 
                     <!-- cart total -->
                     <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
                         <h5>total</h5>
-                        <h5> $ <strong id="cart-total" class="font-weight-bold">10.00</strong> </h5>
+                        <h5> $ <strong id="cart-total" class="font-weight-bold cart-total-price">0</strong> </h5>
                     </div>
                     <!--end cart total -->
                     <!-- cart buttons -->
