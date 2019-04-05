@@ -91,26 +91,18 @@
                 </div>
 
                 <div id="cart" class="cart">
-                    <!-- cart-item -->
-                    <div class="cart-item d-flex align-items-center justify-content-between text-capitalize my-3">
-                        <img src="img/carousel01.jpg" class="img-fluid card-img" id="item-img" alt="">
-                        <span class="item-text mx-5">cart item</span>
-                        <span>$</span>
-                        <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
-                        <input type="number" value="2" class="cart-quantity-input">
-                        <button id='cart-item-remove' class="btn cart-item-remove my-auto">
+                    <!-- cart-items -->
+                    <div class="cart-items text-capitalize my-3">
+                        <!-- <div class="cart-item d-flex align-items-center justify-content-between">
+                            <img src="img/carousel01.jpg" class="img-fluid card-img" id="item-img" alt="">
+                            <span class="item-text mx-5">cart item</span>
+                            <span>$</span>
+                            <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
+                            <input type="number" value="2" class="cart-quantity-input">
+                            <button id='cart-item-remove' class="btn cart-item-remove my-auto">
                                 <i class="fas fa-trash"></i>
-                        </button>
-                    </div>
-                    <div class="cart-item d-flex align-items-center justify-content-between text-capitalize my-3">
-                        <img src="img/carousel02.jpg" class="img-fluid card-img" id="item-img" alt="">
-                        <span class="item-text mx-5">cart item</span>
-                        <span>$</span>
-                        <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
-                        <input type="number" value="2" class="cart-quantity-input">
-                        <button id='cart-item-remove' class="btn cart-item-remove my-auto">
-                                <i class="fas fa-trash"></i>
-                        </button>
+                            </button>
+                        </div>end .cart-item -->
                     </div>
 
                     <!-- cart total -->
@@ -123,7 +115,7 @@
                     <div class="cart-buttons-container mt-3 d-flex justify-content-between">
                         <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear
                             cart</a>
-                        <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
+                        <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink btn-checkout">checkout</a>
                     </div>
                     <!--end of  cart buttons -->
                     <!--  -->
@@ -169,19 +161,22 @@
                     <h4 class="card-title text-center">#01</h4>
                     <img src="./img/chocodoughnuts.png" alt="" class="card-img mt-5 mb-2">
                     <p class="card-text text-center text-uppercase">chocolate doughnuts</p>
-                    <p><button class="btn btn-secondary store-item-icon">Order</button></p>
+                    <button class="btn btn-secondary store-item-icon">Add To Cart</button>
+                    <span class="cart-item-price" class="mb-0">10.99</span>
                 </div><!-- /.col-lg-3 -->
                 <div class="col-lg-3 card mx-2">
                     <h4 class="card-title text-center">#02</h4>
                     <img src="./img/orangecupcakes.png" alt="" class="card-img">
                     <p class="card-text text-center text-uppercase">orange cupcakes</p>
-                    <p><button class="btn btn-secondary store-item-icon">Order</button></p>
+                    <button class="btn btn-secondary store-item-icon">Add To Cart</button>
+                    <span class="cart-item-price" class="mb-0">10.99</span>
                 </div><!-- /.col-lg-3 -->
                 <div class="col-lg-3 card mx-2">
                     <h4 class="card-title text-center">#03</h4>
                     <img src="./img/chocochipcookies.png" alt="" class="card-img mb-2">
                     <p class="card-text text-center text-uppercase">chocolate cookies</p>
-                    <p><button class="btn btn-secondary store-item-icon">Order</button></p>
+                    <button class="btn btn-secondary store-item-icon">Add To Cart</button>
+                    <span class="cart-item-price" class="mb-0">10.99</span>
                 </div><!-- /.col-lg-3 -->
             </div><!-- /.row -->
         </div>
