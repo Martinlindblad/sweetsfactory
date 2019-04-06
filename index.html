@@ -161,21 +161,21 @@
                     <img src="./img/chocodoughnuts.png" alt="" class="card-img mt-5 mb-2">
                     <p class="card-text text-center text-uppercase">chocolate doughnuts</p>
                     <button class="btn btn-secondary store-item-icon">Add To Cart</button>
-                    <span class="cart-item-price" class="mb-0">10.99</span>
+                    <p>$<span class="cart-item-price" class="mb-0">10.99</span></p>
                 </div><!-- /.col-lg-3 -->
                 <div class="col-lg-3 card mx-2">
                     <h4 class="card-title text-center">#02</h4>
                     <img src="./img/orangecupcakes.png" alt="" class="card-img">
                     <p class="card-text text-center text-uppercase">orange cupcakes</p>
                     <button class="btn btn-secondary store-item-icon">Add To Cart</button>
-                    <span class="cart-item-price" class="mb-0">10.99</span>
+                    <p>$<span class="cart-item-price" class="mb-0">10.99</span></p>
                 </div><!-- /.col-lg-3 -->
                 <div class="col-lg-3 card mx-2">
                     <h4 class="card-title text-center">#03</h4>
                     <img src="./img/chocochipcookies.png" alt="" class="card-img mb-2">
                     <p class="card-text text-center text-uppercase">chocolate cookies</p>
                     <button class="btn btn-secondary store-item-icon">Add To Cart</button>
-                    <span class="cart-item-price" class="mb-0">10.99</span>
+                    <p>$<span class="cart-item-price" class="mb-0">10.99</span></p>
                 </div><!-- /.col-lg-3 -->
             </div><!-- /.row -->
         </div>
@@ -191,26 +191,8 @@
                 </div>
             </div>
             <!-- end of section title -->
-            <!--filter buttons -->
-            <div class="row">
-                <div class=" col-lg-8 mx-auto d-flex justify-content-around my-2 sortBtn flex-wrap">
-                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
-                        data-filter="all">
-                        all</a>
-                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
-                        data-filter="chocolate">chocolates</a>
-                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
-                        data-filter="cupcakes">cupcakes</a>
-                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
-                        data-filter="cookies">cookies</a>
-                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
-                        data-filter="doughnuts">doughnuts</a>
-                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
-                        data-filter="candy">candy</a>
-                </div>
-            </div>
 
-            <div class="row">
+            <div class="row my-5">
                 <div class="col-10 mx-auto col-md-6">
                     <form>
                         <div class="input-group mb-3">
@@ -261,6 +243,42 @@
                     <h1 class="text-capitalize"><strong class="banner-title ">contact</strong> us</h1>
                 </div>
             </div>
+
+            <form action="" class="form-group " method="post" class="a">
+
+                <input id="Name" type="text" class="form-control" placeholder="Name:">
+                <br>
+                <input
+                type="email"
+                class="form-control "
+                id="email"
+                placeholder="name@example.com"
+                >
+                <br>
+                <input
+                id="phone"
+                type="text"
+                class="form-control bfh-phone"
+                placeholder="Phone: (+46) "
+                >
+                <br>
+                <textarea
+                class="form-control help-block"
+                id="exampleFormControlTextarea1"
+                placeholder="Message.."
+                rows="3"
+                ></textarea>
+
+                <input
+                type="button"
+                id="submit"
+                value="Submit"
+                class="btn-lg btn-default"
+                name="submit"
+                data-toggle="modal"
+                data-target="#exampleModal"
+                >
+                </form>
             <!-- end of section title -->
         </div>
     </section>

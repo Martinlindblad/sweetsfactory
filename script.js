@@ -33,6 +33,14 @@ function checkoutClick() {
     updateTotal()
 }
 
+// update the badge num
+// if shopping cart contains item badge num > 0 else show 0
+
+// remove items all at once
+
+// local storage for add, update, save & remove items or lists
+
+
 function removeCartItems(e) {
     const btnClick = e.target;
     btnClick.parentElement.parentElement.remove();
@@ -41,7 +49,7 @@ function removeCartItems(e) {
 
 function qtyChanged(e) {
     const input = e.target
-    if(isNaN(input.value) || input.value <= 0) {
+    if(isNaN(input.value) || input.value <= 1) {
         input.value = 1;
     }
     updateTotal()
@@ -74,8 +82,8 @@ function addItemToCart(cardTxt, price, imageSrc) {
         <div class="cart-item d-flex align-items-center justify-content-between">
             <img src="${imageSrc}" class="img-fluid card-img" id="item-img" alt="">
             <span class="item-text mx-5">${cardTxt}</span>
-            <span>$</span>
-            <span id="cart-item-price" class="cart-item-price" class="mb-0">${price}</span>
+            <span class="mx-2">$</span>
+            <span id="cart-item-price" class="cart-item-price mb-0 mr-2">${price}</span>
             <input type="number" value="1" class="cart-quantity-input">
             <button id='cart-item-remove' class="btn cart-item-remove my-auto">
                 <i class="fas fa-trash"></i>
@@ -120,14 +128,11 @@ function updateTotal() {
     cartInfo.addEventListener('click', () => cart.classList.toggle('show-cart'));
 })();
 
-
 // toggle scroll top arrow when it hits #about
-function toTop() {
+window.addEventListener('scroll', () => {
     const scrollTop = document.querySelector('.gotopbtn');
     const aboutSec = document.querySelector('#about');
     const topOfAbout = aboutSec.offsetTop;
 
     (window.scrollY >= topOfAbout) ? scrollTop.classList.remove('hidden') : scrollTop.classList.add('hidden');
-}
-
-window.addEventListener('scroll', toTop);
+});
