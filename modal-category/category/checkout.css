@@ -155,8 +155,6 @@ input{
     background-color: transparent;
     border-bottom: 1px solid var(--mainBlack);
     margin: 1em 0;
-}
-input{
     width: 90%;
 }
 .checkout{
@@ -171,11 +169,57 @@ input{
 .bg{
     background-color: #f1e0c9;
 }
-#address{
-    width: 96%;
+#address, #addRess{
+    width: 95.5%;
 }
 
 /* end of checkout */
+
+/* order confirm */
+#checkout-modal{
+    border: 1px solid black;
+}
+.boroderbtm{
+    border-bottom: 1px solid black;
+    width: 90%;
+    margin: 1em 0;
+}
+.modal-body .fas{
+    font-size: 4em;
+    color: var(--mainGrey);
+}
+#sendbtn{
+    background-color: var(--mainPink);
+    border: none;
+    text-decoration: none;
+}
+#sendbtn:hover{
+    background-color: white;
+    color: var(--mainPink);
+}
+
+/* end of order confirm */
+
+/* order confirmation */
+#orderName{
+    color: var(--mainPink);
+}
+#thanksTxt{
+    font-size: 1.5em;
+}
+#backtohome{
+    background-color: var(--mainPink);
+    border: none;
+}
+#backtohome:hover{
+    background-color: white;
+    color: var(--mainPink);
+}
+#ordertxt{
+    color: white;
+}
+
+/* end of order confirmation */
 
 /* footer container */
 .gotopbtn {

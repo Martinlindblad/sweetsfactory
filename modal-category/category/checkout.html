@@ -91,29 +91,24 @@
             <div class="container row mx-auto show-product my-3 py-3">
                 <div class="text-center mx-auto my-4"><i class="fas fa-shopping-cart text-center"></i></div>
                 <table class="text-capitalize table">
-                    <tr>
+                    <tr id="product">
                         <th scope="col"></th>
                         <th scope="col">item</th>
                         <th scope="col">price</th>
                         <th scope="col">qty</th>
                     </tr>
-                    <tr>
-                        <td><img src="./img/chocolate.jpg" alt="" width="110"></td>
-                        <td>almond and rasberry</td>
-                        <td>$ 2.00</td>
-                        <td>1 </td>
+                    <tr class="items">
+                        <td><img src="" alt="" width="110"></td>
+                        <td id="item-name"></td>
+                        <td id="item-price"></td>
+                        <td id="item-qty"></td>
                     </tr>
-                    <tr>
-                        <td><img src="./img/cookie2.jpg" alt="" width="110"></td>
-                        <td>chocochip</td>
-                        <td>$ 3.00</td>
-                        <td>1 </td>
-                    </tr>
+                   
                     <tr>
                         <td></td>
                         <td class="text-right">total</td>
-                        <td>$</td>
-                        <td></td>
+                        <td id="total">$</td>
+                        <td id="qty"></td>
                     </tr>
                 </table>
             </div><!-- row mx-auto show-product -->
@@ -164,7 +159,8 @@
                         </div>
                         <!--col-md-6-->
                         <div class="text-center mx-auto"><button type="submit" value="" name="confirm"
-                                class="btn btn-outline-secondary text-uppercase">check</button></div>
+                                class="btn btn-outline-secondary text-uppercase" data-toggle="modal"
+                                data-target="">check</button></div>
                     </div> <!-- /.d-flex flex-column-->
                 </form>
             </div><!-- /.container mx-auto my-3 py-3 checkout-->
@@ -174,52 +170,98 @@
     <!-- end of checkout form-->
 
     <!-- Modal -->
-    <div class="modal fade bd-modal-lg" id="exampleModal" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="check-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="mx-auto text-center">
-                                <h1 class="modal-title text-capitalize" id="exampleModalLabel"></h1>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <img class="cart-item-image" src="" width="400">
-                            </div>
-                            <div class="col-md-5 ml-auto my-5 d-flex flex-column">
-                                <div class="row mx-auto py-4">
-                                    <strong class="cart-price cart-column price mx-auto">$ <span
-                                            class="product-price"></span></strong>
-                                </div>
-                                <div class="row mx-auto d-flex py-4 icon">
-                                    <a class="text-center mx-3 my-auto" id="minus" role="button"><i
-                                            class="far fa-minus-square"></i></a><span class="mx-4"
-                                        id="show-num"></span><a class="text-center mx-3 my-auto" id="plus"
-                                        role="button"><i class="far fa-plus-square"></i></a>
-                                </div>
-                                <div class="row mt-5 d-flex pt-5">
-                                    <button type="button" class="btn btn-outline-dark mr-5"
-                                        data-dismiss="modal">Close</button>
-                                    <button class="btn btn-secondary btn-add-to-cart" type="button">ADD TO CART</button>
-                                </div>
-                            </div>
-                            <!--/.col-md-5-->
-                        </div>
-                        <!--/.row-->
+                    <div class="col-8 mx-auto text-center mt-4">
+                        <h1 class="text-capitalize"><strong class="banner-title ">o</strong>rder <strong
+                                class="banner-title ">c</strong>onfirm</h1>
                     </div>
-                    <!--/.container-fluid-->
+                    <!--col-8 mx-auto text-center mt-4-->
+                    <div class="container my-4 py-5" id="checkout-modal">
+                        <div class="container row mx-auto show-product my-4">
+                            <div class="text-center mx-auto py-4"><i class="fas fa-check-square"></i></div>
+                            <table class="text-capitalize table">
+                                <tr id="product-modal">
+                                    <th scope="col"></th>
+                                    <th scope="col">item</th>
+                                    <th scope="col">price</th>
+                                    <th scope="col">qty</th>
+                                </tr>
+                                <tr class="items">
+                                    <td><img src="" alt="" width="110"></td>
+                                    <td id="item-name"></td>
+                                    <td id="item-price"></td>
+                                    <td id="item-qty"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="text-right">total</td>
+                                    <td id="total-modal"></td>
+                                    <td id="qty-modal"></td>
+                                </tr>
+                            </table>
+                        </div><!-- row mx-auto show-product -->
+                        <div class="container mx-auto my-5 py-5 checkout">
+                            <form method="POST" action="" name="form" id="personal-info">
+                                <div class="row d-flex text-center mx-auto">
+                                    <div class="col-md-6 ">
+                                        <div class="row mx-auto boroderbtm" id="firstName">
+                                        </div>
+                                    </div>
+                                    <!--col-md-6-->
+                                    <div class="col-md-6 ">
+                                        <div class="row mx-auto boroderbtm" id="lastName">
+                                        </div>
+                                    </div>
+                                    <!--col-md-6-->
+                                    <div class="col-md-6 ">
+                                        <div class="row mx-auto boroderbtm" id="eMail">
+                                        </div>
+                                    </div>
+                                    <!--col-md-6-->
+                                    <div class="col-md-6 ">
+                                        <div class="row mx-auto boroderbtm" id="telNmb">
+                                        </div>
+                                    </div>
+                                    <!--col-md-6-->
+                                    <div class="col-md-12 ">
+                                        <div class="row mx-auto boroderbtm" id="addRess">
+                                            <div class=""></div>
+                                        </div>
+                                    </div>
+                                    <!--col-md-12-->
+                                    <div class="col-md-6 ">
+                                        <div class="row mx-auto boroderbtm" id="cityName">
+                                        </div>
+                                    </div>
+                                    <!--col-md-6-->
+                                    <div class="col-md-6 ">
+                                        <div class="row mx-auto boroderbtm" id="postCode">
+                                        </div>
+                                    </div>
+                                    <!--col-md-6-->
+                                    <div class="col-md-6 mx-auto my-3  ">
+                                        <button type="button" class="btn btn-outline-dark text-uppercase mx-3"
+                                            data-dismiss="modal">back</button>
+                                        <a href="thankyou.html" class="btn btn-secondary text-uppercase mx-3" type="button"
+                                            id="sendbtn">order</a>
+                                    </div>
+                                </div> <!-- /.d-flex flex-column-->
+                            </form>
+                        </div><!-- /.container mx-auto my-3 py-3 checkout-->
+                    </div>
+                    <!--container-->
                 </div>
                 <!--/.modal-body-->
             </div>
             <!--/.modal content-->
-
         </div>
         <!--/.modal-dialog modal-lg-->
-
-    </div><!-- end of modal-->
+    </div>
+    <!-- end of modal-->
 
 
 
