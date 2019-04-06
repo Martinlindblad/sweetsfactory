@@ -50,48 +50,49 @@
             </div><!-- row mx-auto show-product -->
             <div class="container mx-auto my-5 py-5 checkout">
                 <form method="POST" action="" name="form" id="thankyou-info">
-                    <div class="row d-flex text-center mx-auto" id="confirm">
+                    <!-- <div class="row d-flex text-center mx-auto" id="confirm">
                         <div class="col-md-6 ">
                             <div class="row mx-auto boroderbtm" id="firstName">
                             </div>
-                        </div>
+                        </div> -->
                         <!--col-md-6-->
-                        <div class="col-md-6 ">
+                        <!-- <div class="col-md-6 ">
                             <div class="row mx-auto boroderbtm" id="lastName">
                             </div>
-                        </div>
+                        </div> -->
                         <!--col-md-6-->
-                        <div class="col-md-6 ">
+                        <!-- <div class="col-md-6 ">
                             <div class="row mx-auto boroderbtm" id="eMail">
                             </div>
-                        </div>
+                        </div> -->
                         <!--col-md-6-->
-                        <div class="col-md-6 ">
+                        <!-- <div class="col-md-6 ">
                             <div class="row mx-auto boroderbtm" id="telNmb">
                             </div>
-                        </div>
+                        </div> -->
                         <!--col-md-6-->
-                        <div class="col-md-12 ">
+                        <!-- <div class="col-md-12 ">
                             <div class="row mx-auto boroderbtm" id="addRess">
                                 <div class=""></div>
                             </div>
-                        </div>
+                        </div> -->
                         <!--col-md-12-->
-                        <div class="col-md-6 ">
+                        <!-- <div class="col-md-6 ">
                             <div class="row mx-auto boroderbtm" id="cityName">
                             </div>
-                        </div>
+                        </div> -->
                         <!--col-md-6-->
-                        <div class="col-md-6 ">
+                        <!-- <div class="col-md-6 ">
                             <div class="row mx-auto boroderbtm" id="postCode">
                             </div>
-                        </div>
+                        </div> -->
                         <!--col-md-6-->
-                        <div class="col-md-6 mx-auto my-3  ">
+                        <!-- <div class="col-md-6 mx-auto my-3  ">
                             <a href="index.html" id="backtohome" class="btn btn-secondary text-uppercase mx-3">back to
                                 home page</a>
-                        </div>
-                    </div> <!-- /.d-flex flex-column-->
+                        </div> -->
+                    <!-- </div>  -->
+                    <!-- /.d-flex flex-column-->
                 </form>
             </div><!-- /.container mx-auto my-3 py-3 checkout-->
         </div>
@@ -130,7 +131,7 @@
                 console.log(localStorage);
                 console.log(localStorage.key(i));
                 result += `<div class="col-md-6 ">
-                        <div class="row mx-auto boroderbtm">${localStorage.getItem(localStorage.key(1))}</div>
+                        <div class="row mx-auto boroderbtm">${localStorage.getItem(localStorage.key(i))}</div>
                         </div>`;
             }
             result += `<div class="col-md-6 mx-auto my-3">
