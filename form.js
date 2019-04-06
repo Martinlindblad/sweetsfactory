@@ -16,8 +16,8 @@ function cssEmail() {
   
   if(validateEmail(emailValue)) {
     
+
     
-    // $('#email').css("box-shadow", "green 1px");
     $("#email").css('border-color', 'green');
     $('#email').addClass("green");
     
@@ -25,7 +25,7 @@ function cssEmail() {
   else {
     $("#email").css('border-color', 'red');
     $('#email').addClass("red"); 
-    
+
     
   
   }
@@ -52,10 +52,11 @@ function cssName() {
   if(validateName(namnValue)) {
     $("#Name").css('border-color', 'green');
     $('#Name').addClass("green");
+ 
     
   }else {
     
-  
+
     $("#Name").css('border-color', 'red');
     $('#Name').addClass("red");
   }
@@ -73,15 +74,16 @@ function validatePhone(phone) {
 }
 
 function cssPhone() {
-  let phoneValue = $('#namn').val();
-  console.log(phoneValue);
+  let phoneValue = $('#phone').val();
+  
   
   if(validatePhone(phoneValue)) {
     $("#phone").css('border-color', 'green');
     $('#phone').addClass("green");
+   
     
   }else {
-    
+
     $("#phone").css('border-color', 'red');
     $('#phone').addClass("red");
   }
@@ -95,24 +97,68 @@ function cssPhone() {
 
 
 $(document).ready(function () {
-
+  
+  $("#submit").addClass('non-click')
   $('#email').on('input', function() {
-
+    
     console.log(validateEmail()) // email
     console.log(cssEmail()); // email
+    console.log(modalVal());
   });
   $('#Name').on('input', function() {
     
     console.log(validateName()); // namn
     console.log(cssName()); // name
+    console.log(modalVal());
   });
   $('#phone').on('input', function() {
-    
-    console.log(validatePhone()); // namn
-    console.log(cssPhone()); // name
+    console.log(modalVal());
+    console.log(validatePhone()); // phone
+    console.log(cssPhone()); // phone
   });
   
   
+  // __________________MODAL____________________________
+
+  function resetForm() {
+
+    document.getElementById("form").reset();
+
+}
+  $('#close').click(function () {
+    resetForm();
+  })
+
+  $("#submit").click(function(){
+    
+    
+    
+    $("#add-modal-h2").append("Thank You!");
+    $("#add-modal-p").append("For submiting your information we will contact you in the near future!");
+  }); 
   
+  
+function modalVal() {
+  let phoneValue = $('#phone').val();
+  let nameValue = $('#Name').val();
+  let emailValue = $('#email').val();
+  if(validateEmail(emailValue) && validatePhone(phoneValue) && validateName(nameValue)){
+    $("#submit").removeClass('non-click')
+    }else{
+      
+        $("#submit").addClass('non-click')
+        
+     
+    }
+}
+
+ 
+
+
+   
+
+
+
+
 }); // Ready
 
