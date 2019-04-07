@@ -25,7 +25,6 @@ $(function () {
 
     let productList = JSON.stringify(product);
     localStorage.setItem('product', productList);
-    console.table(localStorage);
 }); // ready
 
 
@@ -37,7 +36,6 @@ $(function () {
     //då konvertera tillbaka från en JSON-sträng till en array
     let productList = localStorage.getItem('product') ? JSON.parse(localStorage.getItem('product')) : [];
     console.table(productList.sweets);
-    console.log(productList.totalAmount[0].total);
     console.log(productList);
     console.log(localStorage)
 
@@ -60,13 +58,8 @@ $(function () {
     <td class="text-right">total</td>
     <td id="total">$ ${productList.totalAmount[0].total}</td>
     <td id="qty">${productList.totalAmount[0].totalQty}</td>
-</tr>`
-    // $.each(productList.sweets, function(i,item){
-    //     value += `<td>${item}</td>`
-    // });
-
-    //  productList.sweets.forEach(item => 
-    //     )
+    </tr>`
+   
     $('table').append().html(value);
 
 
