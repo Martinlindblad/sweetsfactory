@@ -166,24 +166,7 @@
                         <div class="container row mx-auto show-product my-4">
                             <div class="text-center mx-auto py-4"><i class="fas fa-check-square"></i></div>
                             <table class="text-capitalize table">
-                                <!-- <tr id="product-modal">
-                                    <th scope="col"></th>
-                                    <th scope="col">item</th>
-                                    <th scope="col">price</th>
-                                    <th scope="col">qty</th>
-                                </tr>
-                                <tr class="items">
-                                    <td><img src="" alt="" width="110"></td>
-                                    <td id="item-name"></td>
-                                    <td id="item-price"></td>
-                                    <td id="item-qty"></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td class="text-right">total</td>
-                                    <td id="total-modal"></td>
-                                    <td id="qty-modal"></td>
-                                </tr> -->
+                              
                             </table>
                         </div><!-- row mx-auto show-product -->
                         <div class="container mx-auto my-5 py-5 checkout">
@@ -264,6 +247,16 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     <script src="./checkout.js"></script>
+    <script>
+    /*------------------ toggle shopping cart -------------------*/
+
+    (function () {
+    const cartInfo = document.querySelector('.cart-info');
+    const cart = document.querySelector('.cart');
+
+    cartInfo.addEventListener('click', () => cart.classList.toggle('show-cart'));
+})();
+    </script>
 </body>
 
 </html>

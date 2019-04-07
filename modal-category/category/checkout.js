@@ -1,13 +1,3 @@
-
-/*------------------ toggle shopping cart -------------------*/
-
-// (function () {
-//     const cartInfo = document.querySelector('.cart-info');
-//     const cart = document.querySelector('.cart');
-
-//     cartInfo.addEventListener('click', () => cart.classList.toggle('show-cart'));
-// })();
-
 // Test-----> lagra produkter i LS
 $(function () {
     let product = {
@@ -36,6 +26,7 @@ $(function () {
     let productList = JSON.stringify(product);
     localStorage.setItem('product', productList);
 }); // ready
+/* -------------end of test --------------------*/
 
 
 $(function () {
@@ -74,10 +65,9 @@ $(function () {
         $('table').append().html(value);
 
         
-    /*---------------- checkout validation ---------------*/
+    /*---------------- checkout personlig uppgifter validation ---------------*/
     // Check firstname, lastname, address and city form
     $('#firstname,#lastname,#address,#city').on('blur', function () {
-        // $(this).addClass('bg');
         let chose = $(this).val();
         if (chose === '') {
             $(this).prev().fadeIn();
@@ -147,7 +137,6 @@ $(function () {
     //kollar om attribute data-valid = true eller false
     //Om det är false då visar man fel meddelande
     //Om alla är godkända då visas order confirm
-
     $('button[type="submit"]').on('click', function (e) {
         e.preventDefault();
         let trueCount = 0; // räknar hur många true
@@ -227,7 +216,7 @@ function personInfoLocalStorage(personInfoArray) {
     console.log(typeof myList);
 }
 
-/*------------- Hämta värdet från en personInfoArray till en thankyou.html sidan ------------*/
+/*------------- Hämta värdet från en personInfoArray i LocalStorage till en thankyou.html sidan ------------*/
 $(function () {
     // Om det finns redan infomationen i personInfoArray när man kommer till en ny sidan.
     //Om man kan hämta en personInfoArray från LocalStorage
