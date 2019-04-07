@@ -175,7 +175,7 @@ input{
 
 /* end of checkout */
 
-/* order confirm */
+/* modal order confirm */
 #checkout-modal{
     border: 1px solid black;
 }
@@ -198,9 +198,12 @@ input{
     color: var(--mainPink);
 }
 
-/* end of order confirm */
+/* end of modal order confirm */
 
 /* order confirmation */
+#thankyou{
+    border: 1px solid black;
+}
 #orderName{
     color: var(--mainPink);
 }
@@ -218,8 +221,8 @@ input{
 #ordertxt{
     color: white;
 }
-
 /* end of order confirmation */
+
 
 /* footer container */
 .gotopbtn {
@@ -256,5 +259,33 @@ input{
     border-radius: 50%;
     padding: 5px 7px;
     transform: translateY(50%);
+}
+
+@media (max-width: 576px) {
+.show-product, .checkout{
+    width: 100%;
+} 
+.modal-body .fas, section .fas{
+    font-size: 2em;  
+}
+#orderConfotTxt{
+    font-size: 1.7em;
+}
+}
+
+@media (max-width: 768px) and (min-width: 577px) {
+.show-product, .checkout{
+    width: 100%;
+}
+.modal-body .fas, section .fas{
+    font-size: 2.5em;  
+}
+#orderConfotTxt{
+    font-size: 2em;
+}
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+  
 }
 
