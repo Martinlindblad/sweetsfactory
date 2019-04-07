@@ -115,32 +115,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-    <!-- <script src="./checkout.js"></script> -->
-    <script>
-        $(function () {
-            // Hämta en personInfoArray från LS
-            let personInfoArray = localStorage.getItem('personInfoArray');
-            // Konvertera tillbaka från en JSON-sträng till en array
-            // getJson = JSON.parse(getJson);
-            // console.log(typeof personInfoArray);
-            // getJson = JSON.parse(getJson);
-            
-            
-            let result = `<div class="row d-flex text-center mx-auto">`;
-            for (let i = 0; i < localStorage.length; i++) {
-                console.log(localStorage);
-                console.log(localStorage.key(i));
-                result += `<div class="col-md-6 ">
-                        <div class="row mx-auto boroderbtm">${localStorage.getItem(localStorage.key(i))}</div>
-                        </div>`;
-            }
-            result += `<div class="col-md-6 mx-auto my-3">
-                        <a href="index.html" id="backtohome" class="btn btn-secondary text-uppercase mx-3">back to home page</a></div></div></div>`;
-            console.log(result);
-            $('#thankyou-info').append().html(result);
-        });
-
-    </script>
+    <script src="./checkout.js"></script>
 </body>
 
 </html>

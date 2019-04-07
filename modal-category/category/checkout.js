@@ -148,7 +148,7 @@ function modalSubmit() {
     postcode.html($('#postcode').val());
 
     
-    // Lagra information i localStorage
+    // spara information i en array (personInfoArray)
     let personInfoArray = [
         ($('#firstname').val()),
         ($('#lastname').val()),
@@ -158,13 +158,42 @@ function modalSubmit() {
         ($('#city').val()),
         ($('#postcode').val())
     ];
-    //Konvertera en array till en JSON innan lagrar i LS
-    JSON.stringify(personInfoArray);
-    localStorage.setItem('personInfoArray', personInfoArray);
-    console.table(localStorage);
 
+    personInfoLocalStorage(personInfoArray);
 }
 
+/* -------------- Lagra personal info(personInfoArray) i LocalStorage  --------------------*/
+function personInfoLocalStorage(personInfoArray){
+
+    //Konvertera en array till en JSON innan lagrar i LS
+    let myList = JSON.stringify(personInfoArray);
+    localStorage.setItem('personInfoArray', myList);
+    console.table(localStorage);
+    console.log(typeof myList);
+}
+
+/*------------- Hämta värdet från en personInfoArray till en thankyou.html sidan ------------*/
+    $(function () {
+        // Om det finns redan infomationen i personInfoArray när man kommer till en ny sidan.
+        //Om man kan hämta en personInfoArray från LocalStorage
+        //då konvertera tillbaka från en JSON-sträng till en array
+        let personInfoArray = localStorage.getItem('personInfoArray') ? JSON.parse(localStorage.getItem('personInfoArray')) : []; 
+        console.table(personInfoArray);
+        
+        let result = `<div class="row d-flex text-center mx-auto">`;
+        personInfoArray.forEach(info => 
+        result += `<div class="col-md-6 ">
+                    <div class="row mx-auto boroderbtm">${info}</div></div>`
+        );
+        result += `<div class="col-md-6 mx-auto my-3">
+                    <a href="index.html" id="backtohome" class="btn btn-secondary text-uppercase mx-3">back to home page</a></div></div></div>`;
+        console.log(result);
+        $('#thankyou-info').append().html(result);
+        $('#orderName').append(personInfoArray[0]); // Visa förnamn på högstupp före 'Thank you....
+
+});
+    
+   
 
 
 
