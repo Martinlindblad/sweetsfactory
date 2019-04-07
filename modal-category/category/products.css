@@ -138,6 +138,7 @@ body {
     background-size: 100vw;
     background-position: fixed;
 }
+
 .img1 {
     background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("./img/bg-img.jpg");
 }

@@ -41,27 +41,25 @@ $.getJSON('sweets.json', function( data ) {
     
     
     (function() {
-        const productsEl = document.querySelector(".products-container");
-        const productsTitle = document.querySelector(".row");
+        const productsEl1 = document.querySelector(".products-container1");
+        const productsEl2 = document.querySelector(".products-container2");
+        const productsEl3 = document.querySelector(".products-container3");
+        const productsEl4 = document.querySelector(".products-container4");
+        const productsEl5 = document.querySelector(".products-container5");
+        // const productsTitle = document.querySelector(".row");
         const cartEl = document.querySelector('.cart-item');
         const qtyEl = document.querySelector('.item-qty');
         
         
         //   generate the products with info from json
         function generateProducts() {
-            var titleDiv = document.createElement("div");
-            titleDiv.innerHTML = `<h2 class="text-capitalize"><strong class="banner-title ">D</strong>oughnuts</h2>`;
-            titleDiv.classList.add("col-10", "mx-auto", "col-sm-6", "text-center");
+         
             doughnut.forEach(doughnut => {
                 var productsDiv = document.createElement("div");
-                // productsDiv.className = "col-lg-4";
+              
                 productsDiv.classList.add("col-lg-4", "card", "mx-4", "mx-2");
                 console.log(doughnut);
-                // var divs = $("div > div");
-                // for(var i = 0; i < divs.length; i+=3) {
-                //   divs.slice(i, i+4).wrapAll("<div class='new'></div>");
-                // }
-
+          
             productsDiv.innerHTML = `
             <img src='${doughnut.imageUrl}' alt='${doughnut.name}' class="card-img">
             <h4 class="card-text text-center text-capitalize">${doughnut.name}</h4>
@@ -73,18 +71,18 @@ $.getJSON('sweets.json', function( data ) {
                 doughnut.price
             }</strong>/ 1 piece</p>
             `;
-            productsTitle.appendChild(titleDiv);
-            productsEl.appendChild(productsDiv);
+           
+            productsEl1.appendChild(productsDiv);
             console.log(productsDiv);
         });
         var titleDiv = document.createElement("div");
-        titleDiv.classList.add("col-10", "mx-auto", "col-sm-6", "text-center");
+      
         cupcake.forEach(cupcake => {
             var productsDiv = document.createElement("div");
-            // productsDiv.className = "col-lg-4";
+       
             productsDiv.classList.add("col-lg-4", "card", "mx-4", "mx-2");
             
-            titleDiv.innerHTML = `<h2 class="text-capitalize"><strong class="banner-title ">c</strong>upcakes</h2>`
+   
             productsDiv.innerHTML = `
             <img src='${cupcake.imageUrl}' alt='${cupcake.name}' class="card-img">
             <h4 class="card-text text-center text-capitalize">${cupcake.name}</h4>
@@ -96,18 +94,18 @@ $.getJSON('sweets.json', function( data ) {
                 cupcake.price
             }</strong>/ 1 piece</p>
             `;
-            productsEl.appendChild(productsDiv);
-            productsTitle.appendChild(titleDiv);
+            productsEl2.appendChild(productsDiv);
+           
             console.log(productsDiv);
         });
         var titleDiv = document.createElement("div");
-        titleDiv.classList.add("col-10", "mx-auto", "col-sm-6", "text-center");
+       
         chocolate.forEach(chocolate => {
             var productsDiv = document.createElement("div");
             // productsDiv.className = "col-lg-4";
             productsDiv.classList.add("col-lg-4", "card", "mx-4", "mx-2");
             
-            titleDiv.innerHTML = `<h2 class="text-capitalize"><strong class="banner-title ">c</strong>hocolates</h2>`
+            
             productsDiv.innerHTML = `
             <img src='${chocolate.imageUrl}' alt='${chocolate.name}' class="card-img">
             <h4 class="card-text text-center text-capitalize">${chocolate.name}</h4>
@@ -119,18 +117,17 @@ $.getJSON('sweets.json', function( data ) {
                 chocolate.price
             }</strong>/ 1 piece</p>
             `;
-            productsEl.appendChild(productsDiv);
-            productsTitle.appendChild(titleDiv);
+            productsEl3.appendChild(productsDiv);
+            
             console.log(productsDiv);
         });
-        var titleDiv = document.createElement("div");
-        titleDiv.classList.add("col-10", "mx-auto", "col-sm-6", "text-center");
+        
         cookie.forEach(cookie => {
             var productsDiv = document.createElement("div");
             // productsDiv.className = "col-lg-4";
             productsDiv.classList.add("col-lg-4", "card", "mx-4", "mx-2");
             
-            titleDiv.innerHTML = `<h2 class="text-capitalize"><strong class="banner-title ">c</strong>ookies</h2>`
+          
             productsDiv.innerHTML = `
             <img src='${cookie.imageUrl}' alt='${cookie.name}' class="card-img">
             <h4 class="card-text text-center text-capitalize">${cookie.name}</h4>
@@ -142,18 +139,17 @@ $.getJSON('sweets.json', function( data ) {
                 cookie.price
             }</strong>/ 1 piece</p>
             `;
-            productsEl.appendChild(productsDiv);
-            productsTitle.appendChild(titleDiv);
+            productsEl4.appendChild(productsDiv);
+          
             console.log(productsDiv);
         });
-        var titleDiv = document.createElement("div");
-        titleDiv.classList.add("col-10", "mx-auto", "col-sm-6", "text-center");
+       
         candy.forEach(candy => {
             var productsDiv = document.createElement("div");
             // productsDiv.className = "col-lg-4";
             productsDiv.classList.add("col-lg-4", "card", "mx-4", "mx-2");
             
-            titleDiv.innerHTML = `<h2 class="text-capitalize"><strong class="banner-title ">c</strong>andy</h2>`
+            
             productsDiv.innerHTML = `
             <img src='${candy.imageUrl}' alt='${candy.name}' class="card-img">
             <h4 class="card-text text-center text-capitalize">${candy.name}</h4>
@@ -165,8 +161,8 @@ $.getJSON('sweets.json', function( data ) {
                 candy.price
             }</strong>/ 1 piece</p>
             `;
-            productsEl.appendChild(productsDiv);
-            productsTitle.appendChild(titleDiv);
+            productsEl5.appendChild(productsDiv);
+            
             console.log(productsDiv);
         });
     }
