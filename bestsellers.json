@@ -1,0 +1,13 @@
+{
+    "Bestsellers": [
+        {
+            "rank": "#01", "sort": "chocolate doughnuts", "price": 10.99, "imageUrl": "./img/chocodoughnuts.png"    
+        },
+        {
+            "rank": "#02", "sort": "orange cupcakes", "price": 10.99, "imageUrl": "./img/orangecupcakes.png"  
+        },
+        {
+            "rank": "#03", "sort": "chocolate cookies", "price": 10.99, "imageUrl": "./img/chocochipcookies.png"  
+        }
+    ]
+}
