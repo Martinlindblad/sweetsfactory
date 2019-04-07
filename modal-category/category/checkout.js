@@ -8,9 +8,73 @@
 //     cartInfo.addEventListener('click', () => cart.classList.toggle('show-cart'));
 // })();
 
+// Test-----> lagra produkter i LS
+$(function () {
+    let product = {
+        "sweets": [
+            { "picture": "https://images.pexels.com/photos/639024/pexels-photo-639024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", "name": "Chocolate punch", "price": 3.50, "qty": "2" },
+            { "picture": "https://images.pexels.com/photos/639024/pexels-photo-639024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", "name": "Chocolate", "price": 2.50, "qty": "1" },
+        ],
+        "totalAmount": [
+            {
+                "total": "6.00",
+                "totalQty": "3"
+            }
+        ]
+    };
+
+    let productList = JSON.stringify(product);
+    localStorage.setItem('product', productList);
+    console.table(localStorage);
+}); // ready
+
 
 /*---------------- checkout validation ---------------*/
 $(function () {
+    /*--------- Visa de valda produkterna på beställnings sidan -------*/
+    // Om det finns redan product i en array(product) när man kommer till beställnings sidan.
+    //Om man kan hämta innehållet av product från LocalStorage
+    //då konvertera tillbaka från en JSON-sträng till en array
+    let productList = localStorage.getItem('product') ? JSON.parse(localStorage.getItem('product')) : [];
+    console.table(productList.sweets);
+    console.log(productList.totalAmount[0].total);
+    console.log(productList);
+    console.log(localStorage)
+
+    let value = `<tr id="product">
+    <th scope="col"></th>
+    <th scope="col">item</th>
+    <th scope="col">price</th>
+    <th scope="col">qty</th>
+    </tr>`;
+    productList.sweets.forEach(item =>
+        value += `<tr>
+               <td><img src="${item.picture}" alt="" width="110"></td>
+               <td>${item.name}</td>
+               <td>${item.price}</td>
+               <td>${item.qty}</td>
+               </tr>`
+    )
+    value += `<tr id="totalAmount">
+    <td></td>
+    <td class="text-right">total</td>
+    <td id="total">$ ${productList.totalAmount[0].total}</td>
+    <td id="qty">${productList.totalAmount[0].totalQty}</td>
+</tr>`
+    // $.each(productList.sweets, function(i,item){
+    //     value += `<td>${item}</td>`
+    // });
+
+    //  productList.sweets.forEach(item => 
+    //     )
+    $('table').append().html(value);
+
+
+
+
+
+
+
 
     // Check firstname, lastname, address and city form
     $('#firstname,#lastname,#address,#city').on('blur', function () {
@@ -110,9 +174,9 @@ $(function () {
             true;
         }
 
-    });
+    }); // check button
 
-});
+}); // ready
 
 
 
@@ -122,9 +186,9 @@ function modalSubmit() {
     $('button[type="submit"]').attr('data-target', '#check-modal');
 
     // Visa de valda produkterna via locakstorage
-    getItem();
+    showItem();
 
-    function getItem() {
+    function showItem() {
 
     }
 
@@ -147,7 +211,7 @@ function modalSubmit() {
     cityname.html($('#city').val());
     postcode.html($('#postcode').val());
 
-    
+
     // spara information i en array (personInfoArray)
     let personInfoArray = [
         ($('#firstname').val()),
@@ -160,10 +224,10 @@ function modalSubmit() {
     ];
 
     personInfoLocalStorage(personInfoArray);
-}
+} // modal confirm page
 
 /* -------------- Lagra personal info(personInfoArray) i LocalStorage  --------------------*/
-function personInfoLocalStorage(personInfoArray){
+function personInfoLocalStorage(personInfoArray) {
 
     //Konvertera en array till en JSON innan lagrar i LS
     let myList = JSON.stringify(personInfoArray);
@@ -173,27 +237,31 @@ function personInfoLocalStorage(personInfoArray){
 }
 
 /*------------- Hämta värdet från en personInfoArray till en thankyou.html sidan ------------*/
-    $(function () {
-        // Om det finns redan infomationen i personInfoArray när man kommer till en ny sidan.
-        //Om man kan hämta en personInfoArray från LocalStorage
-        //då konvertera tillbaka från en JSON-sträng till en array
-        let personInfoArray = localStorage.getItem('personInfoArray') ? JSON.parse(localStorage.getItem('personInfoArray')) : []; 
-        console.table(personInfoArray);
-        
-        let result = `<div class="row d-flex text-center mx-auto">`;
-        personInfoArray.forEach(info => 
+$(function () {
+    // Om det finns redan infomationen i personInfoArray när man kommer till en ny sidan.
+    //Om man kan hämta en personInfoArray från LocalStorage
+    //då konvertera tillbaka från en JSON-sträng till en array
+    let personInfoArray = localStorage.getItem('personInfoArray') ? JSON.parse(localStorage.getItem('personInfoArray')) : [];
+    console.table(personInfoArray);
+
+    let result = `<div class="row d-flex text-center mx-auto">`;
+    personInfoArray.forEach(info =>
         result += `<div class="col-md-6 ">
                     <div class="row mx-auto boroderbtm">${info}</div></div>`
-        );
-        result += `<div class="col-md-6 mx-auto my-3">
+    );
+    result += `<div class="col-md-6 mx-auto my-3">
                     <a href="index.html" id="backtohome" class="btn btn-secondary text-uppercase mx-3">back to home page</a></div></div></div>`;
-        console.log(result);
-        $('#thankyou-info').append().html(result);
-        $('#orderName').append(personInfoArray[0]); // Visa förnamn på högstupp före 'Thank you....
+    console.log(result);
+    $('#thankyou-info').append().html(result);
+    $('#orderName').append(personInfoArray[0]); // Visa förnamn på högstupp före 'Thank you....
+
+    // $('#backtohome').on('click', function(){
+    //      personInfoArray.clear();
+    // })
 
 });
-    
-   
+
+
 
 
 
