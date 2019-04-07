@@ -1,3 +1,6 @@
+// todo:
+// local storage for add, update, save & remove items or lists
+
 function ready() {
     // remove items from the cart
     const removeCartItemBtns = document.getElementsByClassName('cart-item-remove');
@@ -19,7 +22,8 @@ function ready() {
         btn.addEventListener('click', addToCartClick)
     }
 
-    // showTotalAmount();
+    const clearBtn = document.getElementById('clear-cart')
+    clearBtn.addEventListener('click', clearCart)
 
     document.querySelector('.btn-checkout').addEventListener('click', checkoutClick)
 }
@@ -28,17 +32,19 @@ ready();
 
 function checkoutClick() {
     alert('Thanks for your purchase. Have a nice day!')
+
+    clearCart()
+}
+
+// remove items all at once
+function clearCart() {
     const allItems = document.getElementsByClassName('cart-items')[0]
+
     while(allItems.hasChildNodes()) {
         allItems.removeChild(allItems.firstChild)
     }
     updateTotal()
 }
-
-// remove items all at once
-
-// local storage for add, update, save & remove items or lists
-
 
 function removeCartItems(e) {
     const btnClick = e.target;
@@ -63,6 +69,7 @@ function addToCartClick(e) {
 
     // console.log(cardTxt, price, imageSrc);
     addItemToCart(cardTxt, price, imageSrc);
+
     updateTotal();
 }
 
@@ -137,8 +144,12 @@ function showTotalAmount() {
 
     console.log(totalItems);
     badgeAmount.innerText = totalItems
+
+    const checkoutBtn = document.querySelector('.btn-checkout')
+    checkoutBtn.classList.remove('disabled')
 };
 
+// show cart
 (function() {
     const cartInfo = document.querySelector('.cart-info');
     const cart = document.querySelector('.cart');
