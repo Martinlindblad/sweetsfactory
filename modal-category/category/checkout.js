@@ -1,24 +1,34 @@
 
 /*------------------ toggle shopping cart -------------------*/
 
-// (function () {
-//     const cartInfo = document.querySelector('.cart-info');
-//     const cart = document.querySelector('.cart');
+(function () {
+    const cartInfo = document.querySelector('.cart-info');
+    const cart = document.querySelector('.cart');
 
-//     cartInfo.addEventListener('click', () => cart.classList.toggle('show-cart'));
-// })();
+    cartInfo.addEventListener('click', () => cart.classList.toggle('show-cart'));
+})();
 
 // Test-----> lagra produkter i LS
 $(function () {
     let product = {
         "sweets": [
-            { "picture": "https://images.pexels.com/photos/639024/pexels-photo-639024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", "name": "Chocolate punch", "price": 3.50, "qty": "2" },
-            { "picture": "https://images.pexels.com/photos/639024/pexels-photo-639024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", "name": "Chocolate", "price": 2.50, "qty": "1" },
+            { "picture": "https://images.pexels.com/photos/639024/pexels-photo-639024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+               "name": "Chocolate punch", 
+               "price": 3.50, 
+               "qty": 2 },
+            { "picture": "https://images.pexels.com/photos/639024/pexels-photo-639024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "name": "Chocolate",
+              "price": 2.50, 
+              "qty": 1 },
+            { "picture": "https://images.pexels.com/photos/639024/pexels-photo-639024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "name": "Chocolate",
+              "price": 2.50, 
+              "qty": 1 },
         ],
         "totalAmount": [
             {
-                "total": "6.00",
-                "totalQty": "3"
+                "total": 6.00,
+                "totalQty": 3
             }
         ]
     };
@@ -59,7 +69,7 @@ $(function () {
     <td id="total">$ ${productList.totalAmount[0].total}</td>
     <td id="qty">${productList.totalAmount[0].totalQty}</td>
     </tr>`
-   
+
     $('table').append().html(value);
 
 
