@@ -4,7 +4,7 @@ $(document).ready(function(){
     bannerRoll();
 });
 // Load bannerRoll() after first document load. Repeats the action.
-let speed = 1000/60; // 60 fps
+
 
 setInterval(() => {
     bannerRoll();
@@ -19,6 +19,173 @@ function bannerRoll(){
         function(){ $(this).stop(true,true).animate({scrollTop: 0}, 12000 , "linear" ); // Go back up again
 });
 }
+
+
+
+// __________________GET JSON_____________________
+
+$.getJSON('sweets.json', function( data ) {
+    console.log(data);
+    let doughnut = data.Doughnut;
+    let cupcake = data.Cupcake;
+    let chocolate = data.Chocolate;
+    let cookie = data.Cookies;
+    let candy = data.Candy;
+    console.log(doughnut);
+    console.log(cupcake);
+    console.log(chocolate);
+    console.log(cookie);
+    console.log(candy);
+    
+    
+    
+    
+    (function() {
+        const productsEl = document.querySelector(".products-container");
+        const productsTitle = document.querySelector(".row");
+        const cartEl = document.querySelector('.cart-item');
+        const qtyEl = document.querySelector('.item-qty');
+        
+        
+        //   generate the products with info from json
+        function generateProducts() {
+            var titleDiv = document.createElement("div");
+            titleDiv.innerHTML = `<h2 class="text-capitalize"><strong class="banner-title ">D</strong>oughnuts</h2>`;
+            titleDiv.classList.add("col-10", "mx-auto", "col-sm-6", "text-center");
+            doughnut.forEach(doughnut => {
+                var productsDiv = document.createElement("div");
+                // productsDiv.className = "col-lg-4";
+                productsDiv.classList.add("col-lg-4", "card", "mx-4", "mx-2");
+                console.log(doughnut);
+                // var divs = $("div > div");
+                // for(var i = 0; i < divs.length; i+=3) {
+                //   divs.slice(i, i+4).wrapAll("<div class='new'></div>");
+                // }
+
+            productsDiv.innerHTML = `
+            <img src='${doughnut.imageUrl}' alt='${doughnut.name}' class="card-img">
+            <h4 class="card-text text-center text-capitalize">${doughnut.name}</h4>
+            <p class="card-text">${doughnut.description}</p>
+            <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
+            ${doughnut.ingredients
+            }</p>
+            <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal" data-target="#exampleModal" role="button">ADD TO CART</button><strong class="ml-5 price">$ ${
+                doughnut.price
+            }</strong>/ 1 piece</p>
+            `;
+            productsTitle.appendChild(titleDiv);
+            productsEl.appendChild(productsDiv);
+            console.log(productsDiv);
+        });
+        var titleDiv = document.createElement("div");
+        titleDiv.classList.add("col-10", "mx-auto", "col-sm-6", "text-center");
+        cupcake.forEach(cupcake => {
+            var productsDiv = document.createElement("div");
+            // productsDiv.className = "col-lg-4";
+            productsDiv.classList.add("col-lg-4", "card", "mx-4", "mx-2");
+            
+            titleDiv.innerHTML = `<h2 class="text-capitalize"><strong class="banner-title ">c</strong>upcakes</h2>`
+            productsDiv.innerHTML = `
+            <img src='${cupcake.imageUrl}' alt='${cupcake.name}' class="card-img">
+            <h4 class="card-text text-center text-capitalize">${cupcake.name}</h4>
+            <p class="card-text">${cupcake.description}</p>
+            <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
+            ${cupcake.ingredients
+            }</p>
+            <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal" data-target="#exampleModal" role="button">ADD TO CART</button><strong class="ml-5 price">$ ${
+                cupcake.price
+            }</strong>/ 1 piece</p>
+            `;
+            productsEl.appendChild(productsDiv);
+            productsTitle.appendChild(titleDiv);
+            console.log(productsDiv);
+        });
+        var titleDiv = document.createElement("div");
+        titleDiv.classList.add("col-10", "mx-auto", "col-sm-6", "text-center");
+        chocolate.forEach(chocolate => {
+            var productsDiv = document.createElement("div");
+            // productsDiv.className = "col-lg-4";
+            productsDiv.classList.add("col-lg-4", "card", "mx-4", "mx-2");
+            
+            titleDiv.innerHTML = `<h2 class="text-capitalize"><strong class="banner-title ">c</strong>hocolates</h2>`
+            productsDiv.innerHTML = `
+            <img src='${chocolate.imageUrl}' alt='${chocolate.name}' class="card-img">
+            <h4 class="card-text text-center text-capitalize">${chocolate.name}</h4>
+            <p class="card-text">${chocolate.description}</p>
+            <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
+            ${chocolate.ingredients
+            }</p>
+            <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal" data-target="#exampleModal" role="button">ADD TO CART</button><strong class="ml-5 price">$ ${
+                chocolate.price
+            }</strong>/ 1 piece</p>
+            `;
+            productsEl.appendChild(productsDiv);
+            productsTitle.appendChild(titleDiv);
+            console.log(productsDiv);
+        });
+        var titleDiv = document.createElement("div");
+        titleDiv.classList.add("col-10", "mx-auto", "col-sm-6", "text-center");
+        cookie.forEach(cookie => {
+            var productsDiv = document.createElement("div");
+            // productsDiv.className = "col-lg-4";
+            productsDiv.classList.add("col-lg-4", "card", "mx-4", "mx-2");
+            
+            titleDiv.innerHTML = `<h2 class="text-capitalize"><strong class="banner-title ">c</strong>ookies</h2>`
+            productsDiv.innerHTML = `
+            <img src='${cookie.imageUrl}' alt='${cookie.name}' class="card-img">
+            <h4 class="card-text text-center text-capitalize">${cookie.name}</h4>
+            <p class="card-text">${cookie.description}</p>
+            <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
+            ${cookie.ingredients
+            }</p>
+            <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal" data-target="#exampleModal" role="button">ADD TO CART</button><strong class="ml-5 price">$ ${
+                cookie.price
+            }</strong>/ 1 piece</p>
+            `;
+            productsEl.appendChild(productsDiv);
+            productsTitle.appendChild(titleDiv);
+            console.log(productsDiv);
+        });
+        var titleDiv = document.createElement("div");
+        titleDiv.classList.add("col-10", "mx-auto", "col-sm-6", "text-center");
+        candy.forEach(candy => {
+            var productsDiv = document.createElement("div");
+            // productsDiv.className = "col-lg-4";
+            productsDiv.classList.add("col-lg-4", "card", "mx-4", "mx-2");
+            
+            titleDiv.innerHTML = `<h2 class="text-capitalize"><strong class="banner-title ">c</strong>andy</h2>`
+            productsDiv.innerHTML = `
+            <img src='${candy.imageUrl}' alt='${candy.name}' class="card-img">
+            <h4 class="card-text text-center text-capitalize">${candy.name}</h4>
+            <p class="card-text">${candy.description}</p>
+            <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
+            ${candy.ingredients
+            }</p>
+            <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal" data-target="#exampleModal" role="button">ADD TO CART</button><strong class="ml-5 price">$ ${
+                candy.price
+            }</strong>/ 1 piece</p>
+            `;
+            productsEl.appendChild(productsDiv);
+            productsTitle.appendChild(titleDiv);
+            console.log(productsDiv);
+        });
+    }
+    
+    generateProducts();
+   
+    
+    function generateCart() {
+        cartEl.innerHTML = '';
+    }
+    
+})();
+
+});
+
+
+
+
+
 
 
 /*------------------ toggle shopping cart -------------------*/

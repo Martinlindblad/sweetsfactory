@@ -1,0 +1,41 @@
+{
+  "Doughnut":[
+    {"name": "Chocolate punch", "description" : "Fresh yeast doughnut topped with chocolate fudge glazed with nuts", "ingredients": "flour,milk,sugar,egg,butter,chocolates, nuts", "price": 3.50, "imageUrl": "/modal-category/category/img/doughnuts.jpg"},
+    {"name": "Old fashion", "description" : "Classic vanilla bean glaze", "ingredients": "flour,milk,sugar,egg,butter,nutmeg", "price": 2.50, "imageUrl": "/modal-category/category/img/doughnut2.jpg"},
+    {"name": "Pinky ring", "description" : "Yeast doughnut topped with pink strawberry cake batter glaze with sprinkles", "ingredients": "flour,milk,sugar,egg,butter,strawberry", "price": 2.50, "imageUrl": "/modal-category/category/img/doughnut3.jpg"},
+    {"name": "cherry to you", "description" : "Yeast doughnut topped with white cake batter glaze with dried cherry", "ingredients": "flour,milk,sugar,egg,butter,dried cherry", "price": 3.00, "imageUrl": "/modal-category/category/img/doughnut4.jpg"}
+    
+  ],
+ 
+  "Cupcake":[
+    {"name": "double stuff", "description" : "Dark chocolate cupcake baked with rasberry, topped with rasberry cream and chocolates", "ingredients": "flour,milk,sugar,egg,butter,chocolates, nuts", "price": 3.50, "imageUrl": "/modal-category/category/img/cupcake2.jpg"},
+    {"name": "mint party", "description" : "Yeast doughnut topped with pink strawberry cake batter glaze with sprinkles", "ingredients": "flour,milk,sugar,egg,butter,rasberry,chocolate", "price": 2.00, "imageUrl": "/modal-category/category/img/cupcake3.jpg"},
+    {"name": "orange range", "description" : "Orange peel cupcake baked with vanilla, topped with orange buttercream.", "ingredients": "flour,milk,sugar,egg,butter,orange", "price": 2.50, "imageUrl": "/modal-category/category/img/cupcake.jpg"},
+    {"name": "limoncello", "description" : "Vanilla cupcake with lemon flavor, topped with chocolates and sugar", "ingredients": "flour,milk,sugar,egg,butter,orange", "price": 2.50, "imageUrl": "/modal-category/category/img/cupcake4.jpg"}
+    
+],
+
+  "Chocolate":[
+    {"name": "almond and rasberry", "description" : "Dark chocolate with almond and rasberry", "ingredients": "70% cacao,almond,rasberry", "price": 2.00, "imageUrl": "/modal-category/category/img/chocolate.jpg"},
+    {"name": "choco mocha", "description" : "Dark chocolate with coffee mocha flavor", "ingredients": "80% cacao, coffee", "price": 1.50, "imageUrl": "/modal-category/category/img/chocolate2.jpg"},
+    {"name": "pistachio truffles", "description" : "chocolate balls filled with pistachio", "ingredients": "40% cacao,pistachio,dates,butter", "price": 3.00, "imageUrl": "/modal-category/category/img/chocolate3.jpg"},
+    {"name": "Ginger", "description" : "Dark chocolate with ginger spice", "ingredients": "70% cacao, ginger", "price": 2.00, "imageUrl": "/modal-category/category/img/chocolate4.jpg"}
+    
+  ],
+
+  "Cookies":[
+    {"name": "chocolate holic", "description" : "Chocolate cookies topped with milk chocolate", "ingredients": "flour,sugar,egg,butter,chocolate", "price": 6.00, "imageUrl": "/modal-category/category/img/cookie.jpg"},
+    {"name": "crunchy oatmeal", "description" : "Crispy oatmeal cookies", "ingredients": "oatmeal,milk,sugar,butter", "price": 5.00, "imageUrl": "/modal-category/category/img/cookie4.jpg"},
+    {"name": "choco chip", "description" : "Butter cookies with chocolate chip", "ingredients": "flour,milk,sugar,egg,butter,chocolate", "price": 5.50, "imageUrl": "/modal-category/category/img/cookie2.jpg"},
+    {"name": "honey almond", "description" : "Honey cookies topped with a full av almond", "ingredients": "flour,milk,sugar,egg,butter,honey,almond", "price": 6.00, "imageUrl": "/modal-category/category/img/cookie3.jpg"}
+    
+  ],
+
+  "Candy":[
+    {"name": "jelly beans", "description" : "Classic jelly beans", "ingredients": "sugar,glucose syrup, maize starch, water, fruit juice from concentrate", "price": 2.00, "imageUrl": "/modal-category/category/img/candy.jpg"},
+    {"name": "fruits jelly", "description" : "Strawbery, orange and pear taste", "ingredients": "sugar,glucose syrup, maize starch, water, fruit juice from concentrate", "price": 2.00, "imageUrl": "/modal-category/category/img/candy2.jpg"},
+    {"name": "easter egg", "description" : "Easter milk chocolate egg candy", "ingredients": "sugar,chocolate,vanilla", "price": 4.50, "imageUrl": "/modal-category/category/img/candy3.jpg"},
+    {"name": "candy crush", "description" : "candy with different flavors", "ingredients": "sugar,glucose syrup", "price": 3.50, "imageUrl": "/modal-category/category/img/candy4.jpg"}
+    
+  ]
+}
