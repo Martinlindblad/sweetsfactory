@@ -1,12 +1,12 @@
 
 /*------------------ toggle shopping cart -------------------*/
 
-(function () {
-    const cartInfo = document.querySelector('.cart-info');
-    const cart = document.querySelector('.cart');
+// (function () {
+//     const cartInfo = document.querySelector('.cart-info');
+//     const cart = document.querySelector('.cart');
 
-    cartInfo.addEventListener('click', () => cart.classList.toggle('show-cart'));
-})();
+//     cartInfo.addEventListener('click', () => cart.classList.toggle('show-cart'));
+// })();
 
 // Test-----> lagra produkter i LS
 $(function () {
@@ -38,9 +38,9 @@ $(function () {
 }); // ready
 
 
-/*---------------- checkout validation ---------------*/
 $(function () {
     /*--------- Visa de valda produkterna på beställnings sidan -------*/
+    //Hämta produkter från lokalStorage
     // Om det finns redan product i en array(product) när man kommer till beställnings sidan.
     //Om man kan hämta innehållet av product från LocalStorage
     //då konvertera tillbaka från en JSON-sträng till en array
@@ -48,7 +48,7 @@ $(function () {
     console.table(productList.sweets);
     console.log(productList);
     console.log(localStorage)
-
+    
     let value = `<tr id="product">
     <th scope="col"></th>
     <th scope="col">item</th>
@@ -57,28 +57,24 @@ $(function () {
     </tr>`;
     productList.sweets.forEach(item =>
         value += `<tr>
-               <td><img src="${item.picture}" alt="" width="110"></td>
-               <td>${item.name}</td>
-               <td>${item.price}</td>
-               <td>${item.qty}</td>
-               </tr>`
-    )
-    value += `<tr id="totalAmount">
-    <td></td>
-    <td class="text-right">total</td>
-    <td id="total">$ ${productList.totalAmount[0].total}</td>
-    <td id="qty">${productList.totalAmount[0].totalQty}</td>
-    </tr>`
+        <td><img src="${item.picture}" alt="" width="110"></td>
+        <td>${item.name}</td>
+        <td>${item.price}</td>
+        <td>${item.qty}</td>
+        </tr>`
+        )
+        value += `<tr id="totalAmount">
+        <td></td>
+        <td class="text-right">total</td>
+        <td id="total">$ ${productList.totalAmount[0].total}</td>
+        <td id="qty">${productList.totalAmount[0].totalQty}</td>
+        </tr>`
+        
+        // Skriva ut alla valda produkter
+        $('table').append().html(value);
 
-    $('table').append().html(value);
-
-
-
-
-
-
-
-
+        
+    /*---------------- checkout validation ---------------*/
     // Check firstname, lastname, address and city form
     $('#firstname,#lastname,#address,#city').on('blur', function () {
         // $(this).addClass('bg');
@@ -187,14 +183,6 @@ $(function () {
 function modalSubmit() {
     // Lägga till attribute värde #check-modal för att kunna öppna modal form
     $('button[type="submit"]').attr('data-target', '#check-modal');
-
-    // Visa de valda produkterna via locakstorage
-    showItem();
-
-    function showItem() {
-
-    }
-
 
     // caching modal ID av personal infomation
     let firstname = $('#firstName');
