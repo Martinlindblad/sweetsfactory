@@ -19,6 +19,8 @@ function ready() {
         btn.addEventListener('click', addToCartClick)
     }
 
+    // showTotalAmount();
+
     document.querySelector('.btn-checkout').addEventListener('click', checkoutClick)
 }
 
@@ -32,9 +34,6 @@ function checkoutClick() {
     }
     updateTotal()
 }
-
-// update the badge num
-// if shopping cart contains item badge num > 0 else show 0
 
 // remove items all at once
 
@@ -62,7 +61,7 @@ function addToCartClick(e) {
     const price = cardItem.getElementsByClassName('cart-item-price')[0].innerText
     const imageSrc = cardItem.getElementsByClassName('card-img')[0].src
 
-    console.log(cardTxt, price, imageSrc);
+    // console.log(cardTxt, price, imageSrc);
     addItemToCart(cardTxt, price, imageSrc);
     updateTotal();
 }
@@ -113,14 +112,33 @@ function updateTotal() {
         const qty = qtyEl.value;
         total = total + (price * qty);
     }
-    document.getElementsByClassName('cart-total-price')[0].innerText = total;
+    document.getElementsByClassName('cart-total-price')[0].innerText = total.toFixed(2);
 
     // always get only 2 decimals
     total = Math.round(total * 100) / 100
     // console.log(total);
+    showTotalAmount()
 }
 
-// toggle shopping cart
+// update the badge num
+function showTotalAmount() {
+    let badgeAmount = document.querySelector('.badge')
+    const itemsInCart = document.querySelectorAll('.cart-quantity-input')
+    const total = []
+
+    itemsInCart.forEach(item => {
+        total.push(parseInt(item.value));
+    })
+
+    const totalItems = total.reduce((total, items) => {
+        total += items;
+        return total;
+    }, 0)
+
+    console.log(totalItems);
+    badgeAmount.innerText = totalItems
+};
+
 (function() {
     const cartInfo = document.querySelector('.cart-info');
     const cart = document.querySelector('.cart');
