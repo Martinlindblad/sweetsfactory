@@ -155,8 +155,6 @@ input{
     background-color: transparent;
     border-bottom: 1px solid var(--mainBlack);
     margin: 1em 0;
-}
-input{
     width: 90%;
 }
 .checkout{
@@ -171,11 +169,60 @@ input{
 .bg{
     background-color: #f1e0c9;
 }
-#address{
-    width: 96%;
+#address, #addRess{
+    width: 95.5%;
 }
 
 /* end of checkout */
+
+/* modal order confirm */
+#checkout-modal{
+    border: 1px solid black;
+}
+.boroderbtm{
+    border-bottom: 1px solid black;
+    width: 90%;
+    margin: 1em 0;
+}
+.modal-body .fas{
+    font-size: 4em;
+    color: var(--mainGrey);
+}
+#sendbtn{
+    background-color: var(--mainPink);
+    border: none;
+    text-decoration: none;
+}
+#sendbtn:hover{
+    background-color: white;
+    color: var(--mainPink);
+}
+
+/* end of modal order confirm */
+
+/* order confirmation */
+#thankyou{
+    border: 1px solid black;
+}
+#orderName{
+    color: var(--mainPink);
+}
+#thanksTxt{
+    font-size: 1.5em;
+}
+#backtohome{
+    background-color: var(--mainPink);
+    border: none;
+}
+#backtohome:hover{
+    background-color: white;
+    color: var(--mainPink);
+}
+#ordertxt{
+    color: white;
+}
+/* end of order confirmation */
+
 
 /* footer container */
 .gotopbtn {
@@ -212,5 +259,33 @@ input{
     border-radius: 50%;
     padding: 5px 7px;
     transform: translateY(50%);
+}
+
+@media (max-width: 576px) {
+.show-product, .checkout{
+    width: 100%;
+} 
+.modal-body .fas, section .fas{
+    font-size: 2em;  
+}
+#orderConfotTxt{
+    font-size: 1.7em;
+}
+}
+
+@media (max-width: 768px) and (min-width: 577px) {
+.show-product, .checkout{
+    width: 100%;
+}
+.modal-body .fas, section .fas{
+    font-size: 2.5em;  
+}
+#orderConfotTxt{
+    font-size: 2em;
+}
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+  
 }
 
