@@ -132,28 +132,6 @@ $(function () {
         }
     });
 
-<<<<<<< HEAD
-     //Loopar genom alla input fältet om de är fyllda
-     //kollar om attribute data-valid = true eller false
-     //Om det är false då visar man fel meddelande
-     //Annars visa bekräftelse
-    
-    $('button[type="submit"]').on('click', function (e) {
-        e.preventDefault();
-        $("input").each( function() {
-        let valid = $(this).attr('data-valid'); 
-         if(valid === 'true'){
-             $(this).prev().fadeOut();
-         }
-         else if(valid === 'false'){
-             $(this).prev().fadeIn();
-         }
-        
-
-        });
-    
-    });
-=======
 
     //Loopar genom alla input fältet om de är fyllda
     //kollar om attribute data-valid = true eller false
@@ -263,7 +241,6 @@ $(function () {
 
 });
 
->>>>>>> category
 
 
 
