@@ -190,7 +190,7 @@ $.getJSON('sweets.json', function( data ) {
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${doughnut.ingredients
             }</p>
-            <p><button class="btn btn-outline-secondary text-uppercase" role="button">ADD TO CART</button><strong class="ml-5 price">$ ${
+            <p><button class="btn btn-outline-secondary text-uppercase" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
                 (doughnut.price).toFixed(2)
             }</strong>/ 1 piece</p>
             `;
@@ -213,7 +213,7 @@ $.getJSON('sweets.json', function( data ) {
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${cupcake.ingredients
             }</p>
-            <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal" data-target="#exampleModal" role="button">ADD TO CART</button><strong class="ml-5 price">$ ${
+            <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal" data-target="#exampleModal" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
                 (cupcake.price).toFixed(2)
             }</strong>/ 1 piece</p>
             `;
@@ -236,7 +236,7 @@ $.getJSON('sweets.json', function( data ) {
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${chocolate.ingredients
             }</p>
-            <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal" data-target="#exampleModal" role="button">ADD TO CART</button><strong class="ml-5 price">$ ${
+            <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal" data-target="#exampleModal" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
                 (chocolate.price).toFixed(2)
             }</strong>/ 1 piece</p>
             `;
@@ -258,7 +258,7 @@ $.getJSON('sweets.json', function( data ) {
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${cookie.ingredients
             }</p>
-            <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal" data-target="#exampleModal" role="button">ADD TO CART</button><strong class="ml-5 price">$ ${
+            <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal" data-target="#exampleModal" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
                 (cookie.price).toFixed(2)
             }</strong>/ 1 piece</p>
             `;
@@ -280,7 +280,7 @@ $.getJSON('sweets.json', function( data ) {
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${candy.ingredients
             }</p>
-            <p><button class="btn btn-outline-secondary text-uppercase" role="button">ADD TO CART</button><strong class="ml-5 price">$ ${
+            <p><button class="btn btn-outline-secondary text-uppercase" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
                 (candy.price).toFixed(2)
             }</strong>/ 1 piece</p>
             `;
