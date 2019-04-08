@@ -68,7 +68,7 @@ $.getJSON('sweets.json', function( data ) {
             ${doughnut.ingredients
             }</p>
             <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal" data-target="#exampleModal" role="button">ADD TO CART</button><strong class="ml-5 price">$ ${
-                doughnut.price
+                (doughnut.price).toFixed(2)
             }</strong>/ 1 piece</p>
             `;
            
@@ -91,7 +91,7 @@ $.getJSON('sweets.json', function( data ) {
             ${cupcake.ingredients
             }</p>
             <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal" data-target="#exampleModal" role="button">ADD TO CART</button><strong class="ml-5 price">$ ${
-                cupcake.price
+                (cupcake.price).toFixed(2)
             }</strong>/ 1 piece</p>
             `;
             productsEl2.appendChild(productsDiv);
@@ -114,7 +114,7 @@ $.getJSON('sweets.json', function( data ) {
             ${chocolate.ingredients
             }</p>
             <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal" data-target="#exampleModal" role="button">ADD TO CART</button><strong class="ml-5 price">$ ${
-                chocolate.price
+                (chocolate.price).toFixed(2)
             }</strong>/ 1 piece</p>
             `;
             productsEl3.appendChild(productsDiv);
@@ -136,7 +136,7 @@ $.getJSON('sweets.json', function( data ) {
             ${cookie.ingredients
             }</p>
             <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal" data-target="#exampleModal" role="button">ADD TO CART</button><strong class="ml-5 price">$ ${
-                cookie.price
+                (cookie.price).toFixed(2)
             }</strong>/ 1 piece</p>
             `;
             productsEl4.appendChild(productsDiv);
@@ -158,7 +158,7 @@ $.getJSON('sweets.json', function( data ) {
             ${candy.ingredients
             }</p>
             <p><button class="btn btn-outline-secondary text-uppercase" data-toggle="modal" data-target="#exampleModal" role="button">ADD TO CART</button><strong class="ml-5 price">$ ${
-                candy.price
+                (candy.price).toFixed(2)
             }</strong>/ 1 piece</p>
             `;
             productsEl5.appendChild(productsDiv);
