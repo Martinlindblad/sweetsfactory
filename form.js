@@ -98,6 +98,7 @@ function cssPhone() {
 
 $(document).ready(function () {
   
+  
   $("#submit").addClass('non-click')
   $('#email').on('input', function() {
     
@@ -119,26 +120,27 @@ $(document).ready(function () {
   
   
   // __________________MODAL____________________________
-
+  
+ 
   function resetForm() {
-
+    
     document.getElementById("form").reset();
-
-}
+    
+  }
   $('#close').click(function () {
     resetForm();
-  
     $("#add-modal-h2").empty();
     $("#add-modal-p").empty();
   })
   $('.close').click(function () {
+ 
     resetForm();
     $("#add-modal-h2").empty();
     $("#add-modal-p").empty();
   })
-
-
-
+  
+  
+  
   $("#submit").click(function(){
     
     

@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sweet Factory</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="form.css">
     <link rel="icon" href="img/sweetLogo.png" type="image/png" sizes="32x32">
 
 </head>
@@ -28,7 +28,7 @@
                         <a class="nav-link" href="#">home</a>
                     </li>
                     <li class="nav-item mx-5">
-                        <a class="nav-link" href="products.html">products</a>
+                        <a class="nav-link" href="#bestseller">products</a>
                     </li>
                     <li class="nav-item mx-5">
                         <a class="nav-link " href="#about">about</a>
@@ -203,143 +203,133 @@
 
         <div class="row w-100 d-flex justify-content-center">
             <div class="col-lg-2 d-flex flex-column align-items-center img-container">
-                <a href="./products.html#choco">
-                    <img class="rounded-circle" src="./img/chocolate5.jpg" alt="Generic placeholder image" width="160">
-                </a>
+                <img class="rounded-circle" src="./img/chocolate.jpg" alt="Generic placeholder image"  width="160" >
                 <p>chocolates</p>
             </div><!-- /.col-lg-2 -->
             <div class="col-lg-2 d-flex flex-column align-items-center">
-                <a href="./products.html#cup">
-                    <img class="rounded-circle" src="./img/cupcakes.jpg" alt="Generic placeholder image" width="160">
-                </a>
+                <img class="rounded-circle" src="./img/cupcakes.jpg" alt="Generic placeholder image"  width="160">
                 <p>cupcake</p>
             </div><!-- /.col-lg-2 -->
             <div class="col-lg-2 d-flex flex-column align-items-center">
-                    <a href="./products.html#donuts">
-                <img class="rounded-circle" src="./img/doughnuts5.jpg" alt="Generic placeholder image" width="160">
-                </a>
+                <img class="rounded-circle" src="./img/doughnuts.jpg" alt="Generic placeholder image"  width="160" >
                 <p>doughnuts</p>
             </div><!-- /.col-lg-2 -->
             <div class="col-lg-2 d-flex flex-column align-items-center">
-                <a href="./products.html#cookie">
-                    <img class="rounded-circle" src="./img/cookies.jpg" alt="Generic placeholder image" width="160">
-                </a>
+                <img class="rounded-circle" src="./img/cookies.jpg" alt="Generic placeholder image"  width="160">
                 <p>cookies</p>
             </div><!-- /.col-lg-2 -->
             <div class="col-lg-2 d-flex flex-column align-items-center">
-                    <a href="./products.html#candy">
-                <img class="rounded-circle" src="./img/candy.jpg" alt="Generic placeholder image" width="160">
-                </a>
+                <img class="rounded-circle" src="./img/candy.jpg" alt="Generic placeholder image"  width="160">
                 <p>candy</p>
             </div><!-- /.col-lg-2 -->
         </div><!-- /.row -->
     </section>
     <!--end of store items -->
 
+    <!-- contact -->
     <section id="contact" class="contact py-5">
-            <div class="container">
-                <!-- section title -->
-                <div class="row">
-                    <div class="col-10 mx-auto col-sm-6 text-center">
-                        <h1 class="text-capitalize"><strong class="banner-title ">contact</strong> us</h1>
-                    </div>
+        <div class="container">
+            <!-- section title -->
+            <div class="row">
+                <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h1 class="text-capitalize"><strong class="banner-title ">contact</strong> us</h1>
                 </div>
-    
-                <div class="container-form mt-5">
-                    <div class="row">
-    
-                        <div class="col-5">
-                            <div>
-                                <a href=""
-                                type="button"
-                                id="submit"
-                                value="Submit"
-                                name="submit"
-                                data-toggle="modal"
-                                data-target="#exampleModal">
-                                    <img class="rounded rounded-circle" id="kaka" src="./img/kaka-1.jpg" alt="">
-                                </a>
-                            </div>
-                            <!-- end of .col-5 -->
-                        </div>
-                        <!-- end of .row -->
-    
-                        <form id="form" action="" class="form-group col-5 " method="post" class="a">
-    
-                            <input id="Name" type="text" class="form-control" placeholder="Name:">
-                            <br>
-                            <input
-                            type="email"
-                            class="form-control "
-                            id="email"
-                            placeholder="name@example.com"
-                            >
-                            <br>
-                            <input
-                            id="phone"
-                            type="text"
-                            class="form-control bfh-phone"
-                            placeholder="Phone: (+46) "
-                            >
-                            <br>
-                            <textarea
-                            class="form-control help-block"
-                            id="exampleFormControlTextarea1"
-                            placeholder="Message.."
-                            rows="3"
-                            ></textarea> <br>
-    
-                        </form>
-                    </div>
-                </div>
-    
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">SweetsFactory</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div id="add-modal">
-                                        <h2 id="add-modal-h2"></h2>
-                                        <p id="add-modal-p"></p>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
             </div>
-    
-        </section>
-    
-    
-    
-    
-    
-        <footer class="container">
-            <div class="toTop float-right"><a class='gotopbtn hidden' href="#"><i class="fas fa-arrow-up"></i></a></div>
-            <div class="copyright">
-                <img src="img/sweetLogo.svg" alt="" class="logo">
-                <p class="text-center">&copy; 2019 Sweet Factory, Inc. </p>
-            </div>
-        </footer>
-    
-    
-            <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-            crossorigin="anonymous"></script>
-            <script src="script.js"></script>
-            <script src="form.js"></script>
-        </body>
-    
-        </html>
 
+            <div class="container-form mt-5">
+                <div class="row">
+
+                    <div class="col-5">
+                        <div>
+                            <a href=""
+                            type="button"
+                            id="submit"
+                            value="Submit"
+                            name="submit"
+                            data-toggle="modal"
+                            data-target="#exampleModal">
+                                <img class="rounded rounded-circle" id="kaka" src="./img/kaka-1.jpg" alt="">
+                            </a>
+                        </div>
+                        <!-- end of .col-5 -->
+                    </div>
+                    <!-- end of .row -->
+
+                    <form id="form" action="" class="form-group col-5 " method="post" class="a">
+
+                        <input id="Name" type="text" class="form-control" placeholder="Name:">
+                        <br>
+                        <input
+                        type="email"
+                        class="form-control "
+                        id="email"
+                        placeholder="name@example.com"
+                        >
+                        <br>
+                        <input
+                        id="phone"
+                        type="text"
+                        class="form-control bfh-phone"
+                        placeholder="Phone: (+46) "
+                        >
+                        <br>
+                        <textarea
+                        class="form-control help-block"
+                        id="exampleFormControlTextarea1"
+                        placeholder="Message.."
+                        rows="3"
+                        ></textarea> <br>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">SweetsFactory</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="add-modal">
+                                    <h2 id="add-modal-h2"></h2>
+                                    <p id="add-modal-p"></p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <footer class="container">
+        <div class="toTop float-right"><a class='gotopbtn hidden' href="#"><i class="fas fa-arrow-up"></i></a></div>
+        <div class="copyright">
+            <img src="img/sweetLogo.svg" alt="" class="logo">
+            <p class="text-center">&copy; 2019 Sweet Factory, Inc. </p>
+        </div>
+    </footer>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+        <script src="form.js"></script>
+    </body>
+
+    </html>
