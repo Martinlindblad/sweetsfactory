@@ -127,7 +127,17 @@ $(document).ready(function () {
 }
   $('#close').click(function () {
     resetForm();
+  
+    $("#add-modal-h2").empty();
+    $("#add-modal-p").empty();
   })
+  $('.close').click(function () {
+    resetForm();
+    $("#add-modal-h2").empty();
+    $("#add-modal-p").empty();
+  })
+
+
 
   $("#submit").click(function(){
     

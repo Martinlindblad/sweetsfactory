@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="form.css">
     <link rel="icon" href="img/sweetLogo.png" type="image/png" sizes="32x32">
 
 </head>
@@ -115,7 +116,7 @@
                     <div class="cart-buttons-container mt-3 d-flex justify-content-between">
                         <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear
                             cart</a>
-                        <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink btn-checkout">checkout</a>
+                        <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink btn-checkout disabled">checkout</a>
                     </div>
                     <!--end of  cart buttons -->
                     <!--  -->
@@ -131,14 +132,24 @@
             <div class="row">
                 <div class="col-10 mx-auto col-md-6 my-5">
                     <h1 class="text-capitalize">about <strong class="banner-title ">us</strong></h1>
-                    <p class="my-4 text-muted w-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-                        aliquam voluptas
-                        beatae vitae expedita consectetur nesciunt quia deserunt asperiores facere fuga dicta fugiat
-                        corrupti et omnis
-                        porro at dolorum! Ad!</p>
-                    <a href="#" class="btn btn-outline-secondary  text-uppercase ">details</a>
+                    <p class="my-4 text-muted w-75">Sweets are special. Every birthday, every celebration ends with something sweet, a cake or something smaller, and people remember. It's all about the memories! Therefore 
+                        our staff at SweetsFactory work hard every day to deliver you the best memories through our products. </p>
+                    <a href="javascript:void(0)" class="btn btn-outline-secondary  text-uppercase " id="details-btn">details</a>
                 </div>
                 <div class="col-10 mx-auto col-md-6 align-self-center my-5">
+                    <div class="text-muted" id="details">
+                        <p>We want to open a destination place where you go for the best chocolate chip cookie you've ever had in your life, the biggest champagne list ever, the best fruit tarts you've tasted. That destination is here online.
+                               </p>
+                        <p>We've never felt like we was in the cookie business. we've always been in a feel good feeling business. Our job is to sell joy. Our job is to sell happiness. Our job is to sell an experience.
+                                </p>
+                        <p>Founded April 2019 with an idea of selling the worlds most delicious cakes ever made.</p>
+
+                        <p>There is always space for improvement, no matter how long you've been in the business.
+                                </p>
+                        <p>There are divisions between a culinary chef and a dessert chef, also called a pastry chef. There are specializations within the pastry chef field. Some pastry chefs specialize in baking breads, while others are master cake designers. Each field requires an exceptional level of creativity and attention to detail.
+                            </p>
+                            <p>Our expertise is what make us the best selling company in this industry. We give our love and passion in our bakery to make the best sweets a man can get. </p>
+                    </div>
                     <div class="about-img-container">
                         <img src="img/about.jpg" class="img-fluid" alt="">
                     </div>
@@ -156,30 +167,10 @@
                 </div>
             </div>
 
-            <div class="row mx-auto d-flex justify-content-center">
-                <div class="col-lg-3 card mx-2">
-                    <h4 class="card-title text-center">#01</h4>
-                    <img src="./img/chocodoughnuts.png" alt="" class="card-img mt-5 mb-2">
-                    <p class="card-text text-center text-uppercase">chocolate doughnuts</p>
-                    <button class="btn btn-secondary store-item-icon">Add To Cart</button>
-                    <span class="cart-item-price" class="mb-0">10.99</span>
-                </div><!-- /.col-lg-3 -->
-                <div class="col-lg-3 card mx-2">
-                    <h4 class="card-title text-center">#02</h4>
-                    <img src="./img/orangecupcakes.png" alt="" class="card-img">
-                    <p class="card-text text-center text-uppercase">orange cupcakes</p>
-                    <button class="btn btn-secondary store-item-icon">Add To Cart</button>
-                    <span class="cart-item-price" class="mb-0">10.99</span>
-                </div><!-- /.col-lg-3 -->
-                <div class="col-lg-3 card mx-2">
-                    <h4 class="card-title text-center">#03</h4>
-                    <img src="./img/chocochipcookies.png" alt="" class="card-img mb-2">
-                    <p class="card-text text-center text-uppercase">chocolate cookies</p>
-                    <button class="btn btn-secondary store-item-icon">Add To Cart</button>
-                    <span class="cart-item-price" class="mb-0">10.99</span>
-                </div><!-- /.col-lg-3 -->
-            </div><!-- /.row -->
-        </div>
+            <div class="row mx-auto d-flex justify-content-center bestseller-container">
+                    
+                </div><!-- /.row -->
+    </div>
     </section>
 
     <!-- store -->
@@ -192,26 +183,8 @@
                 </div>
             </div>
             <!-- end of section title -->
-            <!--filter buttons -->
-            <div class="row">
-                <div class=" col-lg-8 mx-auto d-flex justify-content-around my-2 sortBtn flex-wrap">
-                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
-                        data-filter="all">
-                        all</a>
-                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
-                        data-filter="chocolate">chocolates</a>
-                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
-                        data-filter="cupcakes">cupcakes</a>
-                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
-                        data-filter="cookies">cookies</a>
-                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
-                        data-filter="doughnuts">doughnuts</a>
-                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
-                        data-filter="candy">candy</a>
-                </div>
-            </div>
 
-            <div class="row">
+            <div class="row my-5">
                 <div class="col-10 mx-auto col-md-6">
                     <form>
                         <div class="input-group mb-3">
@@ -262,10 +235,11 @@
                     <h1 class="text-capitalize"><strong class="banner-title ">contact</strong> us</h1>
                 </div>
             </div>
-            <!-- end of section title -->
 
-        </div>
+            <div class="container-form mt-5">
+                <div class="row">
 
+<<<<<<< HEAD
     </section>
 
     <div class=" container-form">
@@ -278,8 +252,52 @@
                         data-target="#exampleModal">
                         <img class="rounded rounded-circle" id="kaka" src="./img/kaka-1.jpg" alt="">
                     </a>
+=======
+                    <div class="col-5">
+                        <div>
+                            <a href=""
+                            type="button"
+                            id="submit"
+                            value="Submit"
+                            name="submit"
+                            data-toggle="modal"
+                            data-target="#exampleModal">
+                                <img class="rounded rounded-circle" id="kaka" src="./img/kaka-1.jpg" alt="">
+                            </a>
+                        </div>
+                        <!-- end of .col-5 -->
+                    </div>
+                    <!-- end of .row -->
 
+                    <form id="form" action="" class="form-group col-5 " method="post" class="a">
+
+                        <input id="Name" type="text" class="form-control" placeholder="Name:">
+                        <br>
+                        <input
+                        type="email"
+                        class="form-control "
+                        id="email"
+                        placeholder="name@example.com"
+                        >
+                        <br>
+                        <input
+                        id="phone"
+                        type="text"
+                        class="form-control bfh-phone"
+                        placeholder="Phone: (+46) "
+                        >
+                        <br>
+                        <textarea
+                        class="form-control help-block"
+                        id="exampleFormControlTextarea1"
+                        placeholder="Message.."
+                        rows="3"
+                        ></textarea> <br>
+>>>>>>> startsidan
+
+                    </form>
                 </div>
+<<<<<<< HEAD
 
 
             </div>
@@ -312,14 +330,44 @@
                     <div id="add-modal">
                         <h2 id="add-modal-h2"></h2>
                         <p id="add-modal-p"></p>
+=======
+            </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">SweetsFactory</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="add-modal">
+                                    <h2 id="add-modal-h2"></h2>
+                                    <p id="add-modal-p"></p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+>>>>>>> startsidan
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
+
         </div>
+<<<<<<< HEAD
     </div>
+=======
+
+    </section>
+
+
+>>>>>>> startsidan
 
 
 
@@ -332,13 +380,25 @@
     </footer>
 
 
+<<<<<<< HEAD
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+=======
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+>>>>>>> startsidan
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+<<<<<<< HEAD
     <script src="script.js"></script>
     <script src="form.js"></script>
 </body>
 
 </html>
+=======
+        <script src="script.js"></script>
+        <script src="form.js"></script>
+    </body>
+
+    </html>
+>>>>>>> startsidan

@@ -1,3 +1,6 @@
+// todo:
+// local storage for add, update, save & remove items or lists
+
 function ready() {
     // remove items from the cart
     const removeCartItemBtns = document.getElementsByClassName('cart-item-remove');
@@ -19,6 +22,9 @@ function ready() {
         btn.addEventListener('click', addToCartClick)
     }
 
+    const clearBtn = document.getElementById('clear-cart')
+    clearBtn.addEventListener('click', clearCart)
+
     document.querySelector('.btn-checkout').addEventListener('click', checkoutClick)
 }
 
@@ -26,7 +32,14 @@ ready();
 
 function checkoutClick() {
     alert('Thanks for your purchase. Have a nice day!')
+
+    clearCart()
+}
+
+// remove items all at once
+function clearCart() {
     const allItems = document.getElementsByClassName('cart-items')[0]
+
     while(allItems.hasChildNodes()) {
         allItems.removeChild(allItems.firstChild)
     }
@@ -41,7 +54,7 @@ function removeCartItems(e) {
 
 function qtyChanged(e) {
     const input = e.target
-    if(isNaN(input.value) || input.value <= 0) {
+    if(isNaN(input.value) || input.value <= 1) {
         input.value = 1;
     }
     updateTotal()
@@ -54,8 +67,9 @@ function addToCartClick(e) {
     const price = cardItem.getElementsByClassName('cart-item-price')[0].innerText
     const imageSrc = cardItem.getElementsByClassName('card-img')[0].src
 
-    console.log(cardTxt, price, imageSrc);
+    // console.log(cardTxt, price, imageSrc);
     addItemToCart(cardTxt, price, imageSrc);
+
     updateTotal();
 }
 
@@ -74,8 +88,8 @@ function addItemToCart(cardTxt, price, imageSrc) {
         <div class="cart-item d-flex align-items-center justify-content-between">
             <img src="${imageSrc}" class="img-fluid card-img" id="item-img" alt="">
             <span class="item-text mx-5">${cardTxt}</span>
-            <span>$</span>
-            <span id="cart-item-price" class="cart-item-price" class="mb-0">${price}</span>
+            <span class="mx-2">$</span>
+            <span id="cart-item-price" class="cart-item-price mb-0 mr-2">${price}</span>
             <input type="number" value="1" class="cart-quantity-input">
             <button id='cart-item-remove' class="btn cart-item-remove my-auto">
                 <i class="fas fa-trash"></i>
@@ -105,14 +119,37 @@ function updateTotal() {
         const qty = qtyEl.value;
         total = total + (price * qty);
     }
-    document.getElementsByClassName('cart-total-price')[0].innerText = total;
+    document.getElementsByClassName('cart-total-price')[0].innerText = total.toFixed(2);
 
     // always get only 2 decimals
     total = Math.round(total * 100) / 100
     // console.log(total);
+    showTotalAmount()
 }
 
-// toggle shopping cart
+// update the badge num
+function showTotalAmount() {
+    let badgeAmount = document.querySelector('.badge')
+    const itemsInCart = document.querySelectorAll('.cart-quantity-input')
+    const total = []
+
+    itemsInCart.forEach(item => {
+        total.push(parseInt(item.value));
+    })
+
+    const totalItems = total.reduce((total, items) => {
+        total += items;
+        return total;
+    }, 0)
+
+    console.log(totalItems);
+    badgeAmount.innerText = totalItems
+
+    const checkoutBtn = document.querySelector('.btn-checkout')
+    checkoutBtn.classList.remove('disabled')
+};
+
+// show cart
 (function() {
     const cartInfo = document.querySelector('.cart-info');
     const cart = document.querySelector('.cart');
@@ -120,14 +157,82 @@ function updateTotal() {
     cartInfo.addEventListener('click', () => cart.classList.toggle('show-cart'));
 })();
 
-
 // toggle scroll top arrow when it hits #about
-function toTop() {
+window.addEventListener('scroll', () => {
     const scrollTop = document.querySelector('.gotopbtn');
     const aboutSec = document.querySelector('#about');
     const topOfAbout = aboutSec.offsetTop;
 
     (window.scrollY >= topOfAbout) ? scrollTop.classList.remove('hidden') : scrollTop.classList.add('hidden');
-}
+});
 
-window.addEventListener('scroll', toTop);
+
+// Show details ( About us )
+//Click on button "details" => Toggle between Image and about Information
+
+
+$('#details').hide();
+$('#details-btn').on('click', function () {
+   
+    $('#details').toggle(500);
+    $('.about-img-container').toggle(500);
+})
+
+$(document).ready(function(){
+
+    
+    
+    // Get JSON Objects and Show bestsellers
+    $.getJSON('bestsellers.json', function (data) {
+        let bestsellers = data.Bestsellers;
+    console.log(data); // Declare object
+    (function() {
+        let bestSellerContainer = document.querySelector(".bestseller-container"); 
+        
+        console.log(bestsellers[0]);
+        
+        function generateBestSeller() { // Function to generate three divs and children with diffrent flexbox classes.
+            let counter = 1;
+            
+            bestsellers.forEach(bestsellers => { // Decide what will happen with the objects
+            let  bestsellerDiv = document.createElement("div");
+            bestsellerDiv.setAttribute("id", "newDiv" + counter++); // Give every div an id-tag
+            
+           
+           
+            bestsellerDiv.classList.add("col-lg-3", "card", "mx-2");   // add standard classes
+            
+            bestsellerDiv.innerHTML =  `
+            <h4 class="card-title text-center">${bestsellers.rank}</h4>
+            <img src="${bestsellers.imageUrl}" alt="${bestsellers.sort}" class="card-img mt-5 mb-2">
+            <p class="card-text text-center text-uppercase">${bestsellers.sort}</p>
+            <button class="btn btn-secondary store-item-icon">Add To Cart</button>
+            <p>$<span class="cart-item-price" class="mb-0">${bestsellers.price}</span></p>
+            `;
+            
+            console.log(bestsellerDiv);
+            bestSellerContainer.appendChild(bestsellerDiv);
+            
+            $('#newDiv2').find('img').removeClass('mt-5', 'mb-2'); // Removes Flexbox classes
+            $('#newDiv3').find('img').removeClass('mt-5') // To make the three boxes look more even.
+                  
+                 
+            
+
+           
+             } );
+            
+        }
+        
+        generateBestSeller();
+      
+        
+    }());
+    
+    
+    
+    
+}); // JSON 
+
+})
+
