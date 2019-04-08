@@ -132,7 +132,7 @@ $(document).ready(function(){
 setInterval(() => {
    bannerRoll();
     
-}, 42800);
+}, 24800);
 
 function bannerRoll(){       
     let imgHigh = $('.img1').height();      // get the Hight from one img
