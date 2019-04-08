@@ -232,7 +232,7 @@ $(function () {
     $('#orderName').append(personInfoArray[0]); // Visa förnamn på högstupp före 'Thank you....
 
     $('#backtohome').on('click', function(){
-         personInfoArray.clear();
+         localStorage.clear();
     })
 
 });
