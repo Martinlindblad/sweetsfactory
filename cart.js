@@ -1,25 +1,28 @@
 setTimeout(function() {
-
 function ready() {
     // remove items from the cart
     const removeCartItemBtns = document.getElementsByClassName('cart-item-remove');
     // console.log(removeCartItemBtns);
-    for(let i = 0; i < removeCartItemBtns.length; i++) {
+    for (let i = 0; i < removeCartItemBtns.length; i++) {
         const btn = removeCartItemBtns[i];
         btn.addEventListener('click', removeCartItems);
     }
 
     const qtyInput = document.getElementsByClassName('cart-quantity-input')
-    for(let i = 0; i < qtyInput.length; i++) {
+    for (let i = 0; i < qtyInput.length; i++) {
         const input = qtyInput[i]
         input.addEventListener('change', qtyChanged)
     }
 
     const addToCartBtn = document.getElementsByClassName('store-item-icon')
-    for(let i = 0; i < addToCartBtn.length; i++) {
+    console.log(addToCartBtn);
+    for (let i = 0; i < addToCartBtn.length; i++) {
         const btn = addToCartBtn[i]
         btn.addEventListener('click', addToCartClick)
     }
+
+    const clearBtn = document.getElementById('clear-cart')
+    clearBtn.addEventListener('click', clearCart)
 
     document.querySelector('.btn-checkout').addEventListener('click', checkoutClick)
 }
@@ -28,8 +31,15 @@ ready();
 
 function checkoutClick() {
     alert('Thanks for your purchase. Have a nice day!')
+
+    clearCart()
+}
+
+// remove items all at once
+function clearCart() {
     const allItems = document.getElementsByClassName('cart-items')[0]
-    while(allItems.hasChildNodes()) {
+
+    while (allItems.hasChildNodes()) {
         allItems.removeChild(allItems.firstChild)
     }
     updateTotal()
@@ -43,7 +53,7 @@ function removeCartItems(e) {
 
 function qtyChanged(e) {
     const input = e.target
-    if(isNaN(input.value) || input.value <= 0) {
+    if (isNaN(input.value) || input.value <= 1) {
         input.value = 1;
     }
     updateTotal()
@@ -58,6 +68,7 @@ function addToCartClick(e) {
 
     console.log(cardTxt, price, imageSrc);
     addItemToCart(cardTxt, price, imageSrc);
+
     updateTotal();
 }
 
@@ -66,8 +77,8 @@ function addItemToCart(cardTxt, price, imageSrc) {
     const cartItems = document.getElementsByClassName('cart-items')[0]
     const cartItemNames = document.getElementsByClassName('item-text')
 
-    for(let i = 0; i < cartItemNames.length; i++) {
-        if(cartItemNames[i].innerText === cardTxt) {
+    for (let i = 0; i < cartItemNames.length; i++) {
+        if (cartItemNames[i].innerText === cardTxt) {
             alert('Item has already been added')
             return
         }
@@ -76,8 +87,8 @@ function addItemToCart(cardTxt, price, imageSrc) {
         <div class="cart-item d-flex align-items-center justify-content-between">
             <img src="${imageSrc}" class="img-fluid card-img" id="item-img" alt="">
             <span class="item-text mx-5">${cardTxt}</span>
-            <span>$</span>
-            <span id="cart-item-price" class="cart-item-price" class="mb-0">${price}</span>
+            <span class="mx-2">$</span>
+            <span id="cart-item-price" class="cart-item-price mb-0 mr-2">${price}</span>
             <input type="number" value="1" class="cart-quantity-input">
             <button id='cart-item-remove' class="btn cart-item-remove my-auto">
                 <i class="fas fa-trash"></i>
@@ -98,7 +109,7 @@ function updateTotal() {
     const cartRows = cartItemContainer.getElementsByClassName('cart-item');
     let total = 0;
 
-    for(let i = 0; i < cartRows.length; i++) {
+    for (let i = 0; i < cartRows.length; i++) {
         const cartRow = cartRows[i];
         const priceEl = cartRow.getElementsByClassName('cart-item-price')[0];
         const qtyEl = cartRow.getElementsByClassName('cart-quantity-input')[0];
@@ -107,43 +118,50 @@ function updateTotal() {
         const qty = qtyEl.value;
         total = total + (price * qty);
     }
-    document.getElementsByClassName('cart-total-price')[0].innerText = total;
+    document.getElementsByClassName('cart-total-price')[0].innerText = total.toFixed(2);
 
     // always get only 2 decimals
     total = Math.round(total * 100) / 100
     // console.log(total);
+    showTotalAmount()
 }
 
-// toggle shopping cart
-(function() {
+// update the badge num
+function showTotalAmount() {
+    let badgeAmount = document.querySelector('.badge')
+    const itemsInCart = document.querySelectorAll('.cart-quantity-input')
+    const total = []
+
+    itemsInCart.forEach(item => {
+        total.push(parseInt(item.value));
+    })
+
+    const totalItems = total.reduce((total, items) => {
+        total += items;
+        return total;
+    }, 0)
+
+    console.log(totalItems);
+    badgeAmount.innerText = totalItems
+
+    const checkoutBtn = document.querySelector('.btn-checkout')
+    checkoutBtn.classList.remove('disabled')
+};
+
+// show cart
+(function () {
     const cartInfo = document.querySelector('.cart-info');
     const cart = document.querySelector('.cart');
 
     cartInfo.addEventListener('click', () => cart.classList.toggle('show-cart'));
 })();
-}, 500);
 
-/*--------------------Banner-----------------------*/
-// Load Document/Start bannerRoll()
-$(document).ready(function(){
-    bannerRoll();
+// toggle scroll top arrow when it hits #about
+window.addEventListener('scroll', () => {
+    const scrollTop = document.querySelector('.gotopbtn');
+    const aboutSec = document.querySelector('#about');
+    const topOfAbout = aboutSec.offsetTop;
+
+    (window.scrollY >= topOfAbout) ? scrollTop.classList.remove('hidden') : scrollTop.classList.add('hidden');
 });
-// Load bannerRoll() after first document load. Repeats the action.
-
-
-setInterval(() => {
-   bannerRoll();
-    
-}, 24000);
-
-function bannerRoll(){       
-    let imgHigh = $('.img1').height();      // get the Hight from one img
-    imgHigh = imgHigh * 5;    // all images have the same size. 6 images. there fore img height*5
-    
-    $(".banner-roll").stop(true,true).animate({scrollTop: imgHigh}, 12000, "linear" ,  // Start the action, will move the page to "imgHigh"
-       function(){ $(this).stop(true,true).animate({scrollTop: 0}, 12000 , "linear" ); // Go back up again
-     });
-}
-
-
-
+}, 500);
