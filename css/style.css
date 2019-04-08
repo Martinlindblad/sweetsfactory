@@ -239,6 +239,10 @@ body {
     position: relative;
     cursor: pointer;
 }
+#kaka{
+    width: 200px;
+    height: 200px;
+}
 .rounded-circle {
     height: 150px;
     width: 150px;
