@@ -1,24 +1,24 @@
-// Test-----> lagra produkter i LS
+// lagra produkter i LS
 $(function () {
     let product = {
         "sweets": [
-            { "picture": "https://images.pexels.com/photos/639024/pexels-photo-639024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-               "name": "Chocolate punch", 
-               "price": 3.50, 
-               "qty": 2 },
-            { "picture": "https://images.pexels.com/photos/639024/pexels-photo-639024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-              "name": "Chocolate",
-              "price": 2.50, 
-              "qty": 1 },
-            { "picture": "https://images.pexels.com/photos/639024/pexels-photo-639024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-              "name": "Chocolate",
-              "price": 2.50, 
-              "qty": 1 },
+            { "picture": "" ,
+               "name": "", 
+               "price": "" , 
+               "qty": "" },
+            { "picture": "" ,
+               "name": "", 
+               "price": "" , 
+               "qty": "" },
+            { "picture": "" ,
+               "name": "", 
+               "price": "" , 
+               "qty": "" },
         ],
         "totalAmount": [
             {
-                "total": 6.00,
-                "totalQty": 3
+                "total": "",
+                "totalQty": ""
             }
         ]
     };

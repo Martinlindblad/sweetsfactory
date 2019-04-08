@@ -198,7 +198,6 @@ $.getJSON('sweets.json', function( data ) {
             productsEl1.appendChild(productsDiv);
             console.log(productsDiv);
         });
-        var titleDiv = document.createElement("div");
       
         cupcake.forEach(cupcake => {
             var productsDiv = document.createElement("div");
@@ -221,7 +220,6 @@ $.getJSON('sweets.json', function( data ) {
            
             console.log(productsDiv);
         });
-        var titleDiv = document.createElement("div");
        
         chocolate.forEach(chocolate => {
             var productsDiv = document.createElement("div");
@@ -291,28 +289,8 @@ $.getJSON('sweets.json', function( data ) {
     }
     
     generateProducts();
-   
-    
-    function generateCart() {
-        cartEl.innerHTML = '';
-    }
     
 })();
 
 });
-
-
-
-
-
-
-
-/*------------------ toggle shopping cart -------------------*/
-
-(function() {
-    const cartInfo = document.querySelector('.cart-info');
-    const cart = document.querySelector('.cart');
-
-    cartInfo.addEventListener('click', () => cart.classList.toggle('show-cart'));
-})();
 

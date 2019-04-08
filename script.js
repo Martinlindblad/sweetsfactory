@@ -5,19 +5,19 @@ function ready() {
     // remove items from the cart
     const removeCartItemBtns = document.getElementsByClassName('cart-item-remove');
     // console.log(removeCartItemBtns);
-    for(let i = 0; i < removeCartItemBtns.length; i++) {
+    for (let i = 0; i < removeCartItemBtns.length; i++) {
         const btn = removeCartItemBtns[i];
         btn.addEventListener('click', removeCartItems);
     }
 
     const qtyInput = document.getElementsByClassName('cart-quantity-input')
-    for(let i = 0; i < qtyInput.length; i++) {
+    for (let i = 0; i < qtyInput.length; i++) {
         const input = qtyInput[i]
         input.addEventListener('change', qtyChanged)
     }
 
     const addToCartBtn = document.getElementsByClassName('store-item-icon')
-    for(let i = 0; i < addToCartBtn.length; i++) {
+    for (let i = 0; i < addToCartBtn.length; i++) {
         const btn = addToCartBtn[i]
         btn.addEventListener('click', addToCartClick)
     }
@@ -40,7 +40,7 @@ function checkoutClick() {
 function clearCart() {
     const allItems = document.getElementsByClassName('cart-items')[0]
 
-    while(allItems.hasChildNodes()) {
+    while (allItems.hasChildNodes()) {
         allItems.removeChild(allItems.firstChild)
     }
     updateTotal()
@@ -54,7 +54,7 @@ function removeCartItems(e) {
 
 function qtyChanged(e) {
     const input = e.target
-    if(isNaN(input.value) || input.value <= 1) {
+    if (isNaN(input.value) || input.value <= 1) {
         input.value = 1;
     }
     updateTotal()
@@ -78,8 +78,8 @@ function addItemToCart(cardTxt, price, imageSrc) {
     const cartItems = document.getElementsByClassName('cart-items')[0]
     const cartItemNames = document.getElementsByClassName('item-text')
 
-    for(let i = 0; i < cartItemNames.length; i++) {
-        if(cartItemNames[i].innerText === cardTxt) {
+    for (let i = 0; i < cartItemNames.length; i++) {
+        if (cartItemNames[i].innerText === cardTxt) {
             alert('Item has already been added')
             return
         }
@@ -110,7 +110,7 @@ function updateTotal() {
     const cartRows = cartItemContainer.getElementsByClassName('cart-item');
     let total = 0;
 
-    for(let i = 0; i < cartRows.length; i++) {
+    for (let i = 0; i < cartRows.length; i++) {
         const cartRow = cartRows[i];
         const priceEl = cartRow.getElementsByClassName('cart-item-price')[0];
         const qtyEl = cartRow.getElementsByClassName('cart-quantity-input')[0];
@@ -150,7 +150,7 @@ function showTotalAmount() {
 };
 
 // show cart
-(function() {
+(function () {
     const cartInfo = document.querySelector('.cart-info');
     const cart = document.querySelector('.cart');
 
@@ -173,66 +173,66 @@ window.addEventListener('scroll', () => {
 
 $('#details').hide();
 $('#details-btn').on('click', function () {
-   
+
     $('#details').toggle(500);
     $('.about-img-container').toggle(500);
 })
 
-$(document).ready(function(){
+$(document).ready(function () {
 
-    
-    
+
+
     // Get JSON Objects and Show bestsellers
     $.getJSON('bestsellers.json', function (data) {
         let bestsellers = data.Bestsellers;
-    console.log(data); // Declare object
-    (function() {
-        let bestSellerContainer = document.querySelector(".bestseller-container"); 
-        
-        console.log(bestsellers[0]);
-        
-        function generateBestSeller() { // Function to generate three divs and children with diffrent flexbox classes.
-            let counter = 1;
-            
-            bestsellers.forEach(bestsellers => { // Decide what will happen with the objects
-            let  bestsellerDiv = document.createElement("div");
-            bestsellerDiv.setAttribute("id", "newDiv" + counter++); // Give every div an id-tag
-            
-           
-           
-            bestsellerDiv.classList.add("col-lg-3", "card", "mx-2");   // add standard classes
-            
-            bestsellerDiv.innerHTML =  `
+        console.log(data); // Declare object
+        (function () {
+            let bestSellerContainer = document.querySelector(".bestseller-container");
+
+            console.log(bestsellers[0]);
+
+            function generateBestSeller() { // Function to generate three divs and children with diffrent flexbox classes.
+                let counter = 1;
+
+                bestsellers.forEach(bestsellers => { // Decide what will happen with the objects
+                    let bestsellerDiv = document.createElement("div");
+                    bestsellerDiv.setAttribute("id", "newDiv" + counter++); // Give every div an id-tag
+
+
+
+                    bestsellerDiv.classList.add("col-lg-3", "card", "mx-2");   // add standard classes
+
+                    bestsellerDiv.innerHTML = `
             <h4 class="card-title text-center">${bestsellers.rank}</h4>
             <img src="${bestsellers.imageUrl}" alt="${bestsellers.sort}" class="card-img mt-5 mb-2">
             <p class="card-text text-center text-uppercase">${bestsellers.sort}</p>
             <button class="btn btn-secondary store-item-icon">Add To Cart</button>
             <p>$<span class="cart-item-price" class="mb-0">${bestsellers.price}</span></p>
             `;
-            
-            console.log(bestsellerDiv);
-            bestSellerContainer.appendChild(bestsellerDiv);
-            
-            $('#newDiv2').find('img').removeClass('mt-5', 'mb-2'); // Removes Flexbox classes
-            $('#newDiv3').find('img').removeClass('mt-5') // To make the three boxes look more even.
-                  
-                 
-            
 
-           
-             } );
-            
-        }
-        
-        generateBestSeller();
-      
-        
-    }());
-    
-    
-    
-    
-}); // JSON 
+                    console.log(bestsellerDiv);
+                    bestSellerContainer.appendChild(bestsellerDiv);
+
+                    $('#newDiv2').find('img').removeClass('mt-5', 'mb-2'); // Removes Flexbox classes
+                    $('#newDiv3').find('img').removeClass('mt-5') // To make the three boxes look more even.
+
+
+
+
+
+                });
+
+            }
+
+            generateBestSeller();
+
+
+        }());
+
+
+
+
+    }); // JSON 
 
 })
 
