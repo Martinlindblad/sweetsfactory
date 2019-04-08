@@ -140,22 +140,22 @@ body {
 }
 
 .img1 {
-    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("./img/bg-img.jpg");
+    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("../img/bg-img.jpg");
 }
 .img2 {
-    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("./img/bg-img2.jpg");
+    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("../img/bg-img2.jpg");
 }
 .img3 {
-    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("./img/bg-img3.jpg");
+    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("../img/bg-img3.jpg");
 }
 .img4 {
-    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("./img/bg-img4.jpg");
+    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("../img/bg-img4.jpg");
 }
 .img5 {
-    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("./img/bg-img5.jpg");
+    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("../img/bg-img5.jpg");
 }
 .img6 {
-    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("./img/bg-img6.jpg");
+    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("../img/bg-img6.jpg");
 }
 .banner-roll {
     width: 100vw;
