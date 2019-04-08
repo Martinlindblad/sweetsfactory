@@ -180,7 +180,7 @@ $.getJSON('sweets.json', function( data ) {
             doughnut.forEach(doughnut => {
                 var productsDiv = document.createElement("div");
               
-                productsDiv.classList.add("col-lg-4", "card", "mx-4", "mx-2");
+                productsDiv.classList.add("col-lg-4", "card", "mx-4", "my-2");
                 console.log(doughnut);
           
             productsDiv.innerHTML = `
@@ -203,7 +203,7 @@ $.getJSON('sweets.json', function( data ) {
         cupcake.forEach(cupcake => {
             var productsDiv = document.createElement("div");
        
-            productsDiv.classList.add("col-lg-4", "card", "mx-4", "mx-2");
+            productsDiv.classList.add("col-lg-4", "card", "mx-4", "my-2");
             
    
             productsDiv.innerHTML = `
@@ -226,7 +226,7 @@ $.getJSON('sweets.json', function( data ) {
         chocolate.forEach(chocolate => {
             var productsDiv = document.createElement("div");
             // productsDiv.className = "col-lg-4";
-            productsDiv.classList.add("col-lg-4", "card", "mx-4", "mx-2");
+            productsDiv.classList.add("col-lg-4", "card", "mx-4", "my-2");
             
             
             productsDiv.innerHTML = `
@@ -248,7 +248,7 @@ $.getJSON('sweets.json', function( data ) {
         cookie.forEach(cookie => {
             var productsDiv = document.createElement("div");
             // productsDiv.className = "col-lg-4";
-            productsDiv.classList.add("col-lg-4", "card", "mx-4", "mx-2");
+            productsDiv.classList.add("col-lg-4", "card", "mx-4", "my-2");
             
           
             productsDiv.innerHTML = `
@@ -270,7 +270,7 @@ $.getJSON('sweets.json', function( data ) {
         candy.forEach(candy => {
             var productsDiv = document.createElement("div");
             // productsDiv.className = "col-lg-4";
-            productsDiv.classList.add("col-lg-4", "card", "mx-4", "mx-2");
+            productsDiv.classList.add("col-lg-4", "card", "mx-4", "my-2");
             
             
             productsDiv.innerHTML = `
