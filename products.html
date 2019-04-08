@@ -121,8 +121,8 @@
                 </div>
             </div>
             <!-- /.col-lg-4 -->
-            </div>
-            <!--/.row -->
+        </div>
+        <!--/.row -->
         </div>
         <!-- end of cupcakes -->
         <!-- chocolates -->
@@ -166,7 +166,7 @@
 
 
     <footer class="container">
-        <div class="toTop float-right"><a class='gotopbtn hidden' href="#"><i class="fas fa-arrow-up"></i></a></div>
+        <div class="toTop float-right"><a class='gotopbtn hidden' href="#donuts"><i class="fas fa-arrow-up"></i></a></div>
         <div class="copyright">
             <img src="img/sweetLogo.svg" alt="" class="logo">
             <p class="text-center">&copy; 2019 Sweet Factory, Inc. </p>
@@ -184,15 +184,18 @@
     <script>
 
         /*-------------------- toggle scroll top arrow  ---------------------*/
+        // toggle scroll top arrow when it hits #products
         const scrollTop = document.querySelector('.gotopbtn');
-        const productsSec = document.querySelector('#products');
-        const topOfAbout = productsSec.offsetTop;
+        const aboutSec = document.querySelector('#products');
+        $(document).on('click', '.gotopbtn',  (e) => {
+            e.preventDefault();
+            console.log('click')  ; 
+            $('html,body').animate({ scrollTop: 0 }, 'slow');
+        return false; 
+        });
 
-        function toTop() {
-            (window.scrollY >= topOfAbout) ? scrollTop.classList.remove('hidden') : scrollTop.classList.add('hidden');
-        }
 
-        window.addEventListener('scroll', toTop);
+
     </script>
 </body>
 

@@ -10,15 +10,11 @@ $(function () {
                "name": "", 
                "price": "" , 
                "qty": "" },
-            { "picture": "" ,
-               "name": "", 
-               "price": "" , 
-               "qty": "" },
         ],
         "totalAmount": [
             {
-                "total": "",
-                "totalQty": ""
+                "total": "2.00",
+                "totalQty": "2"
             }
         ]
     };
@@ -235,9 +231,9 @@ $(function () {
     $('#thankyou-info').append().html(result);
     $('#orderName').append(personInfoArray[0]); // Visa förnamn på högstupp före 'Thank you....
 
-    // $('#backtohome').on('click', function(){
-    //      personInfoArray.clear();
-    // })
+    $('#backtohome').on('click', function(){
+         personInfoArray.clear();
+    })
 
 });
 
