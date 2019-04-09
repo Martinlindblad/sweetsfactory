@@ -45,7 +45,7 @@ $.getJSON('sweets.json', function (data) {
                     }</p>
             <p>
                 <button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button>
-                <strong class="ml-4 price">$ ${
+                <strong class="ml-4 price cart-item-price">$ ${
                     (doughnut.price).toFixed(2)
                     }</strong>/ 1 piece
             </p>
@@ -68,7 +68,7 @@ $.getJSON('sweets.json', function (data) {
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${cupcake.ingredients
                     }</p>
-            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
+            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4 price cart-item-price">$ ${
                     (cupcake.price).toFixed(2)
                     }</strong>/ 1 piece</p>
             `;
@@ -90,7 +90,7 @@ $.getJSON('sweets.json', function (data) {
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${chocolate.ingredients
                     }</p>
-            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
+            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4 price cart-item-price">$ ${
                     (chocolate.price).toFixed(2)
                     }</strong>/ 1 piece</p>
             `;
@@ -112,7 +112,7 @@ $.getJSON('sweets.json', function (data) {
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${cookie.ingredients
                     }</p>
-            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
+            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4 price cart-item-price">$ ${
                     (cookie.price).toFixed(2)
                     }</strong>/ 100 g</p>
             `;
@@ -134,7 +134,7 @@ $.getJSON('sweets.json', function (data) {
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${candy.ingredients
                     }</p>
-            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${(candy.price).toFixed(2)}</strong>/ 100 g</p>`;
+            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4 price cart-item-price">$ ${(candy.price).toFixed(2)}</strong>/ 100 g</p>`;
                 productsEl5.appendChild(productsDiv);
 
                 console.log(productsDiv);

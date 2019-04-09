@@ -68,8 +68,42 @@ setTimeout(function () {
         console.log(cardTxt, price, imageSrc);
         addItemToCart(cardTxt, price, imageSrc);
 
+        // let productList = JSON.stringify({cardTxt,price,imageSrc});
+        // localStorage.setItem('product', productList);
+        // productList = localStorage.getItem('product') ? JSON.parse(localStorage.getItem('product')) : [];
+
+        // console.table(productList);
+
+
+
         updateTotal();
     }
+
+    // function addToLS(){
+    //             let product = {
+    //                 "sweets": [
+    //                     { "picture": "" ,
+    //                        "name": "", 
+    //                        "price": "" , 
+    //                        "qty": "" },
+    //                     { "picture": "" ,
+    //                        "name": "", 
+    //                        "price": "" , 
+    //                        "qty": "" },
+    //                 ],
+    //                 "totalAmount": [
+    //                     {
+    //                         "total": "",
+    //                         "totalQty": ""
+    //                     }
+    //                 ]
+    //             };
+
+    //             product = JSON.parse(localStorage.product);
+    //             console.log(product);
+
+    // }
+
 
     function addItemToCart(cardTxt, price, imageSrc) {
         const cartRow = document.createElement('div')
@@ -96,15 +130,24 @@ setTimeout(function () {
         `;
         cartRow.innerHTML = cartRowContent
         
+        
         // console.log(cartRow)
         
         // console.log( cartItems.append(cartRow));
+        // let productList= [];
         
-        
-        // let productList = JSON.stringify(cartRowContent);
-        // localStorage.setItem('product', productList.innerHTML);
-        // productList = localStorage.getItem('product') ? JSON.parse(localStorage.getItem('product')) : [];
+        // let sameItem = (data) =>{
+            let productList = localStorage.getItem('sweets');
+            productList = JSON.stringify(cartRowContent);
+            productList = localStorage.setItem('sweets', [...productList,data]);
+            productList = JSON.parse(localStorage.getItem('sweets'));
+            
+            
+            console.table(productList);
+        // }
+        // productList = localStorage.getItem('sweets') ? JSON.parse(localStorage.getItem('sweets')) : [];
         // console.log(productList);
+
         
 
         // for(let i = 0; i < productList.length; i++){
@@ -133,6 +176,7 @@ setTimeout(function () {
             const price = priceEl.innerText;
             const qty = qtyEl.value;
             total = total + (price * qty);
+           
         }
         document.getElementsByClassName('cart-total-price')[0].innerText = total.toFixed(2);
 
@@ -162,6 +206,9 @@ setTimeout(function () {
 
         const checkoutBtn = document.querySelector('.btn-checkout')
         checkoutBtn.classList.remove('disabled')
+
+        //  addToLS();
+        
     };
 
     // show cart
