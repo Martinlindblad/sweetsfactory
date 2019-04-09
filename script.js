@@ -75,6 +75,14 @@ $('#details-btn').on('click', function () {
 });
 
 
+// toggle scroll top arrow when it hits #about
+window.addEventListener('scroll', () => {
+    const scrollTop = document.querySelector('.gotopbtn');
+    const aboutSec = document.querySelector('#about');
+    const topOfAbout = aboutSec.offsetTop;
+
+    (window.scrollY >= topOfAbout) ? scrollTop.classList.remove('hidden') : scrollTop.classList.add('hidden');
+});
 
 
 
