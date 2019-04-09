@@ -135,7 +135,7 @@ function addItemToCart(cardTxt, price, imageSrc) {
     cartRow.innerHTML = cartRowContent;
     
     // let productList = localStorage.getItem('product') ? JSON.parse(localStorage.getItem('product')) : [];
-    //  console.log(productList);
+    //  console.table(productList);
 
     cartItems.append(cartRow)
 

@@ -95,11 +95,22 @@ setTimeout(function () {
             </div>
         `;
         cartRow.innerHTML = cartRowContent
-        // let productList = JSON.stringify(cartRowContent);
-        // localStorage.setItem('product', productList);
+        
+        
+        
+        cartItems.append(cartRow);
+        
 
-
-        cartItems.append(cartRow)
+        let productList = JSON.stringify(cartRowContent);
+        localStorage.setItem('product', productList);
+        productList = localStorage.getItem('product') ? JSON.parse(localStorage.getItem('product')) : [];
+        console.table(productList);
+        
+       
+        for(let i = 0; i < productList.length; i++){
+         localStorage.setItem('product', productList);
+            
+        }
 
         cartRow.getElementsByClassName('cart-item-remove')[0].addEventListener('click', removeCartItems)
 
