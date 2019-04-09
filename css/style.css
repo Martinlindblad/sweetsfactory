@@ -77,7 +77,10 @@ body {
 }
 .banner {
     color: whitesmoke;
+}
+.banner-top {
     margin-top: -35%;
+    top: -25rem;
 }
 .banner-title {
     color: var(--mainPink);
@@ -145,6 +148,10 @@ body {
 /* cart item */
 
 /* cart buttons */
+.btn {
+    letter-spacing: 0.15em;
+    border-radius: 0;
+}
 .btn-pink {
     color: var(--mainPink) !important;
     border-color: var(--mainPink) !important;
@@ -242,7 +249,7 @@ body {
     position: relative;
     cursor: pointer;
 }
-#kaka{
+#kaka {
     width: 200px;
     height: 200px;
 }
@@ -257,6 +264,25 @@ body {
     transform: scale(1.1);
 }
 /* end of store items */
+
+/* modal */
+.btn-secondary {
+    background: var(--mainPink);
+    border: 1px solid var(--mainPink);
+}
+.btn-secondary:hover {
+    background: none;
+    border: none;
+    color: var(--mainPink);
+}
+.icon .far {
+    font-size: 2em;
+    color: cornflowerblue;
+}
+#show-num {
+    font-size: 2.5em;
+}
+/* end of modal */
 
 /* footer container */
 .gotopbtn {
@@ -295,7 +321,81 @@ body {
     transform: translateY(50%);
 }
 
+/* products page style */
+/* banner scroll */
+.banner-title, .product-title {
+    color: var(--mainPink);
+    font-size: 4rem;
+    font-family: 'Yeseva One', cursive;
+}
+.product-title{
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    text-align: center;
+    margin: 0 auto;
+}
+.bg-image {
+    /* Full height */
+    min-height: 70vh;
+    width: 100vw;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-position: fixed;
+}
 
+.img1 {
+    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("../img/bg-img.jpg");
+}
+.img2 {
+    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("../img/bg-img2.jpg");
+}
+.img3 {
+    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("../img/bg-img3.jpg");
+}
+.img4 {
+    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("../img/bg-img4.jpg");
+}
+.img5 {
+    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("../img/bg-img5.jpg");
+}
+.img6 {
+    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)),url("../img/bg-img6.jpg");
+}
+.banner-roll {
+    width: 100vw;
+    overflow-y: scroll;
+    height: 70vh;
+    scrollbar-width: none;
+}
+.big-nothing {
+    height: 500px;
+    width: 100%;
+}
+.banner {
+    height: 100%;
+    position: relative;
+    margin: 0%;
+    width: 100vw;
+}
+/* end of banner scroll */
+
+/* Products */
+#products .card {
+    border: none;
+}
+#products .price {
+    font-size: 1.5em;
+    font-family: 'Yeseva One', cursive;
+}
+#products .btn-outline-secondary {
+    background-color: var(--mainPink);
+    color: white;
+    border: none;
+}
+/* end of products */
 
 @media (max-width: 576px) {
     .carousel {

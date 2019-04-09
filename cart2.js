@@ -85,8 +85,8 @@ setTimeout(function () {
         const cartRowContent = `
             <div class="cart-item d-flex align-items-center justify-content-between">
                 <img src="${imageSrc}" class="img-fluid card-img" id="item-img" alt="">
-                <span class="item-text mx-5" id="item-name">${cardTxt}</span>
-                <span class="mx-2">$</span>
+                <span class="item-text mx-5">${cardTxt}</span>
+
                 <span id="cart-item-price" class="cart-item-price mb-0 mr-2">${price}</span>
                 <input type="number" value="1" class="cart-quantity-input">
                 <button id='cart-item-remove' class="btn cart-item-remove my-auto">
@@ -171,7 +171,7 @@ setTimeout(function () {
 
         cartInfo.addEventListener('click', () => cart.classList.toggle('show-cart'));
     })();
-}, 500);
+    }, 500);
 
     // // toggle scroll top arrow when it hits #about
     // window.addEventListener('scroll', () => {
