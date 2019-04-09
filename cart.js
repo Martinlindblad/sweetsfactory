@@ -134,7 +134,8 @@ function addItemToCart(cardTxt, price, imageSrc) {
     `;
     cartRow.innerHTML = cartRowContent;
     
-
+    // let productList = localStorage.getItem('product') ? JSON.parse(localStorage.getItem('product')) : [];
+    //  console.log(productList);
 
     cartItems.append(cartRow)
 
@@ -189,15 +190,6 @@ function showTotalAmount() {
 
 
 
-
-// show cart
-(function () {
-    const cartInfo = document.querySelector('.cart-info');
-    const cart = document.querySelector('.cart');
-
-    cartInfo.addEventListener('click', () => cart.classList.toggle('show-cart'));
-})();
-
     // update the badge num
     function showTotalAmount() {
         let badgeAmount = document.querySelector('.badge')
@@ -224,7 +216,7 @@ function showTotalAmount() {
     (function () {
         const cartInfo = document.querySelector('.cart-info');
         const cart = document.querySelector('.cart');
-
+        
         cartInfo.addEventListener('click', () => cart.classList.toggle('show-cart'));
     })();
 
