@@ -43,7 +43,7 @@ $.getJSON('sweets.json', function( data ) {
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${doughnut.ingredients
             }</p>
-            <p><button class="btn btn-outline-secondary text-uppercase" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
+            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
                 (doughnut.price).toFixed(2)
             }</strong>/ 1 piece</p>
             `;
@@ -60,12 +60,12 @@ $.getJSON('sweets.json', function( data ) {
    
             productsDiv.innerHTML = `
             <img src='${cupcake.imageUrl}' alt='${cupcake.name}' class="card-img">
-            <h4 class="card-text text-center text-capitalize">${cupcake.name}</h4>
+            <h4 class="card-text text-center text-capitalize card-title">${cupcake.name}</h4>
             <p class="card-text">${cupcake.description}</p>
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${cupcake.ingredients
             }</p>
-            <p><button class="btn btn-outline-secondary text-uppercase" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
+            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
                 (cupcake.price).toFixed(2)
             }</strong>/ 1 piece</p>
             `;
@@ -82,12 +82,12 @@ $.getJSON('sweets.json', function( data ) {
             
             productsDiv.innerHTML = `
             <img src='${chocolate.imageUrl}' alt='${chocolate.name}' class="card-img">
-            <h4 class="card-text text-center text-capitalize">${chocolate.name}</h4>
+            <h4 class="card-text text-center text-capitalize card-title">${chocolate.name}</h4>
             <p class="card-text">${chocolate.description}</p>
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${chocolate.ingredients
             }</p>
-            <p><button class="btn btn-outline-secondary text-uppercase" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
+            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
                 (chocolate.price).toFixed(2)
             }</strong>/ 1 piece</p>
             `;
@@ -104,12 +104,12 @@ $.getJSON('sweets.json', function( data ) {
           
             productsDiv.innerHTML = `
             <img src='${cookie.imageUrl}' alt='${cookie.name}' class="card-img">
-            <h4 class="card-text text-center text-capitalize">${cookie.name}</h4>
+            <h4 class="card-text text-center text-capitalize card-title">${cookie.name}</h4>
             <p class="card-text">${cookie.description}</p>
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${cookie.ingredients
             }</p>
-            <p><button class="btn btn-outline-secondary text-uppercase" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
+            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
                 (cookie.price).toFixed(2)
             }</strong>/ 100 g</p>
             `;
@@ -126,12 +126,12 @@ $.getJSON('sweets.json', function( data ) {
             
             productsDiv.innerHTML = `
             <img src='${candy.imageUrl}' alt='${candy.name}' class="card-img">
-            <h4 class="card-text text-center text-capitalize">${candy.name}</h4>
+            <h4 class="card-text text-center text-capitalize card-title">${candy.name}</h4>
             <p class="card-text">${candy.description}</p>
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${candy.ingredients
             }</p>
-            <p><button class="btn btn-outline-secondary text-uppercase" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
+            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
                 (candy.price).toFixed(2)
             }</strong>/ 100 g</p>
             `;
