@@ -85,7 +85,7 @@ setTimeout(function() {
         const cartRowContent = `
             <div class="cart-item d-flex align-items-center justify-content-between">
                 <img src="${imageSrc}" class="img-fluid card-img" id="item-img" alt="">
-                <span class="item-text mx-5">${cardTxt}</span>
+                <span class="item-text mx-5" id="item-name">${cardTxt}</span>
                 <span class="mx-2">$</span>
                 <span id="cart-item-price" class="cart-item-price mb-0 mr-2">${price}</span>
                 <input type="number" value="1" class="cart-quantity-input">
@@ -95,6 +95,7 @@ setTimeout(function() {
             </div>
         `;
         cartRow.innerHTML = cartRowContent
+
     
         cartItems.append(cartRow)
     

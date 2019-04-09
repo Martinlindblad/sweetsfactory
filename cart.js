@@ -69,6 +69,7 @@ function addToCartClick(e) {
     console.log(cardTxt, price, imageSrc);
     addItemToCart(cardTxt, price, imageSrc);
 
+
     updateTotal();
 }
 
@@ -95,7 +96,9 @@ function addItemToCart(cardTxt, price, imageSrc) {
             </button>
         </div>
     `;
-    cartRow.innerHTML = cartRowContent
+    cartRow.innerHTML = cartRowContent;
+    
+
 
     cartItems.append(cartRow)
 
@@ -147,6 +150,9 @@ function showTotalAmount() {
     const checkoutBtn = document.querySelector('.btn-checkout')
     checkoutBtn.classList.remove('disabled')
 };
+
+
+
 
 // show cart
 (function () {
