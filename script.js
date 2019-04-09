@@ -9,6 +9,15 @@ $('#details-btn').on('click', function () {
 
 $(document).ready(function () {
 
+    let productList = localStorage.getItem('sweets') ? JSON.parse(localStorage.getItem('sweets')) : [];
+    console.log(productList);
+
+    productList.forEach(item =>
+        $('#cart-item').append(item).innerHTML)
+        console.log(item);
+
+    cartItems.append(cartRow)
+
 
 
     // Get JSON Objects and Show bestsellers

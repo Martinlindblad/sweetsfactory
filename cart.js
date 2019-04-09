@@ -136,8 +136,7 @@ function addItemToCart(cardTxt, price, imageSrc) {
     
     // let productList = localStorage.getItem('product') ? JSON.parse(localStorage.getItem('product')) : [];
     //  console.table(productList);
-
-    cartItems.append(cartRow)
+    
 
     cartRow.getElementsByClassName('cart-item-remove')[0].addEventListener('click', removeCartItems)
 

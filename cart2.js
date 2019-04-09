@@ -95,23 +95,25 @@ setTimeout(function () {
             </div>
         `;
         cartRow.innerHTML = cartRowContent
-        
-        // console.log(cartRow)
-        
-        // console.log( cartItems.append(cartRow));
-        
-        
-        // let productList = JSON.stringify(cartRowContent);
-        // localStorage.setItem('product', productList.innerHTML);
-        // productList = localStorage.getItem('product') ? JSON.parse(localStorage.getItem('product')) : [];
-        // console.log(productList);
-        
 
-        // for(let i = 0; i < productList.length; i++){
-        //     // productList.push()
-        //     console.log(productList)
-        // }
-        cartItems.append(cartRow)
+        let productList = JSON.parse(localStorage.getItem('sweets'));
+        if (!productList) {
+            productList = [];
+        }
+        console.log({ productList });
+        localStorage.setItem('sweets', JSON.stringify([...productList, cartRowContent]));
+        const newProductList = JSON.parse(localStorage.getItem('sweets'));
+
+        console.log({newProductList});
+
+        productList = localStorage.getItem('sweets') ? JSON.parse(localStorage.getItem('sweets')) : [];
+        console.log(productList);
+
+        productList.forEach(item =>
+            $('#cart-item').append(item))
+            
+      
+        cartItems.append(cartRow);
         
        
 
@@ -173,11 +175,4 @@ setTimeout(function () {
     })();
     }, 500);
 
-    // // toggle scroll top arrow when it hits #about
-    // window.addEventListener('scroll', () => {
-    //     const scrollTop = document.querySelector('.gotopbtn');
-    //     const aboutSec = document.querySelector('#about');
-    //     const topOfAbout = aboutSec.offsetTop;
-
-    //     (window.scrollY >= topOfAbout) ? scrollTop.classList.remove('hidden') : scrollTop.classList.add('hidden');
-    // });
+   
