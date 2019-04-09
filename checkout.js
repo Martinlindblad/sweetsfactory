@@ -1,27 +1,27 @@
 // lagra produkter i LS
-$(function () {
-    let product = {
-        "sweets": [
-            { "picture": "" ,
-               "name": "", 
-               "price": "" , 
-               "qty": "" },
-            { "picture": "" ,
-               "name": "", 
-               "price": "" , 
-               "qty": "" },
-        ],
-        "totalAmount": [
-            {
-                "total": "",
-                "totalQty": ""
-            }
-        ]
-    };
+// $(function () {
+//     let product = {
+//         "sweets": [
+//             { "picture": "" ,
+//                "name": "", 
+//                "price": "" , 
+//                "qty": "" },
+//             { "picture": "" ,
+//                "name": "", 
+//                "price": "" , 
+//                "qty": "" },
+//         ],
+//         "totalAmount": [
+//             {
+//                 "total": "",
+//                 "totalQty": ""
+//             }
+//         ]
+//     };
 
-    let productList = JSON.stringify(product);
-    localStorage.setItem('product', productList);
-}); // ready
+//     let productList = JSON.stringify(product);
+//     localStorage.setItem('product', productList);
+// }); // ready
 /* -------------end of test --------------------*/
 
 

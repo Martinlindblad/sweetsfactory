@@ -1,4 +1,4 @@
-setTimeout(function() {
+setTimeout(function () {
     function ready() {
         // remove items from the cart
         const removeCartItemBtns = document.getElementsByClassName('cart-item-remove');
