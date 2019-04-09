@@ -21,7 +21,7 @@ $('#details-btn').on('click', function () {
         
         
         // Get JSON Objects and Show bestsellers
-        $.getJSON('bestsellers.json', function (data) {
+        $.getJSON('sweets.json', function (data) {
             let bestsellers = data.Bestsellers;
             console.log(data); // Declare object
             (function () {

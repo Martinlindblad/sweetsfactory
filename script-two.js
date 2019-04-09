@@ -111,7 +111,7 @@ $.getJSON('sweets.json', function( data ) {
             }</p>
             <p><button class="btn btn-outline-secondary text-uppercase" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
                 (cookie.price).toFixed(2)
-            }</strong>/ 1 piece</p>
+            }</strong>/ 100 g</p>
             `;
             productsEl4.appendChild(productsDiv);
           
@@ -133,7 +133,7 @@ $.getJSON('sweets.json', function( data ) {
             }</p>
             <p><button class="btn btn-outline-secondary text-uppercase" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
                 (candy.price).toFixed(2)
-            }</strong>/ 1 piece</p>
+            }</strong>/ 100 g</p>
             `;
             productsEl5.appendChild(productsDiv);
             
