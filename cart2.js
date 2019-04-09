@@ -96,21 +96,24 @@ setTimeout(function () {
         `;
         cartRow.innerHTML = cartRowContent
         
+        // console.log(cartRow)
+        
+        // console.log( cartItems.append(cartRow));
         
         
-        cartItems.append(cartRow);
+        // let productList = JSON.stringify(cartRowContent);
+        // localStorage.setItem('product', productList.innerHTML);
+        // productList = localStorage.getItem('product') ? JSON.parse(localStorage.getItem('product')) : [];
+        // console.log(productList);
         
 
-        let productList = JSON.stringify(cartRowContent);
-        localStorage.setItem('product', productList);
-        productList = localStorage.getItem('product') ? JSON.parse(localStorage.getItem('product')) : [];
-        console.table(productList);
+        // for(let i = 0; i < productList.length; i++){
+        //     // productList.push()
+        //     console.log(productList)
+        // }
+        cartItems.append(cartRow)
         
        
-        for(let i = 0; i < productList.length; i++){
-         localStorage.setItem('product', productList);
-            
-        }
 
         cartRow.getElementsByClassName('cart-item-remove')[0].addEventListener('click', removeCartItems)
 
