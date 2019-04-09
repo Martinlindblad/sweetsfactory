@@ -37,6 +37,7 @@ setTimeout(function () {
 
     // remove items all at once
     function clearCart() {
+        localStorage.removeItem('sweets');
         const allItems = document.getElementsByClassName('cart-items')[0]
 
         while (allItems.hasChildNodes()) {
@@ -70,6 +71,7 @@ setTimeout(function () {
 
         updateTotal();
     }
+    updateTotal();
 
     function addItemToCart(cardTxt, price, imageSrc) {
         const cartRow = document.createElement('div')
@@ -100,22 +102,11 @@ setTimeout(function () {
         if (!productList) {
             productList = [];
         }
-        console.log({ productList });
         localStorage.setItem('sweets', JSON.stringify([...productList, cartRowContent]));
         const newProductList = JSON.parse(localStorage.getItem('sweets'));
-
-        console.log({newProductList});
-
         productList = localStorage.getItem('sweets') ? JSON.parse(localStorage.getItem('sweets')) : [];
-        console.log(productList);
 
-        productList.forEach(item =>
-            $('#cart-item').append(item))
-            
-      
         cartItems.append(cartRow);
-        
-       
 
         cartRow.getElementsByClassName('cart-item-remove')[0].addEventListener('click', removeCartItems)
 

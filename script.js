@@ -8,17 +8,11 @@ $('#details-btn').on('click', function () {
 
 
 $(document).ready(function () {
-
     let productList = localStorage.getItem('sweets') ? JSON.parse(localStorage.getItem('sweets')) : [];
     console.log(productList);
-
-    productList.forEach(item =>
-        $('#cart-item').append(item).innerHTML)
-        console.log(item);
-
-    cartItems.append(cartRow)
-
-
+    productList.forEach(item => {
+        $('.cart-items').append(item.replace(/[\n\r]+/g, '').replace(/\s{2,10}/g, ' '));
+    });
 
     // Get JSON Objects and Show bestsellers
     $.getJSON('sweets.json', function (data) {
@@ -37,7 +31,6 @@ $(document).ready(function () {
                     bestsellerDiv.setAttribute("id", "newDiv" + counter++); // Give every div an id-tag
 
 
-
                     bestsellerDiv.classList.add("col-lg-3", "card", "mx-2");   // add standard classes
 
                     bestsellerDiv.innerHTML = `
@@ -53,25 +46,11 @@ $(document).ready(function () {
 
                     // $('#newDiv2').find('img').removeClass('mt-5', 'mb-2'); // Removes Flexbox classes
                     // $('#newDiv3').find('img').removeClass('mt-5') // To make the three boxes look more even.
-
-
-
-
-
                 });
-
             }
-
             generateBestSeller();
-
-
         }());
-
-
-
-
     }); // JSON
-
 });
 
 

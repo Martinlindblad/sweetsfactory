@@ -1,3 +1,14 @@
+
+$(document).ready(function () {
+    let productList = localStorage.getItem('sweets') ? JSON.parse(localStorage.getItem('sweets')) : [];
+    console.log(productList);
+    productList.forEach(item => {
+        console.log($('.cart-items'));
+        $('.cart-items').append(item.replace(/[\n\r]+/g, '').replace(/\s{2,10}/g, ' '));
+        console.log(item.replace(/[\n\r]+/g, '').replace(/\s{2,10}/g, ' '));
+    });
+});
+
 // __________________GET JSON_____________________
 
 $.getJSON('sweets.json', function (data) {
