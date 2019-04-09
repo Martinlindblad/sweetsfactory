@@ -133,17 +133,13 @@ $(document).ready(function(){
 
 setInterval(() => {
    bannerRoll();
-    
-<<<<<<< HEAD
-}, 24000);
-=======
-}, 24800);
->>>>>>> 54345c66c54e737950075af20af7447cef63d9f1
 
-function bannerRoll(){       
+}, 24000);
+
+function bannerRoll(){
     let imgHigh = $('.img1').height();      // get the Hight from one img
     imgHigh = imgHigh * 5;    // all images have the same size. 6 images. there fore img height*5
-    
+
     $(".banner-roll").stop(true,true).animate({scrollTop: imgHigh}, 12000, "linear" ,  // Start the action, will move the page to "imgHigh"
        function(){ $(this).stop(true,true).animate({scrollTop: 0}, 12000 , "linear" ); // Go back up again
      });
