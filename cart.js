@@ -69,7 +69,7 @@ setTimeout(function() {
         console.log(cardTxt, price, imageSrc);
         addItemToCart(cardTxt, price, imageSrc);
 
-        localStorage.setItem('cart', addItemToCart)
+        localStorage.setItem('cart', JSON.stringify(addItemToCart))
 
         updateTotal();
     }

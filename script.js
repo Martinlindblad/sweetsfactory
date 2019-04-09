@@ -205,10 +205,7 @@ window.addEventListener('scroll', () => {
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${candy.ingredients
                         }</p>
-            <p><button class="btn btn-outline-secondary text-uppercase" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
-                        (candy.price).toFixed(2)
-                        }</strong>/ 1 piece</p>
-            `;
+            <p><button class="btn btn-outline-secondary text-uppercase" role="button">ADD TO CART</button><strong class="ml-4 price">${(candy.price).toFixed(2)}</strong>/ 1 piece</p>`;
                     productsEl5.appendChild(productsDiv);
 
                     console.log(productsDiv);
