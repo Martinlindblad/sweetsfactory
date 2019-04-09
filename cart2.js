@@ -111,8 +111,9 @@ setTimeout(function () {
 
         productList.forEach(item =>
             $('#cart-item').append(item))
+
+
             
-      
         cartItems.append(cartRow);
         
        
