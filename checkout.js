@@ -13,8 +13,8 @@ $(function () {
         ],
         "totalAmount": [
             {
-                "total": "2.00",
-                "totalQty": "2"
+                "total": "",
+                "totalQty": ""
             }
         ]
     };
