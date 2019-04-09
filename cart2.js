@@ -129,32 +129,25 @@ setTimeout(function () {
             </div>
         `;
         cartRow.innerHTML = cartRowContent
-        
-        
-        // console.log(cartRow)
-        
-        // console.log( cartItems.append(cartRow));
-        // let productList= [];
-        
-        // let sameItem = (data) =>{
-            let productList = localStorage.getItem('sweets');
-            productList = JSON.stringify(cartRowContent);
-            productList = localStorage.setItem('sweets', [...productList,data]);
-            productList = JSON.parse(localStorage.getItem('sweets'));
-            
-            
-            console.table(productList);
-        // }
-        // productList = localStorage.getItem('sweets') ? JSON.parse(localStorage.getItem('sweets')) : [];
-        // console.log(productList);
 
-        
+        let productList = JSON.parse(localStorage.getItem('sweets'));
+        if (!productList) {
+            productList = [];
+        }
+        console.log({ productList });
+        localStorage.setItem('sweets', JSON.stringify([...productList, cartRowContent]));
+        const newProductList = JSON.parse(localStorage.getItem('sweets'));
 
-        // for(let i = 0; i < productList.length; i++){
-        //     // productList.push()
-        //     console.log(productList)
-        // }
-        cartItems.append(cartRow)
+        console.log({newProductList});
+
+        productList = localStorage.getItem('sweets') ? JSON.parse(localStorage.getItem('sweets')) : [];
+        console.log(productList);
+
+        productList.forEach(item =>
+            $('#cart-item').append(item))
+            
+      
+        cartItems.append(cartRow);
         
        
 
@@ -220,11 +213,4 @@ setTimeout(function () {
     })();
     }, 500);
 
-    // // toggle scroll top arrow when it hits #about
-    // window.addEventListener('scroll', () => {
-    //     const scrollTop = document.querySelector('.gotopbtn');
-    //     const aboutSec = document.querySelector('#about');
-    //     const topOfAbout = aboutSec.offsetTop;
-
-    //     (window.scrollY >= topOfAbout) ? scrollTop.classList.remove('hidden') : scrollTop.classList.add('hidden');
-    // });
+   
