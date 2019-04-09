@@ -22,7 +22,10 @@ setTimeout(function() {
         }
 
         const clearBtn = document.getElementById('clear-cart')
-        clearBtn.addEventListener('click', clearCart)
+        clearBtn.addEventListener('click', () => {
+            clearCart();
+            localStorage.removeItem('sweets');
+        })
 
         document.querySelector('.btn-checkout').addEventListener('click', checkoutClick)
     }
@@ -37,7 +40,6 @@ setTimeout(function() {
 
     // remove items all at once
     function clearCart() {
-        localStorage.removeItem('sweets');
         const allItems = document.getElementsByClassName('cart-items')[0]
 
         while (allItems.hasChildNodes()) {
@@ -59,24 +61,9 @@ setTimeout(function() {
         }
         updateTotal()
     }
-
-    function addToCartClick(e) {
-        const btn = e.target
-        const cardItem = btn.parentElement
-        const cardTxt = cardItem.getElementsByClassName('card-text')[0].innerText
-        const price = cardItem.getElementsByClassName('cart-item-price')[0].innerText
-        const imageSrc = cardItem.getElementsByClassName('card-img')[0].src
-
-        console.log(cardTxt, price, imageSrc);
-        addItemToCart(cardTxt, price, imageSrc);
-
-        localStorage.setItem('cart', JSON.stringify(addItemToCart))
-
-        updateTotal();
-    }
+   
     updateTotal()
 
-
     function addToCartClick(e) {
         const btn = e.target
         const cardItem = btn.parentElement
@@ -86,7 +73,6 @@ setTimeout(function() {
 
         console.log(cardTxt, price, imageSrc);
         addItemToCart(cardTxt, price, imageSrc);
-
 
         updateTotal();
     }
@@ -135,9 +121,16 @@ setTimeout(function() {
         `;
         cartRow.innerHTML = cartRowContent;
         
-        // let productList = localStorage.getItem('product') ? JSON.parse(localStorage.getItem('product')) : [];
-        //  console.table(productList);
+ 
+        let productList = JSON.parse(localStorage.getItem('sweets'));
+        if (!productList) {
+            productList = [];
+        }
+        localStorage.setItem('sweets', JSON.stringify([...productList, cartRowContent]));
+        productList = localStorage.getItem('sweets') ? JSON.parse(localStorage.getItem('sweets')) : [];
+        productList.forEach(item => $('#cart-item').append(item))
         
+        cartItems.append(cartRow);
 
         cartRow.getElementsByClassName('cart-item-remove')[0].addEventListener('click', removeCartItems)
 

@@ -22,7 +22,10 @@ setTimeout(function () {
         }
 
         const clearBtn = document.getElementById('clear-cart')
-        clearBtn.addEventListener('click', clearCart)
+        clearBtn.addEventListener('click', () => {
+            clearCart();
+            localStorage.removeItem('sweets');
+        })
 
         document.querySelector('.btn-checkout').addEventListener('click', checkoutClick)
     }
@@ -37,7 +40,6 @@ setTimeout(function () {
 
     // remove items all at once
     function clearCart() {
-        localStorage.removeItem('sweets');
         const allItems = document.getElementsByClassName('cart-items')[0]
 
         while (allItems.hasChildNodes()) {
@@ -103,10 +105,8 @@ setTimeout(function () {
             productList = [];
         }
         localStorage.setItem('sweets', JSON.stringify([...productList, cartRowContent]));
-        const newProductList = JSON.parse(localStorage.getItem('sweets'));
         productList = localStorage.getItem('sweets') ? JSON.parse(localStorage.getItem('sweets')) : [];
-        productList.forEach(item =>
-            $('#cart-item').append(item))
+        productList.forEach(item => $('#cart-item').append(item))
 
         cartItems.append(cartRow);
 
