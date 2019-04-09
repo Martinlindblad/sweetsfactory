@@ -1,63 +1,80 @@
 setTimeout(function() {
-function ready() {
-    // remove items from the cart
-    const removeCartItemBtns = document.getElementsByClassName('cart-item-remove');
-    // console.log(removeCartItemBtns);
-    for (let i = 0; i < removeCartItemBtns.length; i++) {
-        const btn = removeCartItemBtns[i];
-        btn.addEventListener('click', removeCartItems);
+    function ready() {
+        // remove items from the cart
+        const removeCartItemBtns = document.getElementsByClassName('cart-item-remove');
+        // console.log(removeCartItemBtns);
+        for (let i = 0; i < removeCartItemBtns.length; i++) {
+            const btn = removeCartItemBtns[i];
+            btn.addEventListener('click', removeCartItems);
+        }
+
+        const qtyInput = document.getElementsByClassName('cart-quantity-input')
+        for (let i = 0; i < qtyInput.length; i++) {
+            const input = qtyInput[i]
+            input.addEventListener('change', qtyChanged)
+        }
+
+        const addToCartBtn = document.getElementsByClassName('store-item-icon')
+        console.log(addToCartBtn);
+        for (let i = 0; i < addToCartBtn.length; i++) {
+            const btn = addToCartBtn[i]
+            btn.addEventListener('click', addToCartClick)
+        }
+
+        const clearBtn = document.getElementById('clear-cart')
+        clearBtn.addEventListener('click', clearCart)
+
+        document.querySelector('.btn-checkout').addEventListener('click', checkoutClick)
     }
 
-    const qtyInput = document.getElementsByClassName('cart-quantity-input')
-    for (let i = 0; i < qtyInput.length; i++) {
-        const input = qtyInput[i]
-        input.addEventListener('change', qtyChanged)
+    ready();
+
+    function checkoutClick() {
+        alert('Thanks for your purchase. Have a nice day!')
+
+        clearCart()
     }
 
-    const addToCartBtn = document.getElementsByClassName('store-item-icon')
-    console.log(addToCartBtn);
-    for (let i = 0; i < addToCartBtn.length; i++) {
-        const btn = addToCartBtn[i]
-        btn.addEventListener('click', addToCartClick)
+    // remove items all at once
+    function clearCart() {
+        const allItems = document.getElementsByClassName('cart-items')[0]
+
+        while (allItems.hasChildNodes()) {
+            allItems.removeChild(allItems.firstChild)
+        }
+        updateTotal()
     }
 
-    const clearBtn = document.getElementById('clear-cart')
-    clearBtn.addEventListener('click', clearCart)
+    function removeCartItems(e) {
+        const btnClick = e.target;
+        btnClick.parentElement.parentElement.remove();
+        updateTotal();
+    }
 
-    document.querySelector('.btn-checkout').addEventListener('click', checkoutClick)
-}
+    function qtyChanged(e) {
+        const input = e.target
+        if (isNaN(input.value) || input.value <= 1) {
+            input.value = 1;
+        }
+        updateTotal()
+    }
 
-ready();
+    function addToCartClick(e) {
+        const btn = e.target
+        const cardItem = btn.parentElement
+        const cardTxt = cardItem.getElementsByClassName('card-text')[0].innerText
+        const price = cardItem.getElementsByClassName('cart-item-price')[0].innerText
+        const imageSrc = cardItem.getElementsByClassName('card-img')[0].src
 
-function checkoutClick() {
-    alert('Thanks for your purchase. Have a nice day!')
+        console.log(cardTxt, price, imageSrc);
+        addItemToCart(cardTxt, price, imageSrc);
 
-    clearCart()
-}
+        localStorage.setItem('cart', addItemToCart)
 
-// remove items all at once
-function clearCart() {
-    const allItems = document.getElementsByClassName('cart-items')[0]
-
-    while (allItems.hasChildNodes()) {
-        allItems.removeChild(allItems.firstChild)
+        updateTotal();
     }
     updateTotal()
-}
 
-function removeCartItems(e) {
-    const btnClick = e.target;
-    btnClick.parentElement.parentElement.remove();
-    updateTotal();
-}
-
-function qtyChanged(e) {
-    const input = e.target
-    if (isNaN(input.value) || input.value <= 1) {
-        input.value = 1;
-    }
-    updateTotal()
-}
 
 function addToCartClick(e) {
     const btn = e.target
@@ -83,6 +100,25 @@ function addItemToCart(cardTxt, price, imageSrc) {
             alert('Item has already been added')
             return
         }
+        const cartRowContent = `
+            <div class="cart-item d-flex align-items-center justify-content-between">
+                <img src="${imageSrc}" class="img-fluid card-img" id="item-img" alt="">
+                <span class="item-text mx-5">${cardTxt}</span>
+                <span class="mx-2">$</span>
+                <span id="cart-item-price" class="cart-item-price mb-0 mr-2">${price}</span>
+                <input type="number" value="1" class="cart-quantity-input">
+                <button id='cart-item-remove' class="btn cart-item-remove my-auto">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+        `;
+        cartRow.innerHTML = cartRowContent
+
+        cartItems.append(cartRow)
+
+        cartRow.getElementsByClassName('cart-item-remove')[0].addEventListener('click', removeCartItems)
+
+        cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', qtyChanged)
     }
     const cartRowContent = `
         <div class="cart-item d-flex align-items-center justify-content-between">
@@ -161,13 +197,43 @@ function showTotalAmount() {
 
     cartInfo.addEventListener('click', () => cart.classList.toggle('show-cart'));
 })();
+
+    // update the badge num
+    function showTotalAmount() {
+        let badgeAmount = document.querySelector('.badge')
+        const itemsInCart = document.querySelectorAll('.cart-quantity-input')
+        const total = []
+
+        itemsInCart.forEach(item => {
+            total.push(parseInt(item.value));
+        })
+
+        const totalItems = total.reduce((total, items) => {
+            total += items;
+            return total;
+        }, 0)
+
+        console.log(totalItems);
+        badgeAmount.innerText = totalItems
+
+        const checkoutBtn = document.querySelector('.btn-checkout')
+        checkoutBtn.classList.remove('disabled')
+    };
+
+    // show cart
+    (function () {
+        const cartInfo = document.querySelector('.cart-info');
+        const cart = document.querySelector('.cart');
+
+        cartInfo.addEventListener('click', () => cart.classList.toggle('show-cart'));
+    })();
+
+    // toggle scroll top arrow when it hits #about
+    window.addEventListener('scroll', () => {
+        const scrollTop = document.querySelector('.gotopbtn');
+        const aboutSec = document.querySelector('#about');
+        const topOfAbout = aboutSec.offsetTop;
+
+        (window.scrollY >= topOfAbout) ? scrollTop.classList.remove('hidden') : scrollTop.classList.add('hidden');
+    });
 }, 500);
-
-// // toggle scroll top arrow when it hits #about
-// window.addEventListener('scroll', () => {
-//     const scrollTop = document.querySelector('.gotopbtn');
-//     const aboutSec = document.querySelector('#about');
-//     const topOfAbout = aboutSec.offsetTop;
-
-//     (window.scrollY >= topOfAbout) ? scrollTop.classList.remove('hidden') : scrollTop.classList.add('hidden');
-// });
