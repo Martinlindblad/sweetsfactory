@@ -105,6 +105,8 @@ setTimeout(function () {
         localStorage.setItem('sweets', JSON.stringify([...productList, cartRowContent]));
         const newProductList = JSON.parse(localStorage.getItem('sweets'));
         productList = localStorage.getItem('sweets') ? JSON.parse(localStorage.getItem('sweets')) : [];
+        productList.forEach(item =>
+            $('#cart-item').append(item))
 
         cartItems.append(cartRow);
 
