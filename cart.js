@@ -146,10 +146,12 @@ setTimeout(function() {
             const cartRow = cartRows[i];
             const priceEl = cartRow.getElementsByClassName('cart-item-price')[0];
             const qtyEl = cartRow.getElementsByClassName('cart-quantity-input')[0];
-
+            
             const price = priceEl.innerText;
+            console.log(price);
             const qty = qtyEl.value;
             total = total + (price * qty);
+
         }
         document.getElementsByClassName('cart-total-price')[0].innerText = total.toFixed(2);
 
