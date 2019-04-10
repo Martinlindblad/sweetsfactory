@@ -44,6 +44,8 @@ $(document).ready(function () {
                     console.log(bestsellerDiv);
                     bestSellerContainer.appendChild(bestsellerDiv);
 
+                    // $('#newDiv2').find('img').removeClass('mt-5', 'mb-2'); // Removes Flexbox classes
+                    // $('#newDiv3').find('img').removeClass('mt-5') // To make the three boxes look more even.
                 });
             }
             generateBestSeller();

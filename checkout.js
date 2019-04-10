@@ -31,7 +31,12 @@ $(function () {
     //Om man kan hämta innehållet av product från LocalStorage
     //då konvertera tillbaka från en JSON-sträng till en array
     let productList = localStorage.getItem('sweets') ? JSON.parse(localStorage.getItem('sweets')) : [];
-    console.log(typeof productList);
+    let totalList = localStorage.getItem('totalt') ? JSON.parse(localStorage.getItem('totalt')) : [];
+
+    console.table(productList);
+    console.log(totalList);
+    
+    
     
     
     
@@ -62,12 +67,12 @@ $(function () {
         // <td>${item.qty}</td>
         // </tr>`
         // )
-        // // value += `<tr id="totalAmount">
-        // <td></td>
-        // <td class="text-right">total</td>
-        // <td id="total">$ ${productList.totalAmount[0].total}</td>
-        // <td id="qty">${productList.totalAmount[0].totalQty}</td>
-        // </tr>`
+        value += `<tr id="totalAmount">
+        <td></td>
+        <td class="text-right">total</td>
+        <td >$ ${totalList}</td>
+        <td></td>
+        </tr>`
         
     //     // Skriva ut alla valda produkter
         $('table').append().html(value);
@@ -227,9 +232,7 @@ function personInfoLocalStorage(personInfoArray) {
 $(function () {
     //Om man kan hämta en personInfoArray från LocalStorage
     //då konvertera tillbaka från en JSON-sträng till en array
-    let personInfoArray = [];
-    personInfoArray = localStorage.getItem('personInfoArray') ; 
-    personInfoArray = JSON.parse(localStorage.getItem('personInfoArray')); 
+    let personInfoArray = localStorage.getItem('personInfoArray') ? JSON.parse(localStorage.getItem('personInfoArray')) : [];
 
 
     let result = `<div class="row d-flex text-center mx-auto">`;

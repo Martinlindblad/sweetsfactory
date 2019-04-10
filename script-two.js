@@ -7,6 +7,12 @@ $(document).ready(function () {
         $('.cart-items').append(item.replace(/[\n\r]+/g, '').replace(/\s{2,10}/g, ' '));
         console.log(item.replace(/[\n\r]+/g, '').replace(/\s{2,10}/g, ' '));
     });
+    function hej() {
+    
+        let hej = $('.cart-quantity-input').val();
+    console.log(hej);
+    }
+    hej();
 });
 
 // __________________GET JSON_____________________

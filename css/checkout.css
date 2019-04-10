@@ -52,69 +52,6 @@ body {
     color: whitesmoke;
 }
 /* end of info icons */
-/* cart */
-.cart {
-    position: absolute;
-    min-height: 10rem;
-    background: whitesmoke;
-    top: 73px;
-    right: 0;
-    transition: all 0.1s ease-in-out;
-    background: rgba(255, 255, 255, 0.8);
-    width: 25rem;
-    overflow: hidden;
-    display: none;
-}
-.show-cart {
-    display: block;
-    padding: 2rem 1.5rem;
-    transform: rotateY(-360deg);
-}
-.cart-item {
-    transition: all .3s ease-in-out;
-}
-#item-img {
-    width: 2.5rem;
-    height: 2rem;
-}
-/* end of cart */
-
-/* cart item */
-.cart-item-remove {
-    color: var(--mainPink);
-    transition: all 1s ease-in-out;
-}
-.cart-item-remove:hover {
-    transform: scale(1.1);
-    color: var(--mainBlack);
-}
-#cart-item-price {
-    font-size: 0.8rem;
-}
-/* cart item */
-
-/* cart buttons */
-.btn {
-    letter-spacing: 0.15em;
-    border-radius: 0;
-}
-.btn-pink {
-    color: var(--mainPink) !important;
-    border-color: var(--mainPink) !important;
-}
-.btn-black {
-    color: var(--mainBlack) !important;
-    border-color: var(--mainBlack) !important;
-}
-.btn-black:hover {
-    color: var(--mainPink) !important;
-    background: var(--mainBlack) !important;
-}
-.btn-pink:hover {
-    background: var(--mainPink) !important;
-    color: var(--mainBlack) !important;
-}
-/* end of cart buttons */
 
 /* banner */
 .banner-title{
@@ -139,6 +76,16 @@ body {
 /* end of products */
 
 /* checkout */
+#item-img {
+    width: 6rem;
+} 
+#cart-item-remove{
+  display: none;
+}
+.cart-quantity-input{
+    pointer-events: none;
+    cursor: default;
+}
 .show-product{
     width: 80%;
     background-color: rgb(184, 178, 171);

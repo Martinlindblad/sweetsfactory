@@ -87,26 +87,8 @@ setTimeout(function() {
                 alert('Item has already been added')
                 return
             }
-            const cartRowContent = `
-                <div class="cart-item d-flex align-items-center justify-content-between">
-                    <img src="${imageSrc}" class="img-fluid card-img" id="item-img" alt="">
-                    <span class="item-text mx-5">${cardTxt}</span>
-                    <span class="mx-2">$</span>
-                    <span id="cart-item-price" class="cart-item-price mb-0 mr-2">${price}</span>
-                    <input type="number" value="1" class="cart-quantity-input">
-                    <button id='cart-item-remove' class="btn cart-item-remove my-auto">
-                        <i class="fas fa-trash"></i>
-                    </button>
-                </div>
-            `;
-            cartRow.innerHTML = cartRowContent
-
-            cartItems.append(cartRow)
-
-            cartRow.getElementsByClassName('cart-item-remove')[0].addEventListener('click', removeCartItems)
-
-            cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', qtyChanged)
         }
+
         const cartRowContent = `
             <div class="cart-item d-flex align-items-center justify-content-between">
                 <img src="${imageSrc}" class="img-fluid card-img" id="item-img" alt="">
@@ -141,14 +123,12 @@ setTimeout(function() {
         const cartItemContainer = document.getElementsByClassName('cart')[0]
         const cartRows = cartItemContainer.getElementsByClassName('cart-item');
         let total = 0;
-
         for (let i = 0; i < cartRows.length; i++) {
             const cartRow = cartRows[i];
             const priceEl = cartRow.getElementsByClassName('cart-item-price')[0];
             const qtyEl = cartRow.getElementsByClassName('cart-quantity-input')[0];
             
             const price = priceEl.innerText;
-            console.log(price);
             const qty = qtyEl.value;
             total = total + (price * qty);
 
@@ -157,6 +137,9 @@ setTimeout(function() {
 
         // always get only 2 decimals
         total = Math.round(total * 100) / 100
+        JSON.parse(localStorage.getItem('totalt'));
+        localStorage.setItem('totalt', JSON.stringify(total));
+        localStorage.getItem('totalt') ? JSON.parse(localStorage.getItem('totalt')) : [];
         // console.log(total);
         showTotalAmount()
     }

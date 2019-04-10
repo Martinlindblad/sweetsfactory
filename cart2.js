@@ -119,29 +119,34 @@ setTimeout(function () {
         const cartItemContainer = document.getElementsByClassName('cart')[0]
         const cartRows = cartItemContainer.getElementsByClassName('cart-item');
         let total = 0;
-
         for (let i = 0; i < cartRows.length; i++) {
             const cartRow = cartRows[i];
             const priceEl = cartRow.getElementsByClassName('cart-item-price')[0];
             const qtyEl = cartRow.getElementsByClassName('cart-quantity-input')[0];
             
             const price = priceEl.innerText;
-            console.log(price);
             const qty = qtyEl.value;
+            console.log(qty);
             total = total + (price * qty);
         }
         document.getElementsByClassName('cart-total-price')[0].innerText = total.toFixed(2);
-
+        
         // always get only 2 decimals
         total = Math.round(total * 100) / 100
-        // console.log(total);
+        console.log(total);
+        JSON.parse(localStorage.getItem('totalt'));
+        localStorage.setItem('totalt', JSON.stringify(total));
+        localStorage.getItem('totalt') ? JSON.parse(localStorage.getItem('totalt')) : [];
+        console.log(typeof (localStorage.totalt));
+
         showTotalAmount()
     }
-
+    
     // update the badge num
     function showTotalAmount() {
         let badgeAmount = document.querySelector('.badge')
         const itemsInCart = document.querySelectorAll('.cart-quantity-input')
+        console.log(itemsInCart);
         const total = []
 
         itemsInCart.forEach(item => {
