@@ -79,12 +79,24 @@ body {
 #item-img {
     width: 6rem;
 } 
+.item-text{
+    width: 80%;
+}
+.cart-item{
+    font-size: 1.2em;
+}
 #cart-item-remove{
   display: none;
+}
+#cart-item-price{
+    font-size: 1.5em;
+    width: 20%;
 }
 .cart-quantity-input{
     pointer-events: none;
     cursor: default;
+    border: none;
+    margin-left: 10%;
 }
 .show-product{
     width: 80%;

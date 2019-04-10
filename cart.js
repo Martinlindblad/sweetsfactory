@@ -138,8 +138,9 @@ setTimeout(function() {
         // always get only 2 decimals
         total = Math.round(total * 100) / 100
         JSON.parse(localStorage.getItem('totalt'));
-        localStorage.setItem('totalt', JSON.stringify(total));
-        localStorage.getItem('totalt') ? JSON.parse(localStorage.getItem('totalt')) : [];
+        // localStorage.setItem('totalt', JSON.stringify(total));
+        // localStorage.getItem('totalt') ? JSON.parse(localStorage.getItem('totalt')) : [];
+        // console.log(localStorage);
         // console.log(total);
         showTotalAmount()
     }

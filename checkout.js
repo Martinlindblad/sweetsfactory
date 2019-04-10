@@ -34,12 +34,7 @@ $(function () {
     let totalList = localStorage.getItem('totalt') ? JSON.parse(localStorage.getItem('totalt')) : [];
 
     console.table(productList);
-    console.log(totalList);
-    
-    
-    
-    
-    
+    // console.log(totalList);
     // let productList = localStorage.getItem('product') ? JSON.parse(localStorage.getItem('product')) : [];
     // console.table(productList.sweets);
     // console.log(productList);
@@ -67,12 +62,12 @@ $(function () {
         // <td>${item.qty}</td>
         // </tr>`
         // )
-        value += `<tr id="totalAmount">
-        <td></td>
-        <td class="text-right">total</td>
-        <td >$ ${totalList}</td>
-        <td></td>
-        </tr>`
+        // value += `<tr>
+        // <td></td>
+        // <td class="text-right">total</td>
+        // <td >$ ${totalList}</td>
+        // <td></td>
+        // </tr>`
         
     //     // Skriva ut alla valda produkter
         $('table').append().html(value);
