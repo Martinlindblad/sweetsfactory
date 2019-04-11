@@ -36,53 +36,14 @@
                         <a class="nav-link " href="index.html#contact">contact</a>
                     </li>
                 </ul>
-                <div class="nav-info-items d-none d-lg-flex ">
-                    <!-- single info -->
-                    <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between ">
-                        <span class="cart-info-icon mr-lg-1"><i class="fas fa-shopping-cart"></i></span>
-                        <span class="badge badge-pill badge-light">0</span>
-                        <!-- <p class="mb-0 text-capitalize"><span id="item-count">2 </span> items - $<span
-                                        class="item-total">10.49</span></p> -->
-                    </div>
-                    <!-- end of single info -->
-                </div>
+               
             </div>
         </nav>
         <div class="col-8 mx-auto banner text-center mt-4">
             <h1 class="text-capitalize"><strong class="banner-title ">C</strong>heckout</h1>
         </div>
 
-        <!-- cart-items -->
-        <div id="cart" class="cart">
-            <div class="cart-items text-capitalize my-3">
-                <!-- <div class="cart-item d-flex align-items-center justify-content-between">
-                    <img src="img/carousel01.jpg" class="img-fluid card-img" id="item-img" alt="">
-                    <span class="item-text mx-5">cart item</span>
-                    <span>$</span>
-                    <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
-                    <input type="number" value="2" class="cart-quantity-input">
-                    <button id='cart-item-remove' class="btn cart-item-remove my-auto">
-                        <i class="fas fa-trash"></i>
-                    </button>
-                </div>end .cart-item -->
-            </div>
-
-            <!-- cart total -->
-            <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
-                <h5>total</h5>
-                <h5> $ <strong id="cart-total" class="font-weight-bold cart-total-price">0</strong> </h5>
-            </div>
-            <!--end cart total -->
-            <!-- cart buttons -->
-            <div class="cart-buttons-container mt-3 d-flex justify-content-between">
-                <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear
-                    cart</a>
-                <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink btn-checkout">checkout</a>
-            </div>
-            <!--end of  cart buttons -->
-            <!--  -->
-
-        </div>
+      
     </header>
 
     <!-- checkout form -->
@@ -248,16 +209,6 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     <script src="./checkout.js"></script>
-    <script>
-    /*------------------ toggle shopping cart -------------------*/
-
-    (function () {
-    const cartInfo = document.querySelector('.cart-info');
-    const cart = document.querySelector('.cart');
-
-    cartInfo.addEventListener('click', () => cart.classList.toggle('show-cart'));
-})();
-    </script>
 </body>
 
 </html>

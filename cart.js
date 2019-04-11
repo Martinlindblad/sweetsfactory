@@ -67,6 +67,8 @@ setTimeout(function() {
         updateTotal()
     }
 
+    updateTotal()
+
     function addToCartClick(e) {
         const btn = e.target
         const cardItem = btn.parentElement

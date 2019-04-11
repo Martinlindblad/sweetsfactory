@@ -1,3 +1,20 @@
+
+$(document).ready(function () {
+    let productList = localStorage.getItem('sweets') ? JSON.parse(localStorage.getItem('sweets')) : [];
+    console.log(productList);
+    productList.forEach(item => {
+        console.log($('.cart-items'));
+        $('.cart-items').append(item.replace(/[\n\r]+/g, '').replace(/\s{2,10}/g, ' '));
+        console.log(item.replace(/[\n\r]+/g, '').replace(/\s{2,10}/g, ' '));
+    });
+    function hej() {
+    
+        let hej = $('.cart-quantity-input').val();
+    console.log(hej);
+    }
+    hej();
+});
+
 // __________________GET JSON_____________________
 
 $.getJSON('sweets.json', function (data) {
@@ -38,16 +55,16 @@ $.getJSON('sweets.json', function (data) {
 
                 productsDiv.innerHTML = `
             <img src='${doughnut.imageUrl}' alt='${doughnut.name}' class="card-img">
-            <h4 class="card-text text-center text-capitalize">${doughnut.name}</h4>
+            <h4 class="card-text text-center text-capitalize ">${doughnut.name}</h4>
             <p class="card-text">${doughnut.description}</p>
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${doughnut.ingredients
                     }</p>
             <p>
                 <button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button>
-                <strong class="ml-4 price">$ ${
+                <strong class="ml-4">$ <span class="cart-item-price price">${
                     (doughnut.price).toFixed(2)
-                    }</strong>/ 1 piece
+                    }</span></strong>/ 1 piece
             </p>
             `;
 
@@ -63,14 +80,14 @@ $.getJSON('sweets.json', function (data) {
 
                 productsDiv.innerHTML = `
             <img src='${cupcake.imageUrl}' alt='${cupcake.name}' class="card-img">
-            <h4 class="card-text text-center text-capitalize card-title">${cupcake.name}</h4>
+            <h4 class="card-text text-center text-capitalize ">${cupcake.name}</h4>
             <p class="card-text">${cupcake.description}</p>
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${cupcake.ingredients
                     }</p>
-            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
+            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4">$ <span class="cart-item-price price">${
                     (cupcake.price).toFixed(2)
-                    }</strong>/ 1 piece</p>
+                    }</span></strong>/ 1 piece</p>
             `;
                 productsEl2.appendChild(productsDiv);
 
@@ -85,14 +102,14 @@ $.getJSON('sweets.json', function (data) {
 
                 productsDiv.innerHTML = `
             <img src='${chocolate.imageUrl}' alt='${chocolate.name}' class="card-img">
-            <h4 class="card-text text-center text-capitalize card-title">${chocolate.name}</h4>
+            <h4 class="card-text text-center text-capitalize ">${chocolate.name}</h4>
             <p class="card-text">${chocolate.description}</p>
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${chocolate.ingredients
                     }</p>
-            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
+            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4">$ <span class="cart-item-price price">${
                     (chocolate.price).toFixed(2)
-                    }</strong>/ 1 piece</p>
+                    }</span></strong>/ 1 piece</p>
             `;
                 productsEl3.appendChild(productsDiv);
 
@@ -107,14 +124,14 @@ $.getJSON('sweets.json', function (data) {
 
                 productsDiv.innerHTML = `
             <img src='${cookie.imageUrl}' alt='${cookie.name}' class="card-img">
-            <h4 class="card-text text-center text-capitalize card-title">${cookie.name}</h4>
+            <h4 class="card-text text-center text-capitalize ">${cookie.name}</h4>
             <p class="card-text">${cookie.description}</p>
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${cookie.ingredients
                     }</p>
-            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${
+            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4">$ <span class="cart-item-price price">${
                     (cookie.price).toFixed(2)
-                    }</strong>/ 100 g</p>
+                    }</span></strong>/ 100 g</p>
             `;
                 productsEl4.appendChild(productsDiv);
 
@@ -129,12 +146,12 @@ $.getJSON('sweets.json', function (data) {
 
                 productsDiv.innerHTML = `
             <img src='${candy.imageUrl}' alt='${candy.name}' class="card-img">
-            <h4 class="card-text text-center text-capitalize card-title">${candy.name}</h4>
+            <h4 class="card-text text-center text-capitalize ">${candy.name}</h4>
             <p class="card-text">${candy.description}</p>
             <p class="card-text"><strong class="text-capitalize">Ingredients: </strong>
             ${candy.ingredients
                     }</p>
-            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4 price">$ ${(candy.price).toFixed(2)}</strong>/ 100 g</p>`;
+            <p><button class="btn btn-outline-secondary text-uppercase store-item-icon" role="button">ADD TO CART</button><strong class="ml-4">$<span class="cart-item-price price">${(candy.price).toFixed(2)}</span></strong>/ 100 g</p>`;
                 productsEl5.appendChild(productsDiv);
 
                 console.log(productsDiv);

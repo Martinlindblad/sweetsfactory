@@ -24,40 +24,52 @@
 // }); // ready
 /* -------------end of test --------------------*/
 
-
 $(function () {
     /*--------- Visa de valda produkterna på beställnings sidan -------*/
     //Hämta produkter från lokalStorage
     // Om det finns redan product i en array(product) när man kommer till beställnings sidan.
     //Om man kan hämta innehållet av product från LocalStorage
     //då konvertera tillbaka från en JSON-sträng till en array
-    let productList = localStorage.getItem('product') ? JSON.parse(localStorage.getItem('product')) : [];
-    console.table(productList.sweets);
-    console.log(productList);
-    console.log(localStorage)
+    let productList = localStorage.getItem('sweets') ? JSON.parse(localStorage.getItem('sweets')) : [];
+    let totalList = localStorage.getItem('totalt') ? JSON.parse(localStorage.getItem('totalt')) : [];
+
+    console.table(productList);
+    // console.log(totalList);
+    // let productList = localStorage.getItem('product') ? JSON.parse(localStorage.getItem('product')) : [];
+    // console.table(productList.sweets);
+    // console.log(productList);
+    // console.log(localStorage)
     
-    let value = `<tr id="product">
-    <th scope="col"></th>
-    <th scope="col">item</th>
-    <th scope="col">price</th>
-    <th scope="col">qty</th>
-    </tr>`;
-    productList.sweets.forEach(item =>
-        value += `<tr>
-        <td><img src="${item.picture}" alt="" width="110"></td>
-        <td>${item.name}</td>
-        <td>${item.price}</td>
-        <td>${item.qty}</td>
-        </tr>`
-        )
-        value += `<tr id="totalAmount">
-        <td></td>
-        <td class="text-right">total</td>
-        <td id="total">$ ${productList.totalAmount[0].total}</td>
-        <td id="qty">${productList.totalAmount[0].totalQty}</td>
-        </tr>`
+    let value = '';
+    // let value = `<tr id="product">
+    // <th scope="col"></th>
+    // <th scope="col">item</th>
+    // <th scope="col">price</th>
+    // <th scope="col">qty</th>
+    // </tr>`;
+                            for (let i of productList){
+                                value += `<tr>
+                                  <td>${i}</td>
+                                
+                                </tr>`
+                            }
+    // productList.sweets.forEach(item =>
+    //     value += productList.sweets
+        // value += `<tr>
+        // <td><img src="${item.picture}" alt="" width="110"></td>
+        // <td>${item.name}</td>
+        // <td>${item.price}</td>
+        // <td>${item.qty}</td>
+        // </tr>`
+        // )
+        // value += `<tr>
+        // <td></td>
+        // <td class="text-right">total</td>
+        // <td >$ ${totalList}</td>
+        // <td></td>
+        // </tr>`
         
-        // Skriva ut alla valda produkter
+    //     // Skriva ut alla valda produkter
         $('table').append().html(value);
 
         
@@ -208,17 +220,15 @@ function personInfoLocalStorage(personInfoArray) {
     //Konvertera en array till en JSON innan lagrar i LS
     let myList = JSON.stringify(personInfoArray);
     localStorage.setItem('personInfoArray', myList);
-    console.table(localStorage);
-    console.log(typeof myList);
+    
 }
 
 /*------------- Hämta värdet från en personInfoArray i LocalStorage till en thankyou.html sidan ------------*/
 $(function () {
-    // Om det finns redan infomationen i personInfoArray när man kommer till en ny sidan.
     //Om man kan hämta en personInfoArray från LocalStorage
     //då konvertera tillbaka från en JSON-sträng till en array
     let personInfoArray = localStorage.getItem('personInfoArray') ? JSON.parse(localStorage.getItem('personInfoArray')) : [];
-    console.table(personInfoArray);
+
 
     let result = `<div class="row d-flex text-center mx-auto">`;
     personInfoArray.forEach(info =>
@@ -227,7 +237,6 @@ $(function () {
     );
     result += `<div class="col-md-6 mx-auto my-3">
                     <a href="index.html" id="backtohome" class="btn btn-secondary text-uppercase mx-3">back to home page</a></div></div></div>`;
-    console.log(result);
     $('#thankyou-info').append().html(result);
     $('#orderName').append(personInfoArray[0]); // Visa förnamn på högstupp före 'Thank you....
 

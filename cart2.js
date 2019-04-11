@@ -22,7 +22,10 @@ setTimeout(function () {
         }
 
         const clearBtn = document.getElementById('clear-cart')
-        clearBtn.addEventListener('click', clearCart)
+        clearBtn.addEventListener('click', () => {
+            clearCart();
+            localStorage.removeItem('sweets');
+        })
 
         document.querySelector('.btn-checkout').addEventListener('click', checkoutClick)
     }
@@ -70,6 +73,7 @@ setTimeout(function () {
 
         updateTotal();
     }
+    updateTotal();
 
     function addItemToCart(cardTxt, price, imageSrc) {
         const cartRow = document.createElement('div')
@@ -86,7 +90,7 @@ setTimeout(function () {
             <div class="cart-item d-flex align-items-center justify-content-between">
                 <img src="${imageSrc}" class="img-fluid card-img" id="item-img" alt="">
                 <span class="item-text mx-5">${cardTxt}</span>
-
+                <span class="mx-2">$</span>
                 <span id="cart-item-price" class="cart-item-price mb-0 mr-2">${price}</span>
                 <input type="number" value="1" class="cart-quantity-input">
                 <button id='cart-item-remove' class="btn cart-item-remove my-auto">
@@ -96,7 +100,15 @@ setTimeout(function () {
         `;
         cartRow.innerHTML = cartRowContent
 
-        cartItems.append(cartRow)
+        let productList = JSON.parse(localStorage.getItem('sweets'));
+        if (!productList) {
+            productList = [];
+        }
+        localStorage.setItem('sweets', JSON.stringify([...productList, cartRowContent]));
+        productList = localStorage.getItem('sweets') ? JSON.parse(localStorage.getItem('sweets')) : [];
+        productList.forEach(item => $('#cart-item').append(item))
+
+        cartItems.append(cartRow);
 
         cartRow.getElementsByClassName('cart-item-remove')[0].addEventListener('click', removeCartItems)
 
@@ -107,28 +119,34 @@ setTimeout(function () {
         const cartItemContainer = document.getElementsByClassName('cart')[0]
         const cartRows = cartItemContainer.getElementsByClassName('cart-item');
         let total = 0;
-
         for (let i = 0; i < cartRows.length; i++) {
             const cartRow = cartRows[i];
             const priceEl = cartRow.getElementsByClassName('cart-item-price')[0];
             const qtyEl = cartRow.getElementsByClassName('cart-quantity-input')[0];
-
+            
             const price = priceEl.innerText;
             const qty = qtyEl.value;
+            console.log(qty);
             total = total + (price * qty);
         }
         document.getElementsByClassName('cart-total-price')[0].innerText = total.toFixed(2);
-
+        
         // always get only 2 decimals
         total = Math.round(total * 100) / 100
-        // console.log(total);
+        console.log(typeof total);
+        // JSON.parse(localStorage.getItem(total));
+        // localStorage.setItem('totalt', JSON.stringify(total));
+        // localStorage.getItem('totalt') ? JSON.parse(localStorage.getItem('totalt')) : [];
+        // console.log(typeof (localStorage.totalt));
+
         showTotalAmount()
     }
-
+    
     // update the badge num
     function showTotalAmount() {
         let badgeAmount = document.querySelector('.badge')
         const itemsInCart = document.querySelectorAll('.cart-quantity-input')
+        console.log(itemsInCart);
         const total = []
 
         itemsInCart.forEach(item => {
@@ -156,11 +174,4 @@ setTimeout(function () {
     })();
     }, 500);
 
-    // // toggle scroll top arrow when it hits #about
-    // window.addEventListener('scroll', () => {
-    //     const scrollTop = document.querySelector('.gotopbtn');
-    //     const aboutSec = document.querySelector('#about');
-    //     const topOfAbout = aboutSec.offsetTop;
-
-    //     (window.scrollY >= topOfAbout) ? scrollTop.classList.remove('hidden') : scrollTop.classList.add('hidden');
-    // });
+   
