@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Factory</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/sweetLogo.png" type="image/png" sizes="32x32">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg px-4">
+            <a class="navbar-brand" href="#"><img src="img/sweetLogo.svg" alt="" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
+                <span class="toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNav">
+                <ul class="navbar-nav mx-auto text-capitalize">
+                    <li class="nav-item mx-5 active">
+                        <a class="nav-link" href="#">home</a>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link" href="products.html">products</a>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link " href="#about">about</a>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link " href="#contact">contact</a>
+                    </li>
+                </ul>
+                <div class="nav-info-items d-none d-lg-flex ">
+                    <!-- single info -->
+                    <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between ">
+                        <span class="cart-info-icon mr-lg-1"><i class="fas fa-shopping-cart"></i></span>
+                        <span class="badge badge-pill badge-light">0</span>
+                    </div>
+                    <!-- end of single info -->
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row max-height justify-content-center align-items-center">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                        <li data-target="#demo" data-slide-to="3"></li>
+                    </ul>
+
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/slideshow1.jpg" alt="slideshow1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slideshow2.jpg" alt="slideshow2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slideshow3.jpg" alt="slideshow3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slideshow4.jpg" alt="slideshow4">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <!-- <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a> -->
+
+                </div>
+
+                <div class="col-8 mx-auto banner banner-top text-center">
+                    <h1 class="text-capitalize">welcome to <strong class="banner-title ">Sweet Factory</strong></h1>
+                    <a href="#store" class="btn banner-link text-uppercase my-2">explore</a>
+                </div>
+
+                <div id="cart" class="cart">
+                    <!-- cart-items -->
+                    <div class="cart-items text-capitalize my-3">
+                        <!-- <div class="cart-item d-flex align-items-center justify-content-between">
+                            <img src="img/carousel01.jpg" class="img-fluid card-img" id="item-img" alt="">
+                            <span class="item-text mx-5">cart item</span>
+                            <span>$</span>
+                            <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
+                            <input type="number" value="2" class="cart-quantity-input">
+                            <button id='cart-item-remove' class="btn cart-item-remove my-auto">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>end .cart-item -->
+                    </div>
+
+                    <!-- cart total -->
+                    <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
+                        <h5>total</h5>
+                        <h5> $ <strong id="cart-total" class="font-weight-bold cart-total-price">0</strong> </h5>
+                    </div>
+                    <!--end cart total -->
+                    <!-- cart buttons -->
+                    <div class="cart-buttons-container mt-3 d-flex justify-content-between">
+                        <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear
+                            cart</a>
+                        <a href="checkout.html" class="btn btn-outline-secondary text-uppercase btn-pink btn-checkout disabled">checkout</a>
+                    </div>
+                    <!--end of  cart buttons -->
+                    <!--  -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- about us -->
+    <section class="about py-5" id="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-10 mx-auto col-md-6 my-5">
+                    <h1 class="text-capitalize">about <strong class="banner-title ">us</strong></h1>
+                    <p class="my-4 text-muted w-75">Sweets are special. Every birthday, every celebration ends with something sweet, a cake or something smaller, and people remember. It's all about the memories! Therefore
+                        our staff at SweetsFactory work hard every day to deliver you the best memories through our products. </p>
+                    <a href="javascript:void(0)" class="btn btn-outline-secondary  text-uppercase " id="details-btn">details</a>
+                </div>
+                <div class="col-10 mx-auto col-md-6 align-self-center my-5">
+                    <div class="text-muted" id="details">
+                        <p>We want to open a destination place where you go for the best chocolate chip cookie you've ever had in your life, the biggest champagne list ever, the best fruit tarts you've tasted. That destination is here online.
+                                </p>
+                        <p>We've never felt like we was in the cookie business. we've always been in a feel good feeling business. Our job is to sell joy. Our job is to sell happiness. Our job is to sell an experience.
+                                </p>
+                        <p>Founded April 2019 with an idea of selling the worlds most delicious cakes ever made.</p>
+
+                        <p>There is always space for improvement, no matter how long you've been in the business.
+                                </p>
+                        <p>There are divisions between a culinary chef and a dessert chef, also called a pastry chef. There are specializations within the pastry chef field. Some pastry chefs specialize in baking breads, while others are master cake designers. Each field requires an exceptional level of creativity and attention to detail.
+                            </p>
+                            <p>Our expertise is what make us the best selling company in this industry. We give our love and passion in our bakery to make the best sweets a man can get. </p>
+                    </div>
+                    <div class="about-img-container">
+                        <img src="img/about.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- bestseller -->
+    <section id="bestseller" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h1 class="text-capitalize">our <strong class="banner-title ">bestsellers</strong></h1>
+                </div>
+            </div>
+            <div class="row mx-auto d-flex justify-content-center bestseller-container productsLS">
+
+                <!-- <button class="btn btn-secondary store-item-icon">Add To Cart</button> -->
+
+            </div><!-- /.row -->
+    </div>
+    </section>
+
+    <!-- store -->
+    <section id="store" class="store py-5">
+        <div class="container">
+            <!-- section title -->
+            <div class="row">
+                <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h1 class="text-capitalize">our <strong class="banner-title ">products</strong></h1>
+                </div>
+            </div>
+            <!-- end of section title -->
+
+            <div class="row my-5">
+                <div class="col-10 mx-auto col-md-6">
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder='what is your flavor....'
+                                id="search-item">
+                            <div class="input-group-prepend ">
+                                <span class="input-group-text search-box" id="search-icon"><i
+                                        class="fas fa-search"></i></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--end of .conterner -->
+
+        <div class="row w-100 d-flex justify-content-center">
+            <div class="col-lg-2 d-flex flex-column align-items-center img-container">
+                <a href="./products.html#choco">
+                    <img class="rounded-circle" src="./img/chocolate5.jpg" alt="Generic placeholder image" width="160">
+                </a>
+                <p>chocolates</p>
+            </div><!-- /.col-lg-2 -->
+            <div class="col-lg-2 d-flex flex-column align-items-center">
+                <a href="./products.html#cup">
+                    <img class="rounded-circle" src="./img/cupcakes.jpg" alt="Generic placeholder image" width="160">
+                </a>
+                <p>cupcake</p>
+            </div><!-- /.col-lg-2 -->
+            <div class="col-lg-2 d-flex flex-column align-items-center">
+                    <a href="./products.html#donuts">
+                <img class="rounded-circle" src="./img/doughnuts5.jpg" alt="Generic placeholder image" width="160">
+                </a>
+                <p>doughnuts</p>
+            </div><!-- /.col-lg-2 -->
+            <div class="col-lg-2 d-flex flex-column align-items-center">
+                <a href="./products.html#cookie">
+                    <img class="rounded-circle" src="./img/cookies.jpg" alt="Generic placeholder image" width="160">
+                </a>
+                <p>cookies</p>
+            </div><!-- /.col-lg-2 -->
+            <div class="col-lg-2 d-flex flex-column align-items-center">
+                    <a href="./products.html#candy">
+                <img class="rounded-circle" src="./img/candy.jpg" alt="Generic placeholder image" width="160">
+                </a>
+                <p>candy</p>
+            </div><!-- /.col-lg-2 -->
+        </div><!-- /.row -->
+    </section>
+    <!--end of store items -->
+
+    <section id="contact" class="contact py-5">
+        <div class="container">
+            <!-- section title -->
+            <div class="row">
+                <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h1 class="text-capitalize"><strong class="banner-title ">contact</strong> us</h1>
+                </div>
+            </div>
+
+            <div class="container-form mt-5">
+                <div class="row">
+                    <div class="col-5">
+                        <div>
+                            <a href=""
+                            type="button"
+                            id="submit"
+                            value="Submit"
+                            name="submit"
+                            data-toggle="modal"
+                            data-target="#exampleModal">
+                                <img class="rounded rounded-circle" id="kaka" src="./img/kaka-1.jpg" alt="">
+                            </a>
+                        </div>
+                        <!-- end of .col-5 -->
+                    </div>
+                    <!-- end of .row -->
+
+                    <form id="form" action="" class="form-group col-5 " method="post" class="a">
+
+                        <input id="Name" type="text" class="form-control" placeholder="Name:">
+                        <br>
+                        <input
+                        type="email"
+                        class="form-control "
+                        id="email"
+                        placeholder="name@example.com"
+                        >
+                        <br>
+                        <input
+                        id="phone"
+                        type="text"
+                        class="form-control bfh-phone"
+                        placeholder="Phone: (+46) "
+                        >
+                        <br>
+                        <textarea
+                        class="form-control help-block"
+                        id="exampleFormControlTextarea1"
+                        placeholder="Message.."
+                        rows="3"
+                        ></textarea> <br>
+                    </form>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">SweetsFactory</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="add-modal">
+                                    <h2 id="add-modal-h2"></h2>
+                                    <p id="add-modal-p"></p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container">
+        <div class="toTop float-right"><a class='gotopbtn hidden' href="#"><i class="fas fa-arrow-up"></i></a></div>
+        <div class="copyright">
+            <img src="img/sweetLogo.svg" alt="" class="logo">
+            <p class="text-center">&copy; 2019 Sweet Factory, Inc. </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
