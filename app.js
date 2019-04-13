@@ -13,7 +13,7 @@ xhttp.onreadystatechange = function() {
             div.innerHTML = `
                 <h4 class="card-title text-center">${bestsellers[i].rank}</h4>
                 <img src="${bestsellers[i].imageUrl}" alt="${bestsellers[i].sort}" class="card-img mt-5 mb-2">
-                <p class="card-text text-center text-uppercase">$bestsellers[i].sort}</p>
+                <p class="card-text text-center text-uppercase">${bestsellers[i].sort}</p>
                 <button class="btn btn-secondary store-item-icon">Add To Cart</button>
                 <p>$<span class="cart-item-price" class="mb-0">${bestsellers[i].price}</span></p>
             `;
