@@ -1,13 +1,22 @@
 {
     "bestsellers": [
         {
-            "rank": "#01", "sort": "chocolate punch", "price": 3.50, "imageUrl": "./img/chocodoughnuts.png"
+            "id": "01",
+            "title": "chocolate punch",
+            "price": 3.50,
+            "imageUrl": "./img/chocodoughnuts.png"
         },
         {
-            "rank": "#02", "sort": "orange range", "price": 2.50, "imageUrl": "./img/orangecupcakes.png"
+            "id": "02",
+            "title": "orange range",
+            "price": 2.50,
+            "imageUrl": "./img/orangecupcakes.png"
         },
         {
-            "rank": "#03", "sort": "chocochip", "price": 5.50, "imageUrl": "./img/chocochipcookies.png"
+            "id": "03",
+            "title": "chocochip",
+            "price": 5.50,
+            "imageUrl": "./img/chocochipcookies.png"
         }
     ]
 }

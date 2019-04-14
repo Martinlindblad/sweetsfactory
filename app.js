@@ -12,9 +12,9 @@ function getData() {
                 div.classList.add("col-lg-3", "card", "mx-2")
 
                 div.innerHTML = `
-                    <h4 class="card-title text-center">${bestsellers[i].rank}</h4>
-                    <img src="${bestsellers[i].imageUrl}" alt="${bestsellers[i].sort}" class="card-img mt-5 mb-2">
-                    <p class="card-text text-center text-uppercase">${bestsellers[i].sort}</p>
+                    <h4 class="card-title text-center">#${bestsellers[i].id}</h4>
+                    <img src="${bestsellers[i].imageUrl}" alt="${bestsellers[i].title}" class="card-img mt-5 mb-2">
+                    <p class="card-text text-center text-uppercase">${bestsellers[i].title}</p>
                     <button class="btn btn-secondary store-item-icon">Add To Cart</button>
                     <p>$<span class="cart-item-price" class="mb-0">${bestsellers[i].price}</span></p>
                 `;
@@ -28,6 +28,59 @@ function getData() {
 getData()
 
 let addToCartBtn;
+
+function ready() {
+    // remove items from the cart
+    const removeCartItemBtns = document.getElementsByClassName('cart-item-remove');
+    // console.log(removeCartItemBtns);
+    for(let i = 0; i < removeCartItemBtns.length; i++) {
+        const btn = removeCartItemBtns[i];
+        btn.addEventListener('click', removeCartItems);
+    }
+
+    const qtyInput = document.getElementsByClassName('cart-quantity-input')
+    for(let i = 0; i < qtyInput.length; i++) {
+        const input = qtyInput[i]
+        input.addEventListener('change', qtyChanged)
+    }
+
+    const clearBtn = document.getElementById('clear-cart')
+    clearBtn.addEventListener('click', clearCart)
+
+    document.querySelector('.btn-checkout').addEventListener('click', checkoutClick)
+}
+
+ready();
+
+function checkoutClick() {
+    alert('Thanks for your purchase. Have a nice day!')
+
+    clearCart()
+}
+
+function clearCart() {
+    const allItems = document.getElementsByClassName('cart-items')[0]
+
+    while(allItems.hasChildNodes()) {
+        allItems.removeChild(allItems.firstChild)
+    }
+    updateTotal()
+}
+
+function removeCartItems(e) {
+    const btnClick = e.target;
+    btnClick.parentElement.parentElement.remove();
+    updateTotal();
+}
+
+function qtyChanged(e) {
+    const input = e.target
+    if(isNaN(input.value) || input.value <= 1) {
+        input.value = 1;
+    }
+    updateTotal()
+}
+
 function addToCartClick(e) {
     const btn = e.target
     const cardItem = btn.parentElement
@@ -45,28 +98,40 @@ function addToCartClick(e) {
 function addItemToCart(cardTxt, price, imageSrc) {
     const cartRow = document.createElement('div')
     const cartItems = document.getElementsByClassName('cart-items')[0]
+    const cartItem = document.getElementsByClassName('cart-item')[0]
     const cartItemNames = document.getElementsByClassName('item-text')
 
-    for(let i = 0; i < cartItemNames.length; i++) {
-        if(cartItemNames[i].innerText === cardTxt) {
+    let shoppingCart = JSON.parse(localStorage.getItem('sweets'))
+    const obj = {
+        name: cardTxt,
+        price: price,
+        imgSrc: imageSrc
+    }
+
+    for(let i = 0; i < shoppingCart.length; i++) {
+        if(shoppingCart[i].name === cardTxt) {
             alert('Item has already been added')
             return
         }
     }
+    shoppingCart.push(obj)
+    localStorage.setItem('sweets', JSON.stringify(shoppingCart))
+    shoppinigCart = localStorage.getItem('sweets') ? JSON.parse(localStorage.getItem('sweets')) : []
 
     const cartRowContent = `
         <div class="cart-item d-flex align-items-center justify-content-between">
-            <img src="${imageSrc}" class="img-fluid card-img" id="item-img" alt="">
-            <span class="item-text mx-5">${cartItemNames}</span>
-            <span class="mx-2">$</span>
-            <span id="cart-item-price" class="cart-item-price mb-0 mr-2">${price}</span>
-            <input type="number" value="1" class="cart-quantity-input">
-            <button id='cart-item-remove' class="btn cart-item-remove my-auto">
-                <i class="fas fa-trash"></i>
-            </button>
+        <img src="${imageSrc}" class="img-fluid card-img" id="item-img" alt="">
+        <span class="item-text mx-5">${cartItemNames}</span>
+        <span class="mx-2">$</span>
+        <span id="cart-item-price" class="cart-item-price mb-0 mr-2">${price}</span>
+        <input type="number" value="1" class="cart-quantity-input">
+        <button id='cart-item-remove' class="btn cart-item-remove my-auto">
+        <i class="fas fa-trash"></i>
+        </button>
         </div>
     `;
     cartRow.innerHTML = cartRowContent
+    // shoppingCart.forEach(item => cartItem.append(item))
 
     cartItems.append(cartRow)
 
@@ -148,13 +213,17 @@ window.addEventListener('scroll', () => {
     })
 })();
 
-window.addEventListener("load", function() {
+window.addEventListener("load", () => {
+    if (localStorage.hasOwnProperty('sweets')) {
+        const productList = JSON.parse(localStorage.getItem('sweets'));
+        console.log(productList)
+    }else {
+        const array = []
+        localStorage.setItem('sweets', JSON.stringify(array))
+    }
+
     addToCartBtn = document.getElementsByClassName('store-item-icon');
 
-    const arr = Array.prototype.slice.call(addToCartBtn);
-    console.log(arr)
-    console.log(addToCartBtn)
-    console.log(addToCartBtn.length)
     for(let i = 0; i < addToCartBtn.length; i++) {
         const btn = addToCartBtn[i]
         btn.addEventListener('click', addToCartClick)
